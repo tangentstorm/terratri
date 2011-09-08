@@ -145,10 +145,10 @@ def sq(x, y):
 
 def squareCount(side, grid):
     count = 0
-    want = 'r.' if side == 'r' else 'b_'
+    want = '.' if side == 'r' else '_'
     for y in range(5):
         for x in range(5):
-            if grid[y][x] in want:
+            if grid[y][x] == want:
                 count += 1
     return count
 
