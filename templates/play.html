@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>Terratri</title>
+    <link rel="stylesheet" type="text/css" href="/assets/style.css" />
+    <script src='/_ah/channel/jsapi'></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="/assets/channel.js"></script>
+    <script src="/assets/terratri.js"></script>
+    <script>
+      $(function()
+      {
+        var gameKey = '{{ gameKey }}';
+        var token = '{{token}}';
+        ChannelAPI.init(token, gameKey, terratri.onUpdate);
+      });
+    </script>
+  </head>
+  <body>
+
+  <h1>Terratri</h1>
+
+  <div class="content">
+    <div class="message" id='other-player' style='display:none'>
+      Waiting for another player to join.<br>
+      Send them this link to play:<br>
+      <div id='game-link'><a href='{{ gameLink }}'>{{ gameLink }}</a></div>
+    </div>
+    <div class="message" id='your-move' style='display:none'>
+      Your move! Click an icon to make your move.
+    </div>
+    <div class="message" id='their-move' style='display:none'>
+      Waiting for other player to move...
+    </div>
+    <div class="message" id='you-won' style='display:none'>
+      You won this game!
+    </div>
+    <div class="message" id='you-lost' style='display:none'>
+      You lost this game.
+    </div>
+    <div id='board'>
+      <table>
+        {% for y in rows %}
+        <tr>
+          <th class="row">{{y}}</th>
+          {% for x in cols %}
+            {# can't make td position:relative so add a wrapper #}
+            <td><div class="cell" id="{{x}}{{y}}"></div></td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+        <tr>
+          <th></th>
+          {% for y in cols %}
+            <th>{{y}}</th>
+          {% endfor %}
+        </tr>
+      </table>
+    </div>
+    <div class="cell" id="end">
+    </div>
+    <div id='this-game'>
+      Quick link to this game:<br/>
+      <span id='this-game-link'><a href='{{ gameLink }}'>{{ gameLink }}</a></span>
+    </div>
+
+  </div>
+
+  {% include "wtf.html" %}
+
+  </body>
+</html>

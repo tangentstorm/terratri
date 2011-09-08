@@ -1,0 +1,46 @@
+<div id="wtf">
+    <h2>What is this?</h2>
+
+    <p>This is an implementation of
+      <a href="http://adamatomic.com/">Adam "Atomic" Saltsman</a>'s game,
+      <a href="http://blog.adamatomic.com/making-terratri-a-minimalist-territory-captur#comment">Terratri.</a>
+      implemented by <a href="http://michaljwallace.com/">Michal Wallace</a>.
+    </p>
+
+    <h2>Rules</h2>
+
+    <p><em>(Copied from Adam's original post.)</em></p>
+
+    <ul>
+      <li>Players start in the middle cell of opposite sides of the board.</li>
+      <li>Players get 2 actions per turn.  Viable actions are: Move one space (up, down, left or right), or Fortify.</li>
+      <li>When a player moves to an unoccupied territory they automatically claim it, placing or flipping a territory marker to show their claim.</li>
+      <li>Unoccupied territory is any grid cell, claimed or not, that has neither a player pawn nor a fort.</li>
+      <li>Players cannot move onto any tile that is occupied by the enemy pawn or an enemy fort.</li>
+      <li>Players must end their turn on a different tile than where they started if the territories or forts did not change during that turn.*</li>
+      <li>Players may Fortify the territory they currently occupy if they have claim over at least 5 unoccupied territories.</li>
+      <li>Players do not need to use all their actions so long as they do not break any other rules by doing so.</li>
+      <li><strong>First player to 5 forts wins.</strong></li>
+      <li>If multiple games are played back to back, players should take turns going first.</li>
+    </ul>
+
+
+    <h2>About this Implementation</h2>
+
+    <p>This program was developed in python with Google App Engine.</p>
+
+    <p>How to use the interface:</p>
+
+    <ul>
+      <li>First player will always play as red.</li>
+      <li>Send a link to your friend to challenge them.</li>
+      <li>Game proceeds in real time when both players are connected.</li>
+      <li>On your turn, click the arrow icons to move.</li>
+      <li>The square icon builds a fort. <em>(Requires 5 colored squares)</em></li>
+      <li>When the game is over, the red player can refresh the page to play again.</li>
+    </ul>
+
+
+
+
+</div>
