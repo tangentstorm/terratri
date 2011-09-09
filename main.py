@@ -62,7 +62,7 @@ class GameUpdater(object):
         if self.game.whoseTurn:
             grid = terratri.boardToGrid(self.game.board)
             return terratri.validSteps(self.game.whoseTurn, grid,
-                                       self.game.steps[-1:])
+                                       self.game.steps)
         else:
             return {}
 

@@ -8,8 +8,8 @@ class TerratriTest(unittest.TestCase):
             ('',      'r'),
             ('n',     'r'),
             ('nn',    'b'),
-            ('nnf',   'b'),
-            ('nnfs',  'r')
+            ('nnS',   'b'),
+            ('nnSS',  'r')
         ]:
             self.assertEquals(expect, terratri.whoseTurn(steps))
 
@@ -47,6 +47,8 @@ class TerratriTest(unittest.TestCase):
         self.assertEquals((2, 4, False), terratri.findPawn('r', start))
 
     def test_after(self):
+        # This isn't a valid sequence of moves, but it tests
+        # out the board manipulation functions.
         self.assertEquals(
             terratri.boardToGrid(
              '  _B '
@@ -60,13 +62,26 @@ class TerratriTest(unittest.TestCase):
         self.assertEquals(
             {'n':'c2', 'e':'d1', 'w':'b1'},
             terratri.validSteps('r', terratri.startGrid(), ''))
-        # can't go south after going north because it puts you back in place
+
+        # after an inital move of n, red changed the board, so can return south
         self.assertEquals(
-            {'n':'c3', 'e':'d2', 'w':'b2', 'x':'end'},
+            {'n':'c3', 'e':'d2', 'w':'b2', 's':'c1', 'x':'end'},
             terratri.validSteps('r', terratri.after('n'), 'n'))
+
+        # after 1. ns:
         self.assertEquals(
             {'S':'c4', 'E':'d5', 'W':'b5'},
-            terratri.validSteps('b', terratri.after('nn'), 'nn'))
+            terratri.validSteps('b', terratri.after('ns'), 'ns'))
+
+        # after 1. ns .. SN, red's choices are the same as on the first move
+        self.assertEquals(
+            {'n':'c2', 'e':'d1', 'w':'b1'},
+            terratri.validSteps('r', terratri.after('nsSN'), 'nsSN'))
+
+        # but if 2. n, red cannot return south as it leaves the board unchanged
+        self.assertEquals(
+            {'n':'c3', 'e':'d2', 'w':'b2', 'x':'end'},
+            terratri.validSteps('r', terratri.after('nsSNn'), 'nsSNn'))
 
 
 if __name__=="__main__":

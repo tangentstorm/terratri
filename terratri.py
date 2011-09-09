@@ -160,9 +160,10 @@ def opposite(dir):
     return None
 
 
-def validSteps(side, grid, lastStep):
+def validSteps(side, grid, steps):
     res = []
     fixCase = string.lower if side=='r' else string.upper
+    lastStep = steps[-1:]
 
     secondStep = lastStep.islower() if side == 'r' else lastStep.isupper()
     if secondStep:
@@ -174,10 +175,15 @@ def validSteps(side, grid, lastStep):
     for step in ['n','s','e','w']:
         x2, y2 = relative(step, x, y)
 
-        # prevent 'pass' turns that leave you on the same square:
+        # prevent 'pass' turns that leave you on the same square
+        # (but this is allowed if the territory changed, so we have to check)
         if secondStep and step == opposite(lastStep.lower()):
-            continue
-        elif inBounds(x2, y2) and grid[y2][x2] not in enemies:
+            beforeLast = after(steps[:-1])
+            afterThis = after(steps + step)
+            if beforeLast == afterThis:
+                continue
+
+        if inBounds(x2, y2) and grid[y2][x2] not in enemies:
             res.append((fixCase(step), sq(x2,y2)))
 
     if not hasFort and squareCount(side, grid) >= 5:
