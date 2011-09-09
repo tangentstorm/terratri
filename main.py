@@ -134,6 +134,7 @@ class PlayPage(webapp.RequestHandler):
                 'token': token,
                 'me': user.user_id(),
                 'gameKey': gameKey,
+                'playingAs': 'r' if user == game.redPlayer else 'b',
                 'gameLink': 'http://' + os.environ['HTTP_HOST'] + '/play?g=' + gameKey,
             }
             self.response.out.write(template.render('templates/play.html',

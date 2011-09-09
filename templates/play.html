@@ -9,6 +9,20 @@
     <script>
       $(function()
       {
+        if ('{{playingAs}}' == 'r')
+        {
+          $('#Uc').html('<strong>N</strong>');
+          $('#Dc').html('<strong>S</strong>');
+          $('#R3').html('<strong>E</strong>');
+          $('#L3').html('<strong>W</strong>');
+        }
+        else
+        {
+          $('#Uc').html('<strong>S</strong>');
+          $('#Dc').html('<strong>N</strong>');
+          $('#R3').html('<strong>W</strong>');
+          $('#L3').html('<strong>E</strong>');
+        }
         var gameKey = '{{ gameKey }}';
         var token = '{{token}}';
         ChannelAPI.init(token, gameKey, terratri.onUpdate);
@@ -39,20 +53,29 @@
     </div>
     <div id='board'>
       <table>
+        <tr>
+          <th>&nbsp;</th>
+          {% for x in cols %}
+            <th id="U{{x}}">{{x}}</th>
+          {% endfor %}
+          <th>&nbsp;</th>
+        </tr>
         {% for y in rows %}
         <tr>
-          <th class="row">{{y}}</th>
+          <th class="row" id="L{{y}}">{{y}}</th>
           {% for x in cols %}
             {# can't make td position:relative so add a wrapper #}
             <td><div class="cell" id="{{x}}{{y}}"></div></td>
           {% endfor %}
+          <th class="row" id="R{{y}}">{{y}}</th>
         </tr>
         {% endfor %}
         <tr>
-          <th></th>
-          {% for y in cols %}
-            <th>{{y}}</th>
+          <th>&nbsp;</th>
+          {% for x in cols %}
+            <th id="D{{x}}">{{x}}</th>
           {% endfor %}
+          <th>&nbsp;</th>
         </tr>
       </table>
     </div>

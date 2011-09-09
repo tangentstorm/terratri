@@ -14,7 +14,7 @@ h1
 
 .content
 {
-    width: 400px;
+    width: 430px;
     margin:  auto;
     border-top: solid black 1px;
     border-bottom: solid black 1px;
@@ -50,9 +50,20 @@ td, th
 
 th
 {
+    font-weight: normal;
+    font-size: 8pt;
+    color: gray;
+    min-width: 15px;
     background: silver;
     border: solid gray 1px;
 }
+
+th strong
+{
+    color: black;
+    font-size: 10pt;
+}
+
 th.col
 {
     height: 25px;
