@@ -56,6 +56,7 @@ var terratri = (function($)
       var whoseTurn = data['whoseTurn'];
       var playingAs = data['playingAs'];
       var winner = data['winner'];
+      var history = data['history'];
       var cell;
 
       // clear any old click handlers
@@ -65,6 +66,17 @@ var terratri = (function($)
 
       // hide all messages:
       $('.message').hide();
+
+      if (history.length > 0)
+      {
+         $('#historyBox').show();
+         var nice = '';
+         for (var ni = 0; ni < history.length; ++ni)
+         {
+            nice += '<strong>' + (ni + 1) + '.</strong> ' + history[ni] + ' ';
+         }
+         $('#history').html(nice);
+      }
 
       // draw the board:
       for (var x = 0; x < 5; ++x)

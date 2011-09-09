@@ -120,3 +120,26 @@ img.step
     font-family: verdana, arial, sans-serif;
     font-size: 10pt;
 }
+
+#end
+{
+    min-height: 100px;
+    min-width: 75px;
+    padding-right: 20px;
+    padding-left: 25px;
+    margin-top: -25px;
+    float:left;
+}
+
+#historyBox
+{
+    text-align: left;
+    vertical-align: top;
+    margin-top: -25px;
+    padding-top: 15px;
+}
+
+#this-game
+{
+    clear:both;
+}

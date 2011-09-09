@@ -75,6 +75,7 @@ class GameUpdater(object):
             'whoseTurn' : self.game.whoseTurn,
             'winner': self.game.winner,
             'winningBoard': self.game.winningBoard,
+            'history': terratri.niceHistory(self.game.steps),
             'validSteps': self.validSteps(),
             'playingAs': 'r'
         }

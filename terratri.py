@@ -203,3 +203,10 @@ def winner(grid):
     if rCount == 5: return 'r'
     if bCount == 5: return 'b'
     return None
+
+
+def niceHistory(steps):
+    moves = [steps[off*4:off*4+4] for off in range(len(steps)/4 + 1)]
+    if '' in moves: moves.remove('')
+    return [string.strip('%s %s' % (move[:2], move[2:]))
+            for move in moves]

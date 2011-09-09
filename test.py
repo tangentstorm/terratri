@@ -84,5 +84,23 @@ class TerratriTest(unittest.TestCase):
             terratri.validSteps('r', terratri.after('nsSNn'), 'nsSNn'))
 
 
+    def test_chunkSteps(self):
+        self.assertEquals(
+            [],
+            terratri.niceHistory(''))
+        self.assertEquals(
+            ['n'],
+            terratri.niceHistory('n'))
+        self.assertEquals(
+            ['nx SW','en'],
+            terratri.niceHistory('nxSWen'))
+        self.assertEquals(
+            ['nx SW','en S'],
+            terratri.niceHistory('nxSWenS'))
+        self.assertEquals(
+            ['nx SW','en SE', 'e'],
+            terratri.niceHistory('nxSWenSEe'))
+
+
 if __name__=="__main__":
     unittest.main()
