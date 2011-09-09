@@ -11,9 +11,11 @@ var terratri = (function($)
 
    const rsq = '<img class="sq" src="/assets/images/rsq.png"/>';
    const rpn = '<img class="pn" src="/assets/images/rpn.png"/>';
+   const rpf = '<img class="pn" src="/assets/images/rpf.png"/>';
    const rft = '<img class="ft" src="/assets/images/rft.png"/>';
    const bsq = '<img class="sq" src="/assets/images/bsq.png"/>';
    const bpn = '<img class="pn" src="/assets/images/bpn.png"/>';
+   const bpf = '<img class="pn" src="/assets/images/bpf.png"/>';
    const bft = '<img class="ft" src="/assets/images/bft.png"/>';
    const mvU = '<img class="step" src="/assets/images/U.png"/>';
    const mvD = '<img class="step" src="/assets/images/D.png"/>';
@@ -97,7 +99,7 @@ var terratri = (function($)
                   cell.append(rsq + rft);
                   break;
                case 'E':
-                  cell.append(rsq + rft + rpn);
+                  cell.append(rsq + rft + rpf);
                   break;
 
                // blue stuff:
@@ -111,7 +113,7 @@ var terratri = (function($)
                   cell.append(bsq + bft);
                   break;
                case 'L':
-                  cell.append(bsq + bft + bpn);
+                  cell.append(bsq + bft + bpf);
                   break;
                default:
                   break;
