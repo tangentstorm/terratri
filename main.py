@@ -7,8 +7,7 @@ based on the channel tic-tac-toe example for google app engine, from:
 http://code.google.com/p/channel-tac-toe/source/browse/trunk/chatactoe.py
 
 """
-import os
-from django.utils import simplejson
+import os, json
 from google.appengine.api import channel, users
 from google.appengine.ext import webapp, db
 from google.appengine.ext.webapp import util, template
@@ -42,11 +41,11 @@ class GameUpdater(object):
     def sendUpdate(self):
         message = self.makeMessage()
         channel.send_message(self.redChannel(),
-                             simplejson.dumps(message))
+                             json.dumps(message))
         if self.game.bluPlayer:
             message['playingAs'] = 'b'
             channel.send_message(self.bluChannel(),
-                                 simplejson.dumps(message))
+                                 json.dumps(message))
 
     def makeMove(self, move, user):
         # TODO: finish this, check for win, right player, etc...

@@ -1,6 +1,7 @@
 application: tangentstorm-terratri
 version: 1
-runtime: python
+runtime: python27
+threadsafe: no
 api_version: 1
 
 handlers:
