@@ -1,54 +1,38 @@
-
+/**
+ * channel.js — Socket.IO replacement for the old GAE Channel API.
+ * Preserves the same ChannelAPI.init / ChannelAPI.sendMessage interface
+ * so terratri.js doesn't need changes.
+ */
 var ChannelAPI = (function(){
 
    var pub = {};
-
-   var mChannel = null;
    var mSocket = null;
    var mGameKey = "";
-   var mConnected = false;
    var mCallback = function (data) { };
 
-   pub.init = function(token, gameKey, callback)
+   pub.init = function(gameKey, callback)
    {
       mGameKey = gameKey;
       mCallback = callback;
 
-      mChannel = new goog.appengine.Channel(token);
-      mSocket = mChannel.open();
-      mSocket.onopen = onOpened;
-      mSocket.onmessage = onMessage;
-      mSocket.onerror = onError;
-      mSocket.onclose = onClose;
+      mSocket = io();
+      mSocket.on('connect', function() {
+         mSocket.emit('join', { gameKey: mGameKey });
+      });
+      mSocket.on('update', function(data) {
+         mCallback(data);
+      });
+      mSocket.on('connect_error', function(err) {
+         console.error("socket connection error:", err);
+      });
    };
 
    pub.sendMessage = function(path, optParam)
    {
-      path += "?g=" + mGameKey;
-      if (optParam) path += '&' + optParam;
-      var xhr = new XMLHttpRequest();
-      xhr.open('POST', path, true);
-      xhr.send();
-   };
-
-   var onOpened = function()
-   {
-      mConnected = true;
-      pub.sendMessage('/opened');
-   };
-
-   var onMessage = function(msg)
-   {
-      mCallback(JSON.parse(msg.data));
-   };
-
-   var onError = function()
-   {
-      alert("channel error. :/");
-   };
-
-   var onClose = function()
-   {
+      if (path === '/move') {
+         var step = optParam.replace('step=', '');
+         mSocket.emit('move', { gameKey: mGameKey, step: step });
+      }
    };
 
    return pub;

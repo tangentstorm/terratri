@@ -151,7 +151,7 @@ var terratri = (function($)
             {
                cell = $('#' + steps[step]);
                cell.append(stepImg[whoseTurn][step]);
-               cell.select('.step').click(mkStep(step));
+               cell.find('.step').click(mkStep(step));
             }
          }
 

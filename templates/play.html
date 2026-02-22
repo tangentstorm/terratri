@@ -2,8 +2,8 @@
   <head>
     <title>Terratri Online</title>
     <link rel="stylesheet" type="text/css" href="/assets/style.css" />
-    <script src='/_ah/channel/jsapi'></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/assets/channel.js"></script>
     <script src="/assets/terratri.js"></script>
     <script>
@@ -24,8 +24,7 @@
           $('#L3').html('<strong>E</strong>');
         }
         var gameKey = '{{ gameKey }}';
-        var token = '{{token}}';
-        ChannelAPI.init(token, gameKey, terratri.onUpdate);
+        ChannelAPI.init(gameKey, terratri.onUpdate);
       });
     </script>
   </head>

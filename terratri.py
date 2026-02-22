@@ -64,7 +64,7 @@ startGrid = lambda : boardToGrid(kStartBoard)
 # steps string -> side char
 def whoseTurn(steps):
     stepCount = len(steps)
-    turnCount = stepCount / 2
+    turnCount = stepCount // 2
     return 'r' if turnCount % 2 == 0 else 'b'
 
 # side -> grid -> (x, y, hasFort)
@@ -162,7 +162,7 @@ def opposite(dir):
 
 def validSteps(side, grid, steps):
     res = []
-    fixCase = string.lower if side=='r' else string.upper
+    fixCase = str.lower if side=='r' else str.upper
     lastStep = steps[-1:]
 
     secondStep = lastStep.islower() if side == 'r' else lastStep.isupper()
@@ -206,7 +206,7 @@ def winner(grid):
 
 
 def niceHistory(steps):
-    moves = [steps[off*4:off*4+4] for off in range(len(steps)/4 + 1)]
+    moves = [steps[off*4:off*4+4] for off in range(len(steps)//4 + 1)]
     if '' in moves: moves.remove('')
-    return [string.strip('%s %s' % (move[:2], move[2:]))
+    return [('%s %s' % (move[:2], move[2:])).strip()
             for move in moves]
