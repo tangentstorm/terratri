@@ -14,7 +14,7 @@ h1
 
 .content
 {
-    width: 555px;
+    width: 680px;
     margin:  auto;
     border-top: solid black 1px;
     border-bottom: solid black 1px;
@@ -30,11 +30,82 @@ h1
 #this-game
 {
     margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#board
+{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: stretch;
+    margin: 10px 0;
+}
+
+.fort-tray
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: #b8a088;
+    border: 2px solid #8b7355;
+    padding: 4px 2px;
+    min-width: 40px;
+}
+
+#home-forts
+{
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+}
+
+#away-forts
+{
+    justify-content: flex-start;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+}
+
+.fort-indicator
+{
+    width: 44px;
+    height: 44px;
+    margin-top: -8px;
+}
+
+.fort-indicator:first-child
+{
+    margin-top: 0;
+}
+
+.fort-spacer
+{
+    flex: 1;
+}
+
+th.red-home
+{
+    background: #e08040;
+}
+
+th.red-home strong
+{
+    color: white;
+}
+
+th.blue-home
+{
+    background: #4070c0;
+}
+
+th.blue-home strong
+{
+    color: white;
 }
 
 table
 {
-    margin: 10px;
+    margin: 0;
     border-collapse: collapse;
 }
 
@@ -133,11 +204,10 @@ img.step
 
 #end
 {
-    min-height: 125px;
+    min-height: 0;
     min-width: 100px;
     padding-right: 20px;
     padding-left: 25px;
-    margin-top: -25px;
     float:left;
 }
 
@@ -145,8 +215,7 @@ img.step
 {
     text-align: left;
     vertical-align: top;
-    margin-top: -25px;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 #this-game

@@ -11,15 +11,15 @@
       {
         if ('{{playingAs}}' == 'r')
         {
-          $('#Uc').html('<strong>N</strong>');
-          $('#Dc').html('<strong>S</strong>');
+          $('#Uc').html('<strong>N</strong>').addClass('blue-home');
+          $('#Dc').html('<strong>S</strong>').addClass('red-home');
           $('#R3').html('<strong>E</strong>');
           $('#L3').html('<strong>W</strong>');
         }
         else
         {
-          $('#Uc').html('<strong>S</strong>');
-          $('#Dc').html('<strong>N</strong>');
+          $('#Uc').html('<strong>S</strong>').addClass('red-home');
+          $('#Dc').html('<strong>N</strong>').addClass('blue-home');
           $('#R3').html('<strong>W</strong>');
           $('#L3').html('<strong>E</strong>');
         }
@@ -51,6 +51,7 @@
       You lost this game.
     </div>
     <div id='board'>
+      <div id="home-forts" class="fort-tray"></div>
       <table>
         <tr>
           <th>&nbsp;</th>
@@ -77,6 +78,7 @@
           <th>&nbsp;</th>
         </tr>
       </table>
+      <div id="away-forts" class="fort-tray"></div>
     </div>
     <div class="cell" id="end">
     </div>

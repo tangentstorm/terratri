@@ -121,6 +121,44 @@ var terratri = (function($)
          }
       }
 
+      // show remaining forts for each player
+      var redForts = 0, blueForts = 0;
+      for (var i = 0; i < board.length; i++)
+      {
+         if (board[i] === 'R' || board[i] === 'E') redForts++;
+         if (board[i] === 'B' || board[i] === 'L') blueForts++;
+      }
+      var redRemaining = 5 - redForts;
+      var blueRemaining = 5 - blueForts;
+      var blueBanked = 1; // TODO: track from server
+      var blueSupply = blueRemaining - blueBanked;
+
+      var bankedFort = '<img class="fort-indicator banked" src="/assets/images/bft.png"/>';
+      var spacer = '<div class="fort-spacer"></div>';
+
+      function fortIcons(src, count)
+      {
+         var html = '';
+         for (var fi = 0; fi < count; fi++)
+            html += '<img class="fort-indicator" src="/assets/images/' + src + '.png"/>';
+         return html;
+      }
+
+      if (playingAs === 'r')
+      {
+         // left (west): blue banked at top, red supply at bottom
+         $('#home-forts').html(bankedFort + spacer + fortIcons('rft', redRemaining));
+         // right (east): blue supply at top
+         $('#away-forts').html(fortIcons('bft', blueSupply));
+      }
+      else
+      {
+         // left (east): blue supply at bottom
+         $('#home-forts').html(fortIcons('bft', blueSupply));
+         // right (west): red supply at top, blue banked at bottom
+         $('#away-forts').html(fortIcons('rft', redRemaining) + spacer + bankedFort);
+      }
+
       // can't use the loop variable directly because
       // it'll close over it
       function mkStep(step)
