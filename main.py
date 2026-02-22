@@ -84,7 +84,7 @@ def play():
 
     game = games.get(game_key)
     if not game:
-        return "No such game", 404
+        return 'No such game. <a href="/">Back to home.</a>', 404
 
     if not game.blu_player and game.red_player != player_id:
         game.blu_player = player_id
