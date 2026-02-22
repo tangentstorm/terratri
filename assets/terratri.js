@@ -144,19 +144,24 @@ var terratri = (function($)
          return html;
       }
 
+      var redBankHtml = '<div class="bank-label" style="background:#e08040">BANK</div>';
+      var blueBankHtml = '<div class="bank-label" style="background:#4070c0">BANK</div>';
+      var redBankFlipHtml = '<div class="bank-label flipped" style="background:#e08040">BANK</div>';
+      var blueBankFlipHtml = '<div class="bank-label flipped" style="background:#4070c0">BANK</div>';
+
       if (playingAs === 'r')
       {
-         // left (west): blue banked at top, red supply at bottom
-         $('#home-forts').html(bankedFort + spacer + fortIcons('rft', redRemaining));
-         // right (east): blue supply at top
-         $('#away-forts').html(fortIcons('bft', blueSupply));
+         // left = blue's bank: blue banked (N) + red supply (S)
+         $('#home-forts').html(blueBankFlipHtml + bankedFort + spacer + fortIcons('rft', redRemaining));
+         // right = red's bank: blue supply (N) + red banked (S, empty at start)
+         $('#away-forts').html(redBankHtml + fortIcons('bft', blueSupply) + spacer);
       }
       else
       {
-         // left (east): blue supply at bottom
-         $('#home-forts').html(fortIcons('bft', blueSupply));
-         // right (west): red supply at top, blue banked at bottom
-         $('#away-forts').html(fortIcons('rft', redRemaining) + spacer + bankedFort);
+         // left = red's bank: blue supply (N) + red banked (S, empty at start)
+         $('#home-forts').html(redBankFlipHtml + fortIcons('bft', blueSupply) + spacer);
+         // right = blue's bank: blue banked (N) + red supply (S)
+         $('#away-forts').html(blueBankHtml + bankedFort + spacer + fortIcons('rft', redRemaining));
       }
 
       // can't use the loop variable directly because

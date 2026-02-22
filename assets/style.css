@@ -10,11 +10,13 @@ body
 h1
 {
     background: silver;
+    margin: 0;
+    padding: 12px 0;
 }
 
 .content
 {
-    width: 680px;
+    width: 740px;
     margin:  auto;
     border-top: solid black 1px;
     border-bottom: solid black 1px;
@@ -46,11 +48,11 @@ h1
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    position: relative;
     background: #b8a088;
     border: 2px solid #8b7355;
     padding: 4px 2px;
-    min-width: 40px;
+    min-width: 50px;
 }
 
 #home-forts
@@ -61,16 +63,15 @@ h1
 
 #away-forts
 {
-    justify-content: flex-start;
     border-left: none;
     border-radius: 0 5px 5px 0;
 }
 
 .fort-indicator
 {
-    width: 44px;
-    height: 44px;
-    margin-top: -8px;
+    width: 70px;
+    height: 70px;
+    margin-top: -24px;
 }
 
 .fort-indicator:first-child
@@ -81,6 +82,31 @@ h1
 .fort-spacer
 {
     flex: 1;
+}
+
+.bank-label
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 2px 4px;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.bank-label.flipped
+{
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.bank-label + .fort-indicator,
+.fort-spacer + .fort-indicator
+{
+    margin-top: 0;
 }
 
 th.red-home
@@ -121,7 +147,7 @@ td, th
 th
 {
     font-weight: normal;
-    font-size: 8pt;
+    font-size: 10pt;
     color: gray;
     min-width: 15px;
     background: silver;
@@ -136,14 +162,14 @@ th strong
 
 th.col
 {
-    height: 25px;
+    height: 30px;
     width: 100px;
 }
 
 th.row
 {
     height: 100px;
-    width: 25px;
+    width: 30px;
 }
 
 
