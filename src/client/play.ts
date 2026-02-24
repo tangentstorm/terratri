@@ -3,6 +3,7 @@
  * updates <terratri-board> and <fort-tray> components.
  */
 import './style.css';
+import './inject-rules.js';
 import './terratri-board.js';
 import './fort-tray.js';
 import type { GameMessage, WsMessage } from '../shared/types.js';
