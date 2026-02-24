@@ -17,7 +17,6 @@ export interface GameMessage {
   bluPlayer: string;
   whoseTurn: Side | '';
   winner: Side | null;
-  winningBoard: Board | null;
   history: string[];
   validSteps: Record<string, string>;
   playingAs: Side;

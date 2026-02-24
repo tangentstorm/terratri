@@ -21,7 +21,6 @@ interface Game {
   whoseTurn: Side | '';
   steps: string;
   winner: Side | null;
-  winningBoard: Board | null;
 }
 
 const games = new Map<string, Game>();
@@ -64,7 +63,6 @@ function makeMessage(game: Game, playingAs: Side): GameMessage {
     bluPlayer: game.bluPlayer || '',
     whoseTurn: game.whoseTurn,
     winner: game.winner,
-    winningBoard: game.winningBoard,
     history: terratri.niceHistory(game.steps),
     validSteps: valid,
     playingAs,
@@ -111,8 +109,7 @@ app.post('/api/games', (req, res) => {
     board: terratri.START_BOARD,
     whoseTurn: 'r',
     steps: '',
-    winner: null,
-    winningBoard: null,
+    winner: null
   };
   games.set(gameKey, game);
   res.json({ gameKey, playingAs: 'r' });
