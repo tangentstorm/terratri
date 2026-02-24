@@ -1,0 +1,30 @@
+{
+  "name": "terratri",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:client": "vite",
+    "dev:server": "tsx watch src/server/main.ts",
+    "dev": "concurrently \"npm:dev:*\"",
+    "build": "vite build && tsc -p tsconfig.server.json",
+    "start": "node dist/server/main.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "cookie": "^1.0.2",
+    "express": "^4.21.1",
+    "uuid": "^11.0.3",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/cookie": "^0.6.0",
+    "@types/express": "^5.0.0",
+    "@types/uuid": "^10.0.0",
+    "@types/ws": "^8.5.13",
+    "concurrently": "^9.1.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vitest": "^2.1.8"
+  }
+}

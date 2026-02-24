@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Terratri Online</title>
+    <link rel="stylesheet" href="/src/client/style.css" />
+  </head>
+  <body>
+    <h1>Terratri Online</h1>
+    <div class="content">
+      <div class="message" id="other-player" style="display:none">
+        Waiting for another player to join.<br />
+        Send them this link to play:<br />
+        <div id="game-link"><a id="game-link-a" href="#">...</a></div>
+      </div>
+      <div class="message" id="your-move" style="display:none">
+        Your move! Click an icon to make your move.
+      </div>
+      <div class="message" id="their-move" style="display:none">
+        Waiting for other player to move...
+      </div>
+      <div class="message" id="you-won" style="display:none">
+        You won this game!
+      </div>
+      <div class="message" id="you-lost" style="display:none">
+        You lost this game.
+      </div>
+
+      <div id="board-area">
+        <fort-tray id="home-forts" side="home"></fort-tray>
+        <terratri-board></terratri-board>
+        <fort-tray id="away-forts" side="away"></fort-tray>
+      </div>
+      <div class="cell" id="end"></div>
+
+      <div id="historyBox" class="message" style="display:none">
+        <p><strong>history: </strong><span id="history"></span></p>
+      </div>
+      <div id="this-game">
+        Quick link to this game:<br />
+        <span id="this-game-link"><a id="this-game-link-a" href="#">...</a></span>
+      </div>
+    </div>
+
+    <div id="wtf">
+      <h2>Rules</h2>
+      <p><em>(Copied from Adam's original post.)</em></p>
+      <ul>
+        <li>Players start in the middle cell of opposite sides of the board.</li>
+        <li>Players get 2 actions per turn. Viable actions are: Move one space (up, down, left or right), or Fortify.</li>
+        <li>When a player moves to an unoccupied territory they automatically claim it.</li>
+        <li>Players cannot move onto any tile occupied by the enemy pawn or an enemy fort.</li>
+        <li>Players must end their turn on a different tile than where they started if the territories or forts did not change during that turn.</li>
+        <li>Players may Fortify if they have claim over at least 5 unoccupied territories.</li>
+        <li><strong>First player to 5 forts wins.</strong></li>
+      </ul>
+    </div>
+
+    <script type="module" src="/src/client/play.ts"></script>
+  </body>
+</html>
