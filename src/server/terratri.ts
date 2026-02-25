@@ -4,10 +4,10 @@
  *
  * Step notation
  * -------------
- * History is a string of 2 chars (steps) per move.
+ * History is a string of steps separated by '|' turn delimiters.
  *   lowercase = red, uppercase = blue
  *   n/N = north, s/S = south, e/E = east, w/W = west
- *   f/F = fort, x/X = pass (second step only)
+ *   f/F = fort, x/X = pass/end turn, k/K = bank
  *
  * Board notation
  * --------------
@@ -43,8 +43,8 @@ export function startGrid(): Grid {
 }
 
 export function whoseTurn(steps: string): Side {
-  const turnCount = Math.floor(steps.length / 2);
-  return turnCount % 2 === 0 ? 'r' : 'b';
+  const completedTurns = (steps.match(/\|/g) || []).length;
+  return completedTurns % 2 === 0 ? 'r' : 'b';
 }
 
 export function findPawn(pawn: Side, grid: Grid): { x: number; y: number; hasFort: boolean } | undefined {
@@ -115,6 +115,9 @@ export function after(steps: string): Grid {
       case 'W': move('b', 'w', grid); break;
       case 'F': fortify('b', grid); break;
       case 'X': break;
+      case '|': break;
+      case 'k': break;
+      case 'K': break;
     }
   }
   return grid;
@@ -155,22 +158,107 @@ function opposite(dir: string): string | null {
   return null;
 }
 
+export function countFortsOnBoard(side: Side, grid: Grid): number {
+  let count = 0;
+  const fort = side === 'r' ? 'R' : 'B';
+  const fortPawn = side === 'r' ? 'E' : 'L';
+  for (let y = 0; y < 5; y++) {
+    for (let x = 0; x < 5; x++) {
+      if (grid[y][x] === fort || grid[y][x] === fortPawn) count++;
+    }
+  }
+  return count;
+}
+
+/** Count bonus actions consumed (forts permanently spent) by a side. */
+export function spentMoves(side: Side, steps: string): number {
+  let spent = 0;
+  const turns = steps.split('|');
+  for (let turnIdx = 0; turnIdx < turns.length; turnIdx++) {
+    const turn = turns[turnIdx];
+    if (turn.length === 0) continue;
+    const turnSide: Side = turnIdx % 2 === 0 ? 'r' : 'b';
+    if (turnSide !== side) continue;
+    for (let i = 2; i < turn.length; i++) {
+      const ch = turn[i];
+      if (ch !== 'x' && ch !== 'X') spent++;
+    }
+  }
+  return spent;
+}
+
+/** Derive banked-move count for a side from the step history. */
+export function bankedMoves(side: Side, steps: string): number {
+  let bank = side === 'b' ? 1 : 0;
+  const turns = steps.split('|');
+
+  for (let turnIdx = 0; turnIdx < turns.length; turnIdx++) {
+    const turn = turns[turnIdx];
+    if (turn.length === 0) continue;
+
+    const turnSide: Side = turnIdx % 2 === 0 ? 'r' : 'b';
+    if (turnSide !== side) continue;
+
+    for (let i = 0; i < turn.length; i++) {
+      const ch = turn[i];
+      if (ch === 'k' || ch === 'K') bank++;
+      else if (i >= 2 && ch !== 'x' && ch !== 'X') bank--; // spending
+    }
+  }
+
+  return bank;
+}
+
+export function fortSupply(side: Side, grid: Grid, steps: string): number {
+  return 5 - countFortsOnBoard(side, grid) - bankedMoves(side, steps) - spentMoves(side, steps);
+}
+
+/** Is the current turn segment complete? */
+export function isTurnOver(steps: string): boolean {
+  const lastPipe = steps.lastIndexOf('|');
+  const segment = lastPipe === -1 ? steps : steps.slice(lastPipe + 1);
+
+  if (segment.length < 2) return false;
+
+  const lastChar = segment.slice(-1);
+  if ('xXkK'.includes(lastChar)) return true;
+
+  // Turn is also over if player has no bank remaining
+  const turnIndex = (steps.match(/\|/g) || []).length;
+  const side: Side = turnIndex % 2 === 0 ? 'r' : 'b';
+
+  return bankedMoves(side, steps) <= 0;
+}
+
 export function validSteps(side: Side, grid: Grid, steps: string): Record<string, string> {
   const res: [string, string][] = [];
   const fixCase = side === 'r' ? (s: string) => s.toLowerCase() : (s: string) => s.toUpperCase();
-  const lastStep = steps.slice(-1);
 
-  const secondStep = side === 'r' ? lastStep === lastStep.toLowerCase() && lastStep !== '' && lastStep >= 'a'
-    : lastStep === lastStep.toUpperCase() && lastStep !== '' && lastStep >= 'A';
+  // Current turn segment
+  const lastPipe = steps.lastIndexOf('|');
+  const segment = lastPipe === -1 ? steps : steps.slice(lastPipe + 1);
+  const stepIndex = segment.length;
 
-  // More precise: second step means the last char belongs to the current side
-  const isSecondStep = lastStep.length > 0 &&
-    (side === 'r' ? lastStep >= 'a' && lastStep <= 'z' : lastStep >= 'A' && lastStep <= 'Z');
-
-  if (isSecondStep) {
+  // Pass / end-turn / bank options
+  if (stepIndex === 1) {
+    // Second step: pass is always available
     res.push([fixCase('x'), 'end']);
+
+    // Bank if supply > 0
+    const supply = fortSupply(side, grid, steps);
+    if (supply > 0) {
+      res.push([fixCase('k'), 'bank']);
+    }
+  } else if (stepIndex >= 2) {
+    // End turn (free) — blocked if board unchanged from turn start
+    const turnStartSteps = lastPipe === -1 ? '' : steps.slice(0, lastPipe + 1);
+    const turnStartBoard = gridToBoard(after(turnStartSteps));
+    if (gridToBoard(grid) !== turnStartBoard) {
+      res.push([fixCase('x'), 'end']);
+    }
   }
 
+  // Direction moves
   const enemies = enemiesOf(side);
   const found = findPawn(side, grid)!;
   const { x, y, hasFort } = found;
@@ -178,12 +266,15 @@ export function validSteps(side: Side, grid: Grid, steps: string): Record<string
   for (const step of ['n', 's', 'e', 'w'] as Dir[]) {
     const [x2, y2] = relative(step, x, y);
 
-    // prevent 'pass' turns that leave you on the same square
-    if (isSecondStep && step === opposite(lastStep.toLowerCase())) {
-      const beforeLast = after(steps.slice(0, -1));
-      const afterThis = after(steps + step);
-      if (gridToBoard(beforeLast) === gridToBoard(afterThis)) {
-        continue;
+    // Anti-reversal: block opposite-direction if it undoes the previous step
+    if (stepIndex >= 1) {
+      const lastStepInSegment = segment.slice(-1);
+      if (step === opposite(lastStepInSegment.toLowerCase())) {
+        const beforeLast = after(steps.slice(0, -1));
+        const afterThis = after(steps + fixCase(step));
+        if (gridToBoard(beforeLast) === gridToBoard(afterThis)) {
+          continue;
+        }
       }
     }
 
@@ -192,7 +283,8 @@ export function validSteps(side: Side, grid: Grid, steps: string): Record<string
     }
   }
 
-  if (!hasFort && squareCount(side, grid) >= 5) {
+  // Fortify: requires supply > 0 (forts only come from supply, never bank)
+  if (!hasFort && squareCount(side, grid) >= 5 && fortSupply(side, grid, steps) > 0) {
     res.push([fixCase('f'), sq(x, y)]);
   }
 
@@ -214,14 +306,12 @@ export function winner(grid: Grid): Side | null {
 }
 
 export function niceHistory(steps: string): string[] {
-  const moves: string[] = [];
-  for (let i = 0; i < steps.length; i += 4) {
-    const chunk = steps.slice(i, i + 4);
-    if (chunk) moves.push(chunk);
+  const turns = steps.split('|').filter(s => s.length > 0);
+  const result: string[] = [];
+  for (let i = 0; i < turns.length; i += 2) {
+    const red = turns[i] || '';
+    const blue = turns[i + 1] || '';
+    result.push((red + ' ' + blue).trim());
   }
-  return moves.map(m => {
-    const first = m.slice(0, 2);
-    const second = m.slice(2);
-    return (first + ' ' + second).trim();
-  });
+  return result;
 }

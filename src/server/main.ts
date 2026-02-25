@@ -66,6 +66,10 @@ function makeMessage(game: Game, playingAs: Side): GameMessage {
     history: terratri.niceHistory(game.steps),
     validSteps: valid,
     playingAs,
+    redBanked: terratri.bankedMoves('r', game.steps),
+    blueBanked: terratri.bankedMoves('b', game.steps),
+    redSupply: terratri.fortSupply('r', grid, game.steps),
+    blueSupply: terratri.fortSupply('b', grid, game.steps),
   };
 }
 
@@ -193,6 +197,9 @@ wss.on('connection', (ws, req) => {
       if (game.whoseTurn === 'b' && playerId !== game.bluPlayer) return;
 
       game.steps += step;
+      if (terratri.isTurnOver(game.steps)) {
+        game.steps += '|';
+      }
       const grid = terratri.after(game.steps);
       game.board = terratri.gridToBoard(grid);
       game.winner = terratri.winner(grid);

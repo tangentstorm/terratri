@@ -47,7 +47,7 @@ function onUpdate(data: GameMessage) {
     winner: data.winner,
   });
 
-  // Update end-turn button (outside the board flex area)
+  // Update end-turn and bank buttons (outside the board flex area)
   endDiv.innerHTML = '';
   const endInfo = board.endStep;
   if (endInfo) {
@@ -57,10 +57,25 @@ function onUpdate(data: GameMessage) {
     img.addEventListener('click', () => sendStep(endInfo.stepCode));
     endDiv.appendChild(img);
   }
+  const bankInfo = board.bankStep;
+  if (bankInfo) {
+    const img = document.createElement('img');
+    img.className = 'step';
+    img.src = `/images/${bankInfo.imgFile}.png`;
+    img.addEventListener('click', () => sendStep(bankInfo.stepCode));
+    endDiv.appendChild(img);
+  }
 
   // Update fort trays
-  homeForts.update({ board: data.board, playingAs: data.playingAs });
-  awayForts.update({ board: data.board, playingAs: data.playingAs });
+  const trayState = {
+    playingAs: data.playingAs,
+    redBanked: data.redBanked,
+    blueBanked: data.blueBanked,
+    redSupply: data.redSupply,
+    blueSupply: data.blueSupply,
+  };
+  homeForts.update(trayState);
+  awayForts.update(trayState);
 
   // Show history
   if (data.history.length > 0) {

@@ -9,12 +9,12 @@ const kCols = '54321';
 
 /** Map step code to image + arrow direction for red (board not flipped) */
 const stepImgRed: Record<string, string> = {
-  n: 'U', s: 'D', e: 'R', w: 'L', f: 'F', x: 'end',
+  n: 'U', s: 'D', e: 'R', w: 'L', f: 'F', x: 'end', k: 'bank',
 };
 
 /** Map step code to image + arrow direction for blue (board is flipped) */
 const stepImgBlue: Record<string, string> = {
-  N: 'D', S: 'U', E: 'L', W: 'R', F: 'F', X: 'end',
+  N: 'D', S: 'U', E: 'L', W: 'R', F: 'F', X: 'end', K: 'bank',
 };
 
 function spriteHtml(board: string, x: number, y: number): string {
@@ -72,6 +72,19 @@ export class TerratriBoard extends HTMLElement {
     const imgMap = this._playingAs === 'r' ? stepImgRed : stepImgBlue;
     for (const [stepCode, squareName] of Object.entries(this._validSteps)) {
       if (squareName === 'end') {
+        return { stepCode, imgFile: imgMap[stepCode] };
+      }
+    }
+    return null;
+  }
+
+  /** Returns the bank step code if available, or null */
+  get bankStep(): { stepCode: string; imgFile: string } | null {
+    const myTurn = this._playingAs === this._whoseTurn && !this._winner;
+    if (!myTurn) return null;
+    const imgMap = this._playingAs === 'r' ? stepImgRed : stepImgBlue;
+    for (const [stepCode, squareName] of Object.entries(this._validSteps)) {
+      if (squareName === 'bank') {
         return { stepCode, imgFile: imgMap[stepCode] };
       }
     }

@@ -20,6 +20,10 @@ export interface GameMessage {
   history: string[];
   validSteps: Record<string, string>;
   playingAs: Side;
+  redBanked: number;
+  blueBanked: number;
+  redSupply: number;
+  blueSupply: number;
 }
 
 /** Client -> server: join a game room */
