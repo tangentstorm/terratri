@@ -5,25 +5,22 @@ import { v4 as uuidv4 } from 'uuid';
 import * as cookie from 'cookie';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import * as terratri from './terratri.js';
-import type { Board, Side, GameMessage, WsMessage } from '../shared/types.js';
+import { Game } from '../shared/Game.js';
+import type { Side, GameMessage, WsMessage } from '../shared/types.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // ---------------------------------------------------------------------------
 // Game storage
 // ---------------------------------------------------------------------------
-interface Game {
+interface Session {
   key: string;
   redPlayer: string;
   bluPlayer: string | null;
-  board: Board;
-  whoseTurn: Side | '';
-  steps: string;
-  winner: Side | null;
+  game: Game;
 }
 
-const games = new Map<string, Game>();
+const games = new Map<string, Session>();
 
 // Track WS clients per player+game room
 const rooms = new Map<string, Set<WebSocket>>();
@@ -51,43 +48,39 @@ function getPlayerIdFromCookie(cookieHeader: string | undefined): string | null 
   return cookies['player_id'] || null;
 }
 
-function makeMessage(game: Game, playingAs: Side): GameMessage {
-  const grid = terratri.boardToGrid(game.board);
-  let valid: Record<string, string> = {};
-  if (game.whoseTurn && !game.winner) {
-    valid = terratri.validSteps(game.whoseTurn as Side, grid, game.steps);
-  }
+function makeMessage(session: Session, playingAs: Side): GameMessage {
+  const g = session.game;
   return {
-    board: game.board,
-    redPlayer: game.redPlayer,
-    bluPlayer: game.bluPlayer || '',
-    whoseTurn: game.whoseTurn,
-    winner: game.winner,
-    history: terratri.niceHistory(game.steps),
-    validSteps: valid,
+    board: g.board,
+    redPlayer: session.redPlayer,
+    bluPlayer: session.bluPlayer || '',
+    whoseTurn: g.whoseTurn,
+    winner: g.winner,
+    history: g.history,
+    validSteps: g.validSteps,
     playingAs,
-    redBanked: terratri.bankedMoves('r', game.steps),
-    blueBanked: terratri.bankedMoves('b', game.steps),
-    redSupply: terratri.fortSupply('r', grid, game.steps),
-    blueSupply: terratri.fortSupply('b', grid, game.steps),
+    redBanked: g.redBanked,
+    blueBanked: g.blueBanked,
+    redSupply: g.redSupply,
+    blueSupply: g.blueSupply,
   };
 }
 
-function sendUpdate(game: Game): void {
+function sendUpdate(session: Session): void {
   // Send to red player
-  const redRoom = rooms.get(roomKey(game.redPlayer, game.key));
+  const redRoom = rooms.get(roomKey(session.redPlayer, session.key));
   if (redRoom) {
-    const msg: WsMessage = { type: 'update', data: makeMessage(game, 'r') };
+    const msg: WsMessage = { type: 'update', data: makeMessage(session, 'r') };
     const payload = JSON.stringify(msg);
     for (const ws of redRoom) {
       if (ws.readyState === WebSocket.OPEN) ws.send(payload);
     }
   }
   // Send to blue player
-  if (game.bluPlayer) {
-    const bluRoom = rooms.get(roomKey(game.bluPlayer, game.key));
+  if (session.bluPlayer) {
+    const bluRoom = rooms.get(roomKey(session.bluPlayer, session.key));
     if (bluRoom) {
-      const msg: WsMessage = { type: 'update', data: makeMessage(game, 'b') };
+      const msg: WsMessage = { type: 'update', data: makeMessage(session, 'b') };
       const payload = JSON.stringify(msg);
       for (const ws of bluRoom) {
         if (ws.readyState === WebSocket.OPEN) ws.send(payload);
@@ -106,31 +99,28 @@ app.use(express.json());
 app.post('/api/games', (req, res) => {
   const playerId = getPlayerId(req, res);
   const gameKey = uuidv4();
-  const game: Game = {
+  const session: Session = {
     key: gameKey,
     redPlayer: playerId,
     bluPlayer: null,
-    board: terratri.START_BOARD,
-    whoseTurn: 'r',
-    steps: '',
-    winner: null
+    game: new Game(),
   };
-  games.set(gameKey, game);
+  games.set(gameKey, session);
   res.json({ gameKey, playingAs: 'r' });
 });
 
 app.post('/api/games/:key/join', (req, res) => {
   const playerId = getPlayerId(req, res);
-  const game = games.get(req.params.key);
-  if (!game) {
+  const session = games.get(req.params.key);
+  if (!session) {
     res.status(404).json({ error: 'No such game' });
     return;
   }
-  if (!game.bluPlayer && game.redPlayer !== playerId) {
-    game.bluPlayer = playerId;
+  if (!session.bluPlayer && session.redPlayer !== playerId) {
+    session.bluPlayer = playerId;
   }
-  const playingAs: Side = playerId === game.redPlayer ? 'r' : 'b';
-  res.json({ gameKey: game.key, playingAs });
+  const playingAs: Side = playerId === session.redPlayer ? 'r' : 'b';
+  res.json({ gameKey: session.key, playingAs });
 });
 
 // In production, serve Vite build output
@@ -176,36 +166,29 @@ wss.on('connection', (ws, req) => {
 
     if (msg.type === 'join') {
       const { gameKey } = msg.data as { gameKey: string };
-      const game = games.get(gameKey);
-      if (!game) return;
+      const session = games.get(gameKey);
+      if (!session) return;
 
       const rk = roomKey(playerId, gameKey);
       if (!rooms.has(rk)) rooms.set(rk, new Set());
       rooms.get(rk)!.add(ws);
       joinedRooms.push(rk);
 
-      sendUpdate(game);
+      sendUpdate(session);
     }
 
     if (msg.type === 'move') {
       const { gameKey, step } = msg.data as { gameKey: string; step: string };
-      const game = games.get(gameKey);
-      if (!game || !step) return;
+      const session = games.get(gameKey);
+      if (!session || !step) return;
 
       // verify it's this player's turn
-      if (game.whoseTurn === 'r' && playerId !== game.redPlayer) return;
-      if (game.whoseTurn === 'b' && playerId !== game.bluPlayer) return;
+      if (session.game.whoseTurn === 'r' && playerId !== session.redPlayer) return;
+      if (session.game.whoseTurn === 'b' && playerId !== session.bluPlayer) return;
 
-      game.steps += step;
-      if (terratri.isTurnOver(game.steps)) {
-        game.steps += '|';
-      }
-      const grid = terratri.after(game.steps);
-      game.board = terratri.gridToBoard(grid);
-      game.winner = terratri.winner(grid);
-      game.whoseTurn = game.winner ? '' : terratri.whoseTurn(game.steps);
+      session.game = session.game.applyStep(step);
 
-      sendUpdate(game);
+      sendUpdate(session);
     }
   });
 

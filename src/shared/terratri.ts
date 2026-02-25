@@ -17,7 +17,7 @@
  *   '_' = blue territory, 'b' = blue pawn, 'B' = blue fort, 'L' = blue fort+pawn
  */
 
-import type { Board, Grid, Side, Dir } from '../shared/types.js';
+import type { Board, Grid, Side, Dir } from './types.js';
 
 export const START_BOARD: Board =
   '  b  ' +
