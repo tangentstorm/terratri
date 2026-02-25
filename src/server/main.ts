@@ -63,6 +63,7 @@ function makeMessage(session: Session, playingAs: Side): GameMessage {
     blueBanked: g.blueBanked,
     redSupply: g.redSupply,
     blueSupply: g.blueSupply,
+    steps: g.steps,
   };
 }
 

@@ -24,6 +24,7 @@ export interface GameMessage {
   blueBanked: number;
   redSupply: number;
   blueSupply: number;
+  steps: string;
 }
 
 /** Client -> server: join a game room */

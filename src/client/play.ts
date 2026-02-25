@@ -85,6 +85,15 @@ function onUpdate(data: GameMessage) {
       .join(' ');
   }
 
+  // Update replay link
+  const replayLink = document.getElementById('replay-link') as HTMLAnchorElement;
+  if (data.steps) {
+    replayLink.href = `${location.origin}/replay.html?steps=${encodeURIComponent(data.steps)}`;
+    replayLink.style.display = '';
+  } else {
+    replayLink.style.display = 'none';
+  }
+
   // Show appropriate message
   if (!data.bluPlayer) {
     msgOther.style.display = 'block';

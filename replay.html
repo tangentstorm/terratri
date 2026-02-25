@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Terratri Replay</title>
+    <link rel="stylesheet" href="/src/client/style.css" />
+    <style>
+      #replay-controls {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      #replay-controls button {
+        font-size: 14pt;
+        padding: 4px 12px;
+        cursor: pointer;
+      }
+      #replay-slider {
+        width: 300px;
+      }
+      #replay-status {
+        font-size: 10pt;
+        margin: 6px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Terratri Replay</h1>
+    <div class="content">
+      <div id="replay-status"></div>
+
+      <div id="board-area">
+        <fort-tray id="home-forts" side="home"></fort-tray>
+        <terratri-board></terratri-board>
+        <fort-tray id="away-forts" side="away"></fort-tray>
+      </div>
+
+      <div id="replay-controls">
+        <button id="btn-start" title="Start">|&lt;</button>
+        <button id="btn-prev" title="Previous">&lt;</button>
+        <input type="range" id="replay-slider" min="0" value="0" />
+        <button id="btn-next" title="Next">&gt;</button>
+        <button id="btn-end" title="End">&gt;|</button>
+      </div>
+
+      <div id="historyBox" class="message" style="display:none">
+        <p><strong>history: </strong><span id="history"></span></p>
+      </div>
+    </div>
+
+    <script type="module" src="/src/client/replay.ts"></script>
+  </body>
+</html>

@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         play: resolve(__dirname, 'play.html'),
+        replay: resolve(__dirname, 'replay.html'),
       },
     },
   },
