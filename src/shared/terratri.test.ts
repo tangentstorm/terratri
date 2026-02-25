@@ -143,8 +143,9 @@ describe('terratri', () => {
     expect(fortSupply('r', startGrid(), '')).toBe(5);
     // Blue has 1 banked → supply = 4
     expect(fortSupply('b', startGrid(), '')).toBe(4);
-    // After blue spends 1 (SWN): banked=0, spent=1, on board=0 → supply = 4
-    expect(fortSupply('b', after('ns|SWN|'), 'ns|SWN|')).toBe(4);
+    // After blue spends 1 banked move (SWN): banked=0, on board=0 → supply = 5
+    // (the banked fort returns to supply when spent)
+    expect(fortSupply('b', after('ns|SWN|'), 'ns|SWN|')).toBe(5);
   });
 
   test('isTurnOver — basic cases', () => {

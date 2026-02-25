@@ -210,7 +210,7 @@ export function bankedMoves(side: Side, steps: string): number {
 }
 
 export function fortSupply(side: Side, grid: Grid, steps: string): number {
-  return 5 - countFortsOnBoard(side, grid) - bankedMoves(side, steps) - spentMoves(side, steps);
+  return 5 - countFortsOnBoard(side, grid) - bankedMoves(side, steps);
 }
 
 /** Is the current turn segment complete? */
