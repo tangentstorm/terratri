@@ -28,6 +28,32 @@ const fullSteps = params.get('steps') || '';
 // Count total atomic steps (non-'|' characters)
 const totalSteps = [...fullSteps].filter(c => c !== '|').length;
 
+// Precompute per-letter step positions for the full history.
+const fullGame = new Game(fullSteps);
+const fullHistory = fullGame.history;
+const turns = fullSteps.split('|').filter(s => s.length > 0);
+
+interface StepLetter { char: string; stepPos: number }
+interface HistoryEntry { index: number; entryStart: number; red: StepLetter[]; blue: StepLetter[] }
+const entries: HistoryEntry[] = [];
+let cumulative = 0;
+for (let i = 0; i < fullHistory.length; i++) {
+  const redTurn = turns[2 * i] || '';
+  const blueTurn = turns[2 * i + 1] || '';
+  const entryStart = cumulative;
+  const red: StepLetter[] = [];
+  for (const ch of redTurn) {
+    cumulative++;
+    red.push({ char: ch, stepPos: cumulative });
+  }
+  const blue: StepLetter[] = [];
+  for (const ch of blueTurn) {
+    cumulative++;
+    blue.push({ char: ch, stepPos: cumulative });
+  }
+  entries.push({ index: i, entryStart, red, blue });
+}
+
 let current = 0;
 
 function renderAt(n: number) {
@@ -65,12 +91,30 @@ function renderAt(n: number) {
     status.textContent = `Move ${n}/${totalSteps}`;
   }
 
-  // History
-  if (game.history.length > 0) {
+  // History — always show full history, fade future letters
+  if (entries.length > 0) {
     historyBox.style.display = 'block';
-    historySpan.innerHTML = game.history
-      .map((h, i) => `<strong>${i + 1}.</strong> ${h}`)
+
+    function letterSpan(sl: StepLetter): string {
+      const cls = n >= sl.stepPos ? 'history-step' : 'history-step history-future';
+      return `<span class="${cls}" data-step="${sl.stepPos}">${sl.char}</span>`;
+    }
+
+    historySpan.innerHTML = entries
+      .map(e => {
+        const numCls = n > e.entryStart ? '' : ' history-future';
+        let html = `<strong class="${numCls}">${e.index + 1}.</strong> `;
+        html += e.red.map(letterSpan).join('');
+        if (e.blue.length) html += ' ' + e.blue.map(letterSpan).join('');
+        return html;
+      })
       .join(' ');
+
+    historySpan.querySelectorAll('.history-step').forEach(el => {
+      el.addEventListener('click', () => {
+        renderAt(Number((el as HTMLElement).dataset['step']));
+      });
+    });
   } else {
     historyBox.style.display = 'none';
   }
