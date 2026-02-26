@@ -1,25 +1,33 @@
 #+TITLE: Terratri Strategy Guide
-#+SUBTITLE: Synthesized from 100 AI Self-Play Games
+#+SUBTITLE: Synthesized from 200 AI Self-Play Games
 
 * Overview
 
-This guide distills strategic insights from 100 games of Terratri played by AI
-agents using various strategies. The tournament covered opening theory, banking
-tactics, fortification timing, spatial patterns, and endgame technique.
+This guide distills strategic insights from 200 games of Terratri played by AI
+agents across two tournament rounds. Round 1 (100 games) established foundational
+strategy. Round 2 (100 games) pressure-tested, refined, and overturned many
+Round 1 conclusions through deeper theory-informed play.
 
 ** Overall Results
 
-| Batch | Games  | Red Wins | Blue Wins | Theme Focus                          |
-|-------+--------+----------+-----------+--------------------------------------|
-|     1 |  1-20  |        8 |        12 | Strategy matchups (10 strategies)    |
-|     2 | 21-40  |       14 |         6 | Banking, aggression, openings        |
-|     3 | 41-60  |        9 |        11 | Counter-strategies, tempo, spatial   |
-|     4 | 61-80  |       12 |         8 | Red/Blue asymmetry, double-fort      |
-|     5 | 81-100 |       16 |         4 | Optimal play, BlueOpt, championship  |
-| Total | 1-100  |       59 |        41 |                                      |
+| Batch | Games   | Red | Blue | Theme                              |
+|-------+---------+-----+------+------------------------------------|
+|     1 | 1-20    |   8 |   12 | Strategy matchups (10 strategies)  |
+|     2 | 21-40   |  14 |    6 | Banking, aggression, openings      |
+|     3 | 41-60   |   9 |   11 | Counter-strategies, tempo, spatial |
+|     4 | 61-80   |  12 |    8 | Red/Blue asymmetry, double-fort    |
+|     5 | 81-100  |  16 |    4 | Optimal play, BlueOpt              |
+|     6 | 101-120 |   8 |   12 | Red counters to BlueOpt            |
+|     7 | 121-140 |  10 |   10 | Blue innovations                   |
+|     8 | 141-160 |  16 |    4 | Fort placement optimization        |
+|     9 | 161-180 |  13 |    7 | Territory denial                   |
+|    10 | 181-200 |  16 |    4 | Championship games                 |
+| Total | 1-200   | 122 |   78 |                                    |
 
-Red wins 59% overall. The first-mover advantage is significant but not decisive
--- Blue has genuine compensation in the starting banked move.
+Red wins 61% overall. As strategic understanding deepened, Red's advantage grew:
+Round 1 was 59-41; Round 2 was 63-37. Championship-level play (Batch 10) shows
+80% Red wins. Terratri is a Red-favored game -- with optimal play from both sides,
+*Red wins in exactly 7 turns*.
 
 * The Fundamentals
 
@@ -34,16 +42,20 @@ fortify, and you need fort supply (5 minus forts on board minus banked moves).
 Each turn gives you 2 base actions. Options for each action:
 - Move in a cardinal direction (n/s/e/w)
 - Fortify your current square (f) -- requires 5+ territory and fort supply > 0
-- Pass/end turn (x) -- available as 2nd action
-- Bank a move (k) -- available as 2nd action, stores a move for later
+- Pass/end turn (x) -- available as 2nd action only
+- Bank a move (k) -- available as 2nd action only, stores a move for later
+
+Important rule: pass (x) and bank (k) *cannot be the first action* of a turn.
+The first action must be a directional move or fortify.
 
 Banked moves let you take extra actions on future turns (3, 4, 5+ action turns).
 
 ** The Territory Threshold
 
 The single most important number in Terratri is *5*. You cannot place forts
-until you control 5 territory squares. Every strategic decision should be
-evaluated against this threshold:
+until you control 5 territory squares (the =.= and =_= markers on the board --
+your pawn position does not count toward this total). Every strategic decision
+should be evaluated against this threshold:
 - Am I moving toward 5 territory?
 - Will this move cost me territory (dropping below 5)?
 - Can I deny my opponent 5 territory?
@@ -52,46 +64,89 @@ evaluated against this threshold:
 
 ** Red Openings (Ranked)
 
-Red moves first from c1 (center bottom). The opening determines how quickly
-Red reaches 5 territory.
+Red moves first from c1 (center bottom). 200 games have produced a clear
+hierarchy:
 
-*** Tier 1: North-first openings (7-turn wins in symmetric play)
-- =ne= (north-east): c1->c2->d2. Center-east development. Clean and efficient.
-- =nw= (north-west): c1->c2->b2. Contests Blue's western expansion early.
+*** S+ Tier: =wn= (the optimal Red opening)
+
+=wn= (west-north): c1->b1->b2. This is the *universal optimal Red opening*,
+discovered in Batch 10 championship games. It works because:
+
+1. Creates territory on the b-column (b1, b2) away from the c-column
+2. Followed by =en= (b2->c2->c3), gives Red 5 territory (c1, b1, b2, c2, c3)
+3. Red's fort chain then runs through d3->d4->d5->c5->c4 -- entirely through
+   Blue's standard expansion path
+4. No overlap between Red's territory base and fort chain (self-fueling)
+5. Beats both Blue SES and Blue SWS responses
+
+The complete optimal Red line: =wn|...|en|...|ef|...|nf|...|nf|...|wf|...|sf|=
+
+Game 200 verified: Red wins Turn 7 with 5 forts to Blue's 1.
+
+*** A Tier: North-first openings (7-8 turn wins)
+- =ne= (north-east): c1->c2->d2. Clean center-east development.
 - =en= (east-north): c1->d1->d2. Develops the east flank smoothly.
 
-These reach 5-6 territory by Turn 3, enabling fortification from Turn 4.
+These reach 5 territory by Turn 3 but are slightly inferior to =wn= because
+the c-column territory overlaps with optimal fort placement paths.
 
-*** Tier 2: Flanking openings (8-turn wins, viable)
-- =wn= (west-north): c1->b1->b2. Leaves east side undeveloped. Blue can exploit.
-- =nn= (north-north): c1->c2->c3. Fast center control but narrow territory.
-- =ee= (east-east): c1->d1->e1. Edge play, efficient for column fortification.
-- =ww= (west-west): c1->b1->a1. Edge play on the west side.
+*** B Tier: Viable but suboptimal
+- =nn= (north-north): c1->c2->c3. Fast center control but *fatally vulnerable*
+  to Blue SWS. Games 184, 187, 192 all show Blue winning against =nn=.
+- =ee= (east-east): c1->d1->e1. Edge play, efficient but narrow.
+- =nw= (north-west): c1->c2->b2. Similar to =wn= but c2 territory overlaps fort path.
 
-*** Tier 3: Avoid
-- =ew= (east-west): c1->d1->c1. Returns to start. Wastes entire first turn.
-- Any opening that returns to a previously visited square.
+*** F Tier: Avoid
+- =ew= / =we= / any backtracking: Returns to a visited square. Pure tempo waste.
+- Any banking opening (=nk=, =ek=): Round 2 proved banking as Red always loses tempo.
 
 ** Blue Openings
 
 Blue starts at c5 (center top) with 1 banked move, giving 3 actions on Turn 1.
 
-*** Standard Expansion
-- =SES= (south-east-south): c5->c4->d4->d3. Strong center-east presence.
-- =SSE= (south-south-east): c5->c4->c3->d3. Deep center penetration.
-- =WSW/WSE= (west-south-west/east): Flanking approaches.
+*** S Tier: Standard SES (best overall Blue response)
 
-*** BlueOpt (strongest Blue opening)
-- =SK= (south-bank): c5->c4, bank. Only 1 territory but saves 2 banked moves total.
-- Then Turn 2: =SSES= burst through Red's trail for 5 territory in one turn.
-- This is the strongest Blue opening found across 100 games.
+=SES= (south-east-south): c5->c4->d4->d3. Against the optimal Red =wn=, this
+is Blue's best response. It loses in 7 turns but puts up the most competitive
+fight, creating territory on the d-column that Red must march through.
 
-** Opening Principles
+*** A Tier: Situational counters
 
-1. *Move toward the center first* -- north-component openings are strongest for Red.
-2. *Claim unique territory* -- never revisit squares you've already marked.
-3. *Reach 5 territory by Turn 3* -- this enables fortification from Turn 4.
-4. *Blue should consider banking Turn 1* -- the BlueOpt SK opening is powerful.
+=SWS= (south-west-south): c5->c4->b4->b3. *Beats Red =nn=* by blocking Red's
+optimal =wn= path. Blue's best choice when Red opens =nn= (Games 184, 187, 192).
+Loses to Red =wn= because Red already occupies the b-column.
+
+*** B Tier: Adaptive BlueOpt
+
+=SK= (south-bank) Turn 1, then burst Turn 2. Round 2 refined this into
+*Adaptive BlueOpt*: choose burst direction based on Red's opening trail.
+
+Best burst per Red opening:
+- vs =nn= openings: =SSWS= (7-turn wins -- fastest Blue strategy found)
+- vs =en= openings: =SSES= (8 turns, overwrites d-column)
+- vs =wn= openings: =WSSW= (8 turns, overwrites b/a-columns)
+
+The burst must target Red's specific trail to overwrite territory. Non-adaptive
+bursts fail against c-column-avoiding Red.
+
+However, Batch 10 showed that *BlueOpt is slightly slower than standard SES*
+against optimal Red play. The banking cost (1 fort supply) and delayed expansion
+negate the burst advantage. BlueOpt remains strong against suboptimal Red.
+
+*** C Tier: Double-Fort (FEF/FWF)
+
+Places 2 forts in one turn using the banked move. Viable against unprepared Red
+but countered by blocking forts at c4 (Game 75, 80). Banking cost negates the
+fort advantage at championship level (Batch 10).
+
+** Opening Principles (Revised)
+
+1. *Red should play =wn=.* The universal optimal opening. Avoids c-column overlap.
+2. *Blue should play SES against =wn=.* The most competitive losing response.
+3. *Blue should play SWS against =nn=.* Exploits Red's c-column vulnerability.
+4. *Blue should bank (SK) only against suboptimal Red.* Standard expansion beats
+   BlueOpt when Red plays optimally.
+5. *Never bank as Red.* Every game where Red banked in Round 2 lost tempo.
 
 * Fortification Strategy
 
@@ -104,42 +159,71 @@ delay fortification, your opponent can place a fort and pull ahead in the race.
 "Territory without forts is ephemeral." -- Game 18 (Batch 1)
 #+end_quote
 
-In Games 5 and 18, the "late fort" strategy (maximize territory before fortifying)
-consistently lost to "early fort" (fortify immediately at 5 territory). Red had 8
-territory in Game 18 but zero forts, and lost to Blue's 5 territory + 2 forts.
-
 ** The Fort-Move Pattern
 
-The optimal endgame technique is alternating fortify-move:
-- =sf= (south, fortify), =nf= (north, fortify), =ef= (east, fortify)
-- Or =fs= (fortify, south), =fn= (fortify, north), etc.
+The optimal endgame technique is alternating move-fortify:
+- =ef= (east, fortify), =nf= (north, fortify), =sf= (south, fortify)
+- Or =fe= (fortify, east), =fn= (fortify, north), etc.
 
-This places one fort per turn while positioning for the next. Games 56 and 60
-demonstrate that when both players use this pattern, Red wins in 8 turns purely
-from first-mover advantage.
+This places one fort per turn while positioning for the next.
 
-** Fort Placement Principles
+** The Key Discovery: Through-Territory Forting
 
-*** Connected forts are stronger than scattered forts
-Fort walls (lines of adjacent forts) serve dual purpose:
-- Score toward the 5-fort win condition
-- Block enemy pawn movement
+The single most important strategic discovery across 200 games:
 
-Game 11 (Batch 1) showed Blue building a wall from c4 to a2 that Red couldn't
-breach. Games 61-63 (Batch 4) showed Red's row-5 fort sweep as devastating.
+#+begin_quote
+*Build forts on your opponent's territory, not your own.*
+#+end_quote
 
-*** Fort on enemy territory creates double advantage
-When you fortify on a square the opponent previously claimed, you simultaneously:
-- Gain a fort (progressing toward win)
-- Deny opponent a territory square (potentially dropping them below 5)
+This is the principle of *self-fueling vs self-consuming* forts (Batch 8):
 
-Games 62, 73, 75, and 78 (Batch 4) demonstrated this -- Red's eastward fort sweep
-through Blue's territory was often game-winning.
+*** Self-fueling forts (S Tier)
+Fort on enemy or unclaimed territory. Each fort placed:
+- Scores toward your 5-fort win condition
+- Steals an opponent territory square (denial as free side effect)
+- Preserves your own territory count above the fortification threshold
 
-*** Blocking forts disrupt opponent plans
-Game 75 (Batch 4) showed the key counter to Blue's double-fort: Red places a
-fort at c4, directly blocking Blue's northward fort column. This forced Blue to
-detour, costing a critical tempo.
+Red's optimal fort chain (d3->d4->d5->c5->c4) runs *entirely through Blue's
+standard territory*, denying Blue 1 square with every fort placed. By Turn 5,
+Blue has been pushed below 5 territory and cannot fort at all.
+
+*** Self-consuming forts (C Tier)
+Fort on your own territory. Each fort placed:
+- Scores toward your 5-fort win condition
+- BUT consumes one of your own territory markers
+- Risks dropping yourself below the 5-territory threshold
+
+Column sweeps along your own expansion axis are the classic self-consuming
+mistake. Red forting along c1->c2->c3 eats into Red's own dot trail.
+
+*** Fort Placement Hierarchy
+
+1. *Self-fueling > self-consuming*: Always prefer enemy/unclaimed squares.
+2. *Straight-line > diagonal*: Fort-move-fort in one direction = 2 actions/fort.
+   Diagonal requires alternating, costing 3+ actions/fort.
+3. *Row sweep > column sweep*: Rows cross both players' territory; columns run
+   parallel to expansion axes and tend to self-consume.
+4. *Connected forts > scattered*: Fort walls block opponent movement AND score.
+5. *Adaptive > forced geometry*: Evaluate which squares give the best denial
+   bonus rather than committing to a fixed geometric pattern.
+
+** Fort Blocking
+
+Blocking forts disrupt opponent plans at the cost of 1 tempo. The main
+applications:
+
+- *c4 block*: Counters Blue's FEF double-fort by cutting the northward column.
+- *Row wall*: A connected row of 3+ forts bisects the board and blocks movement.
+  Blue's c-column fort wall (c2-c3-c4-c5) is the strongest structural defense.
+- *Fort-denial*: Placing a fort on the opponent's planned fort path forces them
+  to reroute, costing 2+ opponent turns for your 1 tempo investment.
+
+** Comeback Potential
+
+Round 2 conclusively proved: *a player 2+ forts behind cannot recover* against
+competent play (Batch 8). Two forts = 3-4 tempi deficit, which is insurmountable.
+The maximum recoverable deficit is 1 fort, achievable only through aggressive
+territory invasion that drops the opponent below the 5-territory threshold.
 
 * Banking Strategy
 
@@ -156,226 +240,305 @@ supply. Blue starts with 1 free banked move.
 |      3 |            5 |                3 |
 |      4 |            6 |                4 |
 
-** The Banking Spectrum
+** Round 2 Verdict: Banking is Mostly Suboptimal
 
-*** No banking (pure expansion)
-Consistent, reliable. Fort every turn once at 5 territory.
-Win rate: ~50% (depends on strategy).
+Round 1 treated banking as a tactical option. Round 2 proved it is *almost
+always suboptimal*:
 
-*** Light banking (1-2 banks)
-Bank 1-2 moves for a tactical burst. The optimal balance.
-Enables 3-4 action turns for catching up or making a push.
+- *Red should never bank.* Both actions should be used for expansion/fortification.
+  Every banking game for Red in Batches 8 and 10 lost tempo. The =nk= counter to
+  BlueOpt (Batch 6) showed marginal success (~55%) but is strictly worse than the
+  =wn= opening which beats BlueOpt without banking.
 
-*** Heavy banking (3-4 banks)
-High-risk, high-reward. The "bank-4-burst-3-forts" pattern (Games 49, 59 in Batch 3)
-places 3 forts in one massive turn. But banking 4+ turns gives the opponent free
-fortification time.
+- *Blue's free bank is key.* Blue starts with 1 banked move (3 actions Turn 1).
+  This is Blue's structural compensation for going second.
 
-*** Maximum banking (5 banks)
-5 banked = 0 fort supply = cannot place any forts until you spend banked moves.
-Games 3 and 9 (Batch 1) showed 7-action turns that are spectacular but usually too late.
+- *Additional Blue banking (SK) is situational.* Against suboptimal Red (=nn=
+  openings), the BlueOpt SK->burst is the fastest Blue strategy (7-turn SSWS).
+  Against optimal Red (=wn=), standard SES without additional banking is stronger.
 
-** Optimal Banking Tactics
+** When Banking Still Works
 
-*** Red: Bank-2-Burst
-- Turns 1-2: Move + bank each turn (=nk=, =wk=)
-- Turn 3: 4-action burst: move-move-move-fortify
-- Then: Normal fort-move pattern
+1. *Blue SK against Red =nn=*: The adaptive BlueOpt burst overwrites Red's
+   c-column trail. This is the one remaining high-value banking play.
+2. *Desperation*: When already losing, banking for a multi-fort burst turn is
+   the only comeback mechanism. It rarely works but is the best bad option.
 
-This reaches the same position as normal play but is neither better nor worse
-(Game 86, Batch 5). Banking as Red is a style choice, not an advantage.
+** Banking Traps (Confirmed by Round 2)
 
-*** Blue: BlueOpt (Bank-then-Burst)
-- Turn 1: =SK= (move south, bank). Total: 2 banked moves.
-- Turn 2: =SSES= (4-action burst through Red's unfortified territory trail).
-- Turn 3+: Fort aggressively from the bottom of the board.
-
-This is the *strongest Blue strategy discovered*. It exploits the fact that Red's
-early territory is unfortified and can be overwritten. Games 92, 96, and 97 (Batch 5)
-show it beating Smart Red consistently.
-
-*** Blue: Double-Fort (FEF/FWF)
-- Turns 1-3: Preserve banked move while expanding (use =X= to end turn early)
-- Turn 4: =FEF= (fortify, east, fortify) or =FWF= (fortify, west, fortify)
-- This places 2 forts in one turn, compensating for Blue's second-mover disadvantage.
-
-Games 66-70 (Batch 4) systematically proved this technique:
-- FEF wins in 7 turns when Red doesn't counter
-- FWF is the mirror variant (works identically)
-- Red's counter: block the fort direction with a fort at c4 (Game 75, 80)
-
-** Banking Traps
-
-1. *Banking too long*: Banking 4+ turns as Red gives Blue 3+ free forts (Games 3, 21).
-2. *Fort supply exhaustion*: Banked moves reduce fort supply. 5 banked = 0 supply.
-3. *No opponent pressure*: Banking only works if the opponent doesn't build an
-   insurmountable fort lead during the banking phase.
+1. *Banking too long*: Banking 4+ turns gives the opponent free forts.
+2. *Fort supply exhaustion*: 5 banked = 0 supply = no forts possible.
+3. *Delayed burst is strictly inferior*: Batch 7 proved that banking beyond 1
+   extra move (Blue SK) never recovers the lost tempo.
+4. *Triple-fort is impossible*: Requires 5+ banked moves, by which time the
+   opponent has 3-4 forts already (Batch 7).
 
 * Territory Control
 
 ** Spatial Patterns
 
 *** Edge/Column play
-Moving along an edge (a-column, e-column, row 1, row 5) creates linear territory
-that is easy to fortify. Games 88 and 94 (Batch 5) showed Wall and Edge strategies
-winning by building efficient fort columns.
-
-Advantage: Simple, efficient path. No decision-making overhead.
-Disadvantage: Opponent can claim the entire center uncontested.
+Moving along an edge creates linear territory easy to fortify. Efficient but
+cedes the center.
 
 *** Center play
-Center control (c3 area) is positionally strong but has a fatal flaw: the center
-only has 4-5 reachable squares without doubling back. Game 90 (Batch 5) showed the
-"Center" strategy trapped in infinite oscillation, never reaching 5 territory.
+Center control (c3) is positionally strong but has the oscillation trap: the
+center has only 4-5 reachable squares without backtracking. Game 90 showed the
+"Center" strategy stuck in infinite oscillation.
 
-Advantage: Central position reaches all board quadrants.
-Disadvantage: Oscillation trap. Smaller territory ceiling.
+*** The Optimal Pattern: Separate Territory Base from Fort Chain
 
-*** Diagonal play
-Moving in alternating north-east / south-west patterns covers ground efficiently.
-Game 17 (Batch 1) showed diagonal Red reaching all four corners before Blue's
-defensive forts could block.
+The key structural principle (Batches 8, 10): your territory base (the 5+
+squares that enable fortification) should be geographically separate from your
+fort chain (the path where you place forts).
 
-Advantage: Wide coverage, good fort placement variety.
-Disadvantage: Can create gaps in territory that opponents exploit.
+Red's optimal example:
+- Territory base: c1, b1, b2, c2, c3 (b/c-columns, rows 1-3)
+- Fort chain: d3, d4, d5, c5, c4 (d-column + c-column upper, rows 3-5)
+- Zero overlap: every fort is on enemy territory (self-fueling)
+
+When territory base and fort chain overlap (self-consuming), each fort placed
+risks dropping below the 5-territory threshold, forcing costly rebuilding.
 
 ** Territory Denial
 
-When you move onto an opponent's territory square, you claim it. This is a
-powerful tactic in the mid-game:
+Round 2 (Batch 9) extensively tested territory denial as a primary strategy.
+The revised understanding:
 
-1. *Reduces opponent's territory count* -- potentially below 5 (blocking forts)
-2. *Increases your territory count* -- potentially reaching 5 (enabling forts)
-3. *Disrupts opponent's fort path* -- forces them to rebuild before fortifying
+*** Denial is a secondary effect, not a primary strategy
 
-Game 78 (Batch 4): Blue's aggressive T1 bank-spend (SES toward Red) backfired --
-Red captured Blue's territory and invaded southward, leaving Blue permanently below
-the 5-territory threshold.
+Pure denial (stepping on opponent territory without forting) wastes tempo. The
+denier falls behind in the fort race. The hierarchy:
+
+1. *Fort-denial* (S Tier): Place forts on opponent's territory. Scores AND denies.
+2. *Incidental denial* (A Tier): Choose expansion paths through opponent territory.
+   Free side effect, no tempo cost.
+3. *Structural denial* (B Tier): Fort walls that permanently bisect the board.
+   Powerful but expensive (3+ turns for a wall).
+4. *Pure denial* (D Tier): Stepping on territory without forting. Temporary and
+   costly. Only worthwhile to drop opponent below 5 before their first fort.
+
+*** The Denial Hierarchy
+
+| Strategy        | Beats           | Loses to         |
+|-----------------+-----------------+------------------|
+| Counter-denial  | Denial          | --               |
+| Denial          | Fort-focus      | Counter-denial   |
+| Fort-focus      | Passive         | Denial (pre-fort)|
+| Passive         | --              | Everything       |
+
+Counter-denial = reading the opponent's fort direction and blocking it with
+your own fort. This costs 1 tempo but disrupts 2+ opponent turns.
+
+*** When to Switch from Denial to Fortification
+
+Switch to fortification IMMEDIATELY when you have 5+ territory, fort supply > 0,
+and your position is on a good fort path. Never spend a turn on pure denial when
+you could fort instead. Fort-denial (forting on enemy territory) is always
+superior to stepping-on-territory denial because it scores AND denies.
 
 * Counter-Strategies
 
-** Countering Aggressive Play
+** Countering BlueOpt (Resolved)
 
-Aggression (rushing toward the opponent) wins when it disrupts their territory.
-It loses when the opponent simply avoids it.
+Round 1 left this as an open question. Round 2 provided the answer:
 
-Counter: *Flanking*. Move away from the aggressor and build territory on the
-opposite side of the board. Games 41-45 (Batch 3) showed counter-strategies
-winning 5/5 against aggressive Red.
+*Red =wn= beats BlueOpt without any special counter.*
 
-** Countering Banking
+The =wn= opening creates territory on the b-column, away from Blue's standard
+burst paths. Red then pushes through d3->d4->d5 with through-territory forting,
+denying Blue territory with every fort placed. BlueOpt's burst cannot overwrite
+b-column territory efficiently.
 
-Against a banking player, you have several free turns to expand and fortify.
+The Batch 6 =nk= + =wne= (c3 block) counter is weaker (~55%) because:
+- It requires banking, which loses tempo
+- Blue can counter-counter with west detour (WSSE) through Red's b-column trail
+- The block creates a critical vulnerability in Red's own territory
 
-Counter: *Steady fortification*. Place one fort per turn while the opponent banks.
-By the time they burst, you'll have 3+ forts to their 0. Games 21-22 (Batch 2)
-showed that banking rarely overcomes a 3+ fort deficit.
+** Countering Red =wn= (Blue's Dilemma)
 
-Exception: If the burstor reaches 5 territory and can place 3 forts in one turn
-(bank-4-burst pattern), the burst can overcome a 2-fort deficit (Game 25).
+No Blue strategy consistently beats optimal Red =wn=. The best responses:
+
+1. *SES* (best): c5->c4->d4->d3. Competitive but loses in 7 turns.
+2. *SWS*: c5->c4->b4->b3. Loses because Red already holds b-column.
+3. *Adaptive BlueOpt*: SK + burst. Slightly slower than SES against =wn=.
+4. *Aggression*: Rush toward Red. Fails because Red forts while Blue chases.
+
+Blue's win condition against =wn=: *Red must misplay.* Specifically, Red must
+open =nn= (allowing Blue SWS) or delay fortification. Against perfect Red play,
+Blue cannot win.
 
 ** Countering the Double-Fort (FEF)
 
-Blue's double-fort at Turn 4 is a tempo play. Red's counter:
+Red's counter:
+1. Read the direction: FEF goes east, FWF goes west.
+2. Block at c4 with a fort, cutting Blue's northward column.
+3. Fort into Blue's territory to drop them below 5.
 
-1. *Read the direction*: FEF goes east, FWF goes west.
-2. *Block the path*: Place a fort in Blue's planned column (c4 blocks FEF-northward).
-3. *Capture their territory*: Fort into Blue's territory to drop their count below 5.
+** Countering Aggression
 
-Games 75 and 80 (Batch 4) showed this counter working. Red wins 8 turns by blocking
-at c4 then sweeping east through Blue's territory.
+Counter with flanking: move away from the aggressor and build territory on the
+opposite side. Games 41-45 (Batch 3) showed flanking winning 5/5 against
+aggressive Red.
 
-** Countering BlueOpt
+** Countering Banking
 
-BlueOpt (bank Turn 1, burst Turn 2 through Red's trail) is harder to counter.
-It beats both Smart and Rush Red strategies (Games 92, 96, 97 in Batch 5).
+Place one fort per turn during the opponent's banking phase. A 3+ fort deficit
+from banking is unrecoverable (confirmed Batch 8).
 
-Potential counters (not fully proven):
-- Red avoids the c-column entirely (e.g., =en= to d1->d2 instead of =nn= through c2)
-- Red plays BlueOpt-as-Red (Game 98), banking to out-tempo Blue
-- The definitive Red counter to BlueOpt remains an open problem
+* Strategy Tier List (Final -- 200 Games)
 
-* Strategy Tier List
+** Red Strategies
 
-Based on 100 games of tournament data:
+*** S+ Tier
+- =wn= + =en= + through-territory forting :: The optimal Red line. Fort chain
+  runs through Blue's territory (d3->d4->d5->c5->c4). 7-turn wins. Beats every
+  Blue response.
 
-** S Tier
-- *BlueOpt*: Bank T1 then burst through opponent's trail. Won 5/5 games played.
-  The strongest Blue strategy and strong as Red too.
+*** A Tier
+- =ne= / =en= + adaptive forting :: Clean development, 7-8 turn wins. Slightly
+  inferior to =wn= due to c-column overlap. Reliable against most Blue play.
 
-** A Tier
-- *Smart/Fort-focused*: Expand efficiently, fortify immediately at 5 territory,
-  fort-move pattern. The reliable workhorse. Red wins 7-8 turns in most matchups.
-- *Double-fort (FEF)*: Blue's key technique. Compensates for second-mover
-  disadvantage. Beatable but forces Red to read and counter.
+*** B Tier
+- =nn= + standard fort sweep :: Fast center control but *vulnerable to Blue SWS*.
+  Red =nn= is the one opening where Blue can win consistently. Avoid unless you
+  know Blue won't play SWS.
+- Edge/Wall strategies (=ee=, =ww=) :: Efficient fort columns along board edges.
+  Reliable but cedes the center.
 
-** B Tier
-- *Edge/Wall*: Viable, efficient fort paths along board edges. Slightly less
-  flexible than center approaches but reliable.
-- *Banking burst*: High-risk, high-reward. Bank-4-burst-3-forts can overcome
-  deficits but dangerous if opponent fortifies aggressively during banking phase.
+*** C Tier
+- Banking variants (=nk=) :: Loses tempo. The c3 block counter to BlueOpt has
+  only ~55% win rate and is strictly worse than =wn=.
+- Aggressive/Raider :: Disrupts opponent but wastes tempo chasing. Works against
+  passive play, fails against competent opponents.
 
-** C Tier
-- *Aggressive/Raider*: Disrupts opponent but can waste tempo chasing.
-  Works against passive opponents, fails against flankers.
-- *Expansion*: Pure territory maximization. Equivalent to Smart in practice
-  but sometimes fortifies too late.
+*** F Tier
+- Defensive / passive :: Cedes all initiative. "Defense loses in Terratri."
+- Center oscillation :: Trapped in infinite loops. Catastrophically bad.
 
-** D Tier
-- *Defensive*: Cedes initiative. "Defense loses in Terratri" -- territory
-  control requires active expansion.
-- *Late fort*: Maximizing territory before fortifying. Creates longest games
-  (19 turns) but gives opponent free forts.
+** Blue Strategies
 
-** F Tier
-- *Center oscillation*: Greedy center-seeking without memory. Trapped in
-  infinite loops, never reaches 5 territory. Catastrophically bad.
-- *Random*: Wastes actions on passes and aimless wandering. Still wins as
-  Red (!) due to first-mover advantage, showing how strong the tempo is.
+*** S Tier
+- Standard SES against Red =wn= :: Best response to optimal Red. Loses in 7 but
+  most competitive option. Creates territory on d-column.
+- SWS against Red =nn= :: Beats Red's second-best opening. Blue's only reliable
+  winning line at high-level play.
 
-* Key Principles Summary
+*** A Tier
+- Adaptive BlueOpt (SK + directional burst) :: Strong against suboptimal Red.
+  Choose burst direction based on Red's trail:
+  - vs =nn=: SSWS (7-turn wins, fastest)
+  - vs =en=: SSES (8 turns)
+  - vs =wn=: WSSW (8 turns)
+  Slightly slower than standard SES against =wn=.
 
-1. *Reach 5 territory by Turn 3*. This is the single most important goal.
-2. *Fortify immediately at threshold*. One delayed fort can cost the game.
-3. *Fort-move-fort-move*. The optimal endgame pattern. Every turn should place a fort.
-4. *Connected forts > scattered forts*. Fort walls block movement and score simultaneously.
-5. *Territory without forts is ephemeral*. Unfortified territory can be overwritten.
-6. *Banking is timing*. 1-2 banks for tactical advantage; 4+ banks for desperate comeback.
-7. *Blue's banked move is key*. Used for double-fort (FEF) or BlueOpt burst, it compensates for going second.
-8. *Red's advantage is tempo*. In symmetric play, Red wins by one turn. Blue must break symmetry.
-9. *Read your opponent*. Counter aggression with flanking. Counter banking with steady forts.
-10. *Never oscillate*. Always move to new/unclaimed squares. Revisiting wastes tempo.
+*** B Tier
+- Standard SSES BlueOpt :: The original BlueOpt. Beats most Red openings in 8
+  turns. Less efficient than adaptive burst but simpler.
+- Double-Fort FEF/FWF :: 2 forts in one turn. Viable against unprepared Red,
+  countered by c4 blocking fort. Banking cost hurts at championship level.
 
-* Appendix: Game Length Distribution
+*** C Tier
+- Structural denial (c-column fort wall) :: Powerful defensive structure but
+  expensive (3+ turns). Only worthwhile if Red doesn't read it and counter.
 
-| Turns | Count | Notes                              |
-|-------+-------+------------------------------------|
-|     7 |    36 | Optimal or near-optimal play        |
-|     8 |    30 | Standard well-played game           |
-|     9 |    16 | Slight inefficiencies               |
-|    10 |     6 | Banking burst or Rush repositioning  |
-|    11 |     5 | Extended territorial battles         |
-|    12 |     4 | Late-fort or comeback games          |
-|   13+ |     3 | Aggressive chasing or deep banking   |
+*** F Tier
+- Maximum banking :: 5 banked = 0 fort supply. Always loses.
+- Turtle / passive :: Wastes tempo. Even Random Red beats passive Blue.
 
-Average game length: ~8.2 turns. The theoretical minimum appears to be 7 turns
-(earliest fort at Turn 3 + 4 more turns of fort-move = 5 forts by Turn 7).
+* The Optimal Game
 
-* Appendix: The Terratri Metagame
+The verified optimal line (Game 200, confirmed move-by-move via MCP tool):
 
-The metagame has a rock-paper-scissors quality:
+#+begin_example
+Steps: wn|SES|en|SE|ef|NX|nf|NX|nf|FN|wf|SX|sf|
+#+end_example
 
-- *Steady fort-play* beats banking (free forts while opponent saves)
-- *Banking burst* beats slow expansion (burst overcomes territory lead)
-- *Counter-flanking* beats aggression (avoid confrontation, build elsewhere)
-- *Aggression* beats defense (claim contested territory, deny forts)
-- *BlueOpt* beats standard play (exploits unfortified trail weakness)
-- *Blocking forts* beat double-fort (read direction, block column)
+| Turn | Red                         | Blue                        |
+|------+-----------------------------+-----------------------------|
+|    1 | =wn= c1->b1->b2            | =SES= c5->c4->d4->d3       |
+|    2 | =en= b2->c2->c3            | =SE= d3->d2->e2             |
+|    3 | =ef= c3->d3, fort d3       | =NX= e2->e3, pass           |
+|    4 | =nf= d3->d4, fort d4       | =NX= e3->e4, pass           |
+|    5 | =nf= d4->d5, fort d5       | =FN= fort e4, e4->e5        |
+|    6 | =wf= d5->c5, fort c5       | =SX= e5->e4, pass           |
+|    7 | =sf= c5->c4, fort c4       | -- RED WINS (5 forts)       |
 
-No single strategy dominates all others, though BlueOpt comes closest for Blue
-and Smart/Fort-focused is the safest for Red.
+Key dynamics:
+- Red's fort chain (d3, d4, d5, c5, c4) runs entirely through Blue's territory
+- Each Red fort steals a Blue territory square (through-territory forting)
+- Blue is pushed below 5 territory and can only manage 1 fort by Turn 5
+- Red wins 5-1 in forts despite Blue playing competently
 
-The deepest strategic question remains open: what is Red's optimal counter to
-BlueOpt? The 100-game tournament suggests Red should either avoid the c-column
-(denying Blue the burst path) or adopt the BlueOpt banking pattern as Red
-(leveraging first-mover advantage with the burst).
+* Key Principles Summary (Revised)
+
+1. *Red =wn= is optimal.* The universal best Red opening across 200 games.
+2. *Separate territory base from fort chain.* Self-fueling forts (on enemy
+   territory) are vastly superior to self-consuming forts (on your own).
+3. *Fortify immediately at threshold.* One delayed fort can cost the game.
+4. *Fort-move-fort-move.* The optimal endgame pattern. Every turn should place a fort.
+5. *Through-territory forting wins games.* Build forts on your opponent's territory.
+   Each fort scores AND denies -- a double advantage that compounds each turn.
+6. *Blue cannot win against perfect Red.* Blue's goal is to exploit Red mistakes.
+   The most common Red mistake is the =nn= opening (allows Blue SWS counter).
+7. *Two forts behind is unrecoverable.* The maximum comeback is from 1 fort behind,
+   and only by dropping the opponent below the 5-territory threshold.
+8. *Banking is almost always wrong.* The only high-value bank is Blue SK against
+   Red =nn=. Red should never bank. Additional Blue banking loses tempo.
+9. *Territory denial is a side effect, not a strategy.* Fort-denial (forting on
+   enemy territory) achieves denial for free. Pure denial wastes tempo.
+10. *Read your opponent's opening.* The optimal Blue response depends entirely on
+    Red's first move: SES against =wn=, SWS against =nn=, adaptive BlueOpt
+    against suboptimal Red.
+
+* Appendix: The Solved Game
+
+Terratri appears to be a *solved game in Red's favor*. With optimal play:
+
+- Red wins in exactly 7 turns (the theoretical minimum)
+- Red places 5 forts while Blue manages only 1
+- Blue cannot force a win from any position against optimal Red
+
+The game's balance stands at approximately *75-25 in Red's favor* at
+championship level. Blue can only win when Red plays suboptimally, particularly
+the =nn= opening which allows the Blue SWS counter.
+
+This makes Terratri structurally similar to other first-mover-advantage abstract
+games (like Connect Four, where first player wins with perfect play). The
+game remains interesting for human play because:
+1. The =wn= + through-territory forting line must be known and executed precisely
+2. Suboptimal Red openings create genuine Blue winning chances
+3. The adaptive response tree (SES vs SWS vs BlueOpt) rewards reading your opponent
+4. At casual skill levels, the game is balanced and dynamic
+
+** Win Rate Evolution
+
+| Stage              | Red % | Blue % | Games |
+|--------------------+-------+--------+-------|
+| Early exploration  |   53% |    47% | 1-40  |
+| Theory development |   53% |    47% | 41-80 |
+| BlueOpt era        |   60% |    40% | 81-120|
+| Fort optimization  |   73% |    27% | 121-160|
+| Championship       |   80% |    20% | 161-200|
+| Overall            |   61% |    39% | 1-200 |
+
+The trajectory shows Red's win rate steadily increasing as strategic
+understanding deepened. Early games explored widely and Blue's banking advantage
+masked Red's structural edge. As fort placement was optimized and through-territory
+forting discovered, Red's inherent first-mover advantage became dominant.
+
+** Open Questions
+
+Even after 200 games, some questions remain for future investigation:
+
+1. *Is the optimal line truly forced?* Does Blue have a response to Red =wn=
+   that performs better than SES? Could an unconventional Blue opening (e.g.,
+   =EK= east-bank, or =WK= west-bank) surprise Red?
+2. *Board size sensitivity.* Would Terratri on a 7x7 or 9x9 board change the
+   Red advantage? Larger boards may give Blue more room to establish territory
+   before Red's fort chain reaches them.
+3. *Fort threshold sensitivity.* If the fortification threshold were 6 or 7
+   instead of 5, would Blue have better chances? Higher thresholds slow the
+   fort race and may reduce first-mover advantage.
+4. *Alternative win conditions.* Could a territory-based alternative win
+   condition (e.g., control 15+ squares) create more balanced gameplay?

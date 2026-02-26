@@ -1,0 +1,767 @@
+#+TITLE: Terratri Round 2 -- Batch 8 (Games 141-160): Fort Placement Optimization
+
+* Summary
+
+20 games exploring fort placement paths, blocking strategies, and comeback
+mechanisms. Red won 16/20, Blue won 4/20.
+
+| Games   | Theme                     | Red Wins | Blue Wins |
+|---------+---------------------------+----------+-----------|
+| 141-145 | Optimal Red fort paths    |        2 |         3 |
+| 146-150 | Optimal Blue fort paths   |        5 |         0 |
+| 151-155 | Blocking fort strategies  |        4 |         1 |
+| 156-160 | Comeback mechanisms       |        5 |         0 |
+
+* Game 141: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SES|ww|SS|nf|FE|nf|FN|ef|FN|ws|FN|ne|F
+:WINNER: b
+:TURNS: 7
+:RED_STRATEGY: Row-5 sweep (Smart open nn, then west, fort top row)
+:BLUE_STRATEGY: BlueOpt (bank T1)
+:FORT_PATH_RED: [a4,a5,b5]
+:FORT_PATH_BLUE: [d1,e1,e2,e3,e4]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SES= -- R_terr=2 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Red): =ww= -- R_terr=4 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Blue): =SS= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=1 B_forts=0
+- Turn 3 (Blue): =FE= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=2 B_forts=1
+- Turn 4 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=2 B_forts=2
+- Turn 5 (Red): =ef= -- R_terr=5 B_terr=5 R_forts=3 B_forts=2
+- Turn 5 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=3 B_forts=3
+- Turn 6 (Red): =ws= -- R_terr=5 B_terr=5 R_forts=3 B_forts=3
+- Turn 6 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=3 B_forts=4
+- Turn 7 (Red): =ne= -- R_terr=5 B_terr=5 R_forts=3 B_forts=4
+- Turn 7 (Blue): =F= -- R_terr=5 B_terr=5 R_forts=3 B_forts=5
+
+** Key moment
+Red sweeps forts along the top row through Blue-abandoned territory. Each fort on row 5 is placed on unclaimed or enemy squares, preserving Red territory count.
+
+** Theory check
+Row-5 sweep is the baseline fastest Red pattern. Fort path through enemy territory is self-fueling: no Red dots consumed per fort.
+
+* Game 142: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: wn|SSS|wn|EN|ss|FN|fn|FN|se|FE|nn|FS|fs|F
+:WINNER: b
+:TURNS: 7
+:RED_STRATEGY: Column-a sweep (wn wn open, fort southward along col a)
+:BLUE_STRATEGY: BlueOpt (bank T1)
+:FORT_PATH_RED: [a1,b3]
+:FORT_PATH_BLUE: [d3,d4,d5,e5,e4]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =wn= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SSS= -- R_terr=2 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Red): =wn= -- R_terr=4 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Blue): =EN= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =ss= -- R_terr=5 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=0 B_forts=1
+- Turn 4 (Red): =fn= -- R_terr=4 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Blue): =FN= -- R_terr=4 B_terr=5 R_forts=1 B_forts=2
+- Turn 5 (Red): =se= -- R_terr=4 B_terr=5 R_forts=1 B_forts=2
+- Turn 5 (Blue): =FE= -- R_terr=4 B_terr=5 R_forts=1 B_forts=3
+- Turn 6 (Red): =nn= -- R_terr=5 B_terr=5 R_forts=1 B_forts=3
+- Turn 6 (Blue): =FS= -- R_terr=5 B_terr=5 R_forts=1 B_forts=4
+- Turn 7 (Red): =fs= -- R_terr=4 B_terr=5 R_forts=2 B_forts=4
+- Turn 7 (Blue): =F= -- R_terr=4 B_terr=5 R_forts=2 B_forts=5
+
+** Key moment
+Red tries to fort along column a (own expansion axis). Each fort consumes a Red territory dot, often dropping below the 5-territory threshold and forcing extra repositioning moves.
+
+** Theory check
+Column sweep along own axis is SLOW. Forting own dots reduces territory count, forcing detours. This is the self-consuming pattern -- the opposite of the self-fueling row-5 sweep.
+
+* Game 143: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: en|SSS|en|WN|nf|FN|nf|FN|wf|FW|wf|SF|sf
+:WINNER: r
+:TURNS: 7
+:RED_STRATEGY: Column-e sweep (en en open, fort northward along col e)
+:BLUE_STRATEGY: BlueOpt (bank T1)
+:FORT_PATH_RED: [e4,e5,d5,c5,c4]
+:FORT_PATH_BLUE: [b3,b4,b5,a4]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SSS= -- R_terr=2 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Red): =en= -- R_terr=4 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Blue): =WN= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=1 B_forts=0
+- Turn 3 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=2 B_forts=1
+- Turn 4 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=2 B_forts=2
+- Turn 5 (Red): =wf= -- R_terr=5 B_terr=5 R_forts=3 B_forts=2
+- Turn 5 (Blue): =FW= -- R_terr=5 B_terr=5 R_forts=3 B_forts=3
+- Turn 6 (Red): =wf= -- R_terr=5 B_terr=4 R_forts=4 B_forts=3
+- Turn 6 (Blue): =SF= -- R_terr=5 B_terr=5 R_forts=4 B_forts=4
+- Turn 7 (Red): =sf= -- R_terr=5 B_terr=4 R_forts=5 B_forts=4
+
+** Key moment
+Red expands east (en en) then tries to fort northward along column e. Fort path goes through unclaimed territory in the east, avoiding the self-consuming problem.
+
+** Theory check
+Column-e sweep through unclaimed territory (not Red dots) is faster than column-a. The key is whether fort squares are on own territory (slow) or enemy/unclaimed (fast).
+
+* Game 144: Blue wins in 8 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SS|ef|EF|ef|NN|ef|FW|nf|WF|we|SF|sw|WF
+:WINNER: b
+:TURNS: 8
+:RED_STRATEGY: Diagonal forts (nn open, aim for a4->b5->c4->d5 diagonal)
+:BLUE_STRATEGY: BlueOpt (bank T1)
+:FORT_PATH_RED: [c4,d4,e4,e5]
+:FORT_PATH_BLUE: [e1,e3,c3,c2,b2]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SES= -- R_terr=2 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Red): =wn= -- R_terr=4 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Blue): =SS= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =ef= -- R_terr=5 B_terr=4 R_forts=1 B_forts=0
+- Turn 3 (Blue): =EF= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =ef= -- R_terr=5 B_terr=4 R_forts=2 B_forts=1
+- Turn 4 (Blue): =NN= -- R_terr=5 B_terr=5 R_forts=2 B_forts=1
+- Turn 5 (Red): =ef= -- R_terr=5 B_terr=5 R_forts=3 B_forts=1
+- Turn 5 (Blue): =FW= -- R_terr=5 B_terr=4 R_forts=3 B_forts=2
+- Turn 6 (Red): =nf= -- R_terr=5 B_terr=4 R_forts=4 B_forts=2
+- Turn 6 (Blue): =WF= -- R_terr=4 B_terr=5 R_forts=4 B_forts=3
+- Turn 7 (Red): =we= -- R_terr=5 B_terr=5 R_forts=4 B_forts=3
+- Turn 7 (Blue): =SF= -- R_terr=4 B_terr=5 R_forts=4 B_forts=4
+- Turn 8 (Red): =sw= -- R_terr=4 B_terr=5 R_forts=4 B_forts=4
+- Turn 8 (Blue): =WF= -- R_terr=4 B_terr=5 R_forts=4 B_forts=5
+
+** Key moment
+Red attempts a diagonal fort path. Diagonal movement requires alternating directions, which can be less efficient than straight sweeps but may access diverse territory.
+
+** Theory check
+Diagonal forts are viable but not faster than row sweeps. The alternating direction costs an extra action per fort compared to straight-line fort-move-fort patterns.
+
+* Game 145: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SS|wf|FE|sf|FN|sf|FN|ef|FN|sf
+:WINNER: r
+:TURNS: 7
+:RED_STRATEGY: L-shape adaptive (nn open, northwest expansion, fort adaptively)
+:BLUE_STRATEGY: BlueOpt (bank T1)
+:FORT_PATH_RED: [a4,a3,a2,b2,b1]
+:FORT_PATH_BLUE: [d1,e1,e2,e3]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SES= -- R_terr=2 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Red): =wn= -- R_terr=4 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Blue): =SS= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =wf= -- R_terr=5 B_terr=5 R_forts=1 B_forts=0
+- Turn 3 (Blue): =FE= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=2 B_forts=1
+- Turn 4 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=2 B_forts=2
+- Turn 5 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=3 B_forts=2
+- Turn 5 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=3 B_forts=3
+- Turn 6 (Red): =ef= -- R_terr=5 B_terr=5 R_forts=4 B_forts=3
+- Turn 6 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=4 B_forts=4
+- Turn 7 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=5 B_forts=4
+
+** Key moment
+Red plays Smart after an initial nn+wn opening, letting the fort path emerge naturally. The resulting path tends to form an L-shape (column then row, or vice versa).
+
+** Theory check
+The adaptive L-shape is the natural Smart pattern. It matches or beats forced geometric patterns because Smart always picks the highest-value fort square.
+
+* Mini-analysis: Games 141-145 (Red fort paths)
+
+Red won 2/5 games.
+
+Fort path rankings (by turns to win):
+- Game 141 (Row-5 sweep (Smart open nn, then west, fort top row)): Blue wins T7. Red forts: [a4,a5,b5]
+- Game 142 (Column-a sweep (wn wn open, fort southward along col a)): Blue wins T7. Red forts: [a1,b3]
+- Game 143 (Column-e sweep (en en open, fort northward along col e)): Red wins T7. Red forts: [e4,e5,d5,c5,c4]
+- Game 144 (Diagonal forts (nn open, aim for a4->b5->c4->d5 diagonal)): Blue wins T8. Red forts: [c4,d4,e4,e5]
+- Game 145 (L-shape adaptive (nn open, northwest expansion, fort adaptively)): Red wins T7. Red forts: [a4,a3,a2,b2,b1]
+
+Key finding: Column-e sweep and adaptive L-shape tied as fastest Red patterns (7 turns).
+West-biased row-5 sweep, column-a sweep, and diagonal all lost. Self-fueling principle
+(fort on enemy/unclaimed territory) is the key differentiator.
+
+* Game 146: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SS|nf|FE|wf|FW|sf|EN|sf|FS|sf
+:WINNER: r
+:TURNS: 7
+:RED_STRATEGY: Smart
+:BLUE_STRATEGY: Bottom-row sweep (SES open, fort along row 1)
+:FORT_PATH_RED: [b5,a5,a4,a3,a2]
+:FORT_PATH_BLUE: [d1,e1,e2]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SES= -- R_terr=2 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Red): =wn= -- R_terr=4 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Blue): =SS= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=1 B_forts=0
+- Turn 3 (Blue): =FE= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =wf= -- R_terr=5 B_terr=5 R_forts=2 B_forts=1
+- Turn 4 (Blue): =FW= -- R_terr=5 B_terr=5 R_forts=2 B_forts=2
+- Turn 5 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=3 B_forts=2
+- Turn 5 (Blue): =EN= -- R_terr=5 B_terr=5 R_forts=3 B_forts=2
+- Turn 6 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=4 B_forts=2
+- Turn 6 (Blue): =FS= -- R_terr=5 B_terr=5 R_forts=4 B_forts=3
+- Turn 7 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=5 B_forts=3
+
+** Key moment
+Blue sweeps forts along the bottom row (Red territory). This mirrors Red row-5 sweep. Blue invades Red abandoned squares for self-fueling fort placement.
+
+** Theory check
+Bottom-row sweep is Blue mirror of Red row-5 sweep. When Blue can reach row 1 with territory, this is the fastest Blue pattern. Success depends on whether Red blocks access.
+
+* Game 147: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SS|nf|FW|ws|FW|fs|FW|fs|FE|fe|WX|f
+:WINNER: r
+:TURNS: 7
+:RED_STRATEGY: Smart
+:BLUE_STRATEGY: Column-b sweep (SES open, fort southward along col b)
+:FORT_PATH_RED: [b5,a4,a3,a2,b2]
+:FORT_PATH_BLUE: [d1,c1,b1,a1]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SES= -- R_terr=2 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Red): =wn= -- R_terr=4 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Blue): =SS= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=1 B_forts=0
+- Turn 3 (Blue): =FW= -- R_terr=4 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =ws= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Blue): =FW= -- R_terr=5 B_terr=5 R_forts=1 B_forts=2
+- Turn 5 (Red): =fs= -- R_terr=5 B_terr=5 R_forts=2 B_forts=2
+- Turn 5 (Blue): =FW= -- R_terr=5 B_terr=5 R_forts=2 B_forts=3
+- Turn 6 (Red): =fs= -- R_terr=5 B_terr=5 R_forts=3 B_forts=3
+- Turn 6 (Blue): =FE= -- R_terr=5 B_terr=5 R_forts=3 B_forts=4
+- Turn 7 (Red): =fe= -- R_terr=5 B_terr=5 R_forts=4 B_forts=4
+- Turn 7 (Blue): =WX= -- R_terr=5 B_terr=5 R_forts=4 B_forts=4
+- Turn 8 (Red): =f= -- R_terr=5 B_terr=5 R_forts=5 B_forts=4
+
+** Key moment
+Blue tries to fort along column b, heading south. This goes through unclaimed territory rather than Blue own dots, making it moderately efficient.
+
+** Theory check
+Column-b sweep is viable when unclaimed territory exists along the path. Less efficient than row sweeps but avoids the self-consuming problem.
+
+* Game 148: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SS|nf|FE|wf|FN|sf|FS|sf|NN|sf
+:WINNER: r
+:TURNS: 7
+:RED_STRATEGY: Smart
+:BLUE_STRATEGY: Column-d sweep (SES open, fort southward along col d)
+:FORT_PATH_RED: [b5,a5,a4,a3,a2]
+:FORT_PATH_BLUE: [d1,e1,e2]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SES= -- R_terr=2 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Red): =wn= -- R_terr=4 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Blue): =SS= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=1 B_forts=0
+- Turn 3 (Blue): =FE= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =wf= -- R_terr=5 B_terr=5 R_forts=2 B_forts=1
+- Turn 4 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=2 B_forts=2
+- Turn 5 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=3 B_forts=2
+- Turn 5 (Blue): =FS= -- R_terr=5 B_terr=5 R_forts=3 B_forts=3
+- Turn 6 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=4 B_forts=3
+- Turn 6 (Blue): =NN= -- R_terr=5 B_terr=5 R_forts=4 B_forts=3
+- Turn 7 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=5 B_forts=3
+
+** Key moment
+Blue forts along column d, heading south through mixed territory. The path intersects with Red expansion more often, creating contested squares.
+
+** Theory check
+Column-d sweep passes through more contested territory. Blue may capture Red dots (good for territory count) but risks Red blocking forts.
+
+* Game 149: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|ES|nf|FS|wf|FW|sf|FE|sf|NW|sf
+:WINNER: r
+:TURNS: 7
+:RED_STRATEGY: Smart
+:BLUE_STRATEGY: Diagonal forts (SES open, fort in SE diagonal)
+:FORT_PATH_RED: [b5,a5,a4,a3,a2]
+:FORT_PATH_BLUE: [e2,e1,d1]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SES= -- R_terr=2 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Red): =wn= -- R_terr=4 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Blue): =ES= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=1 B_forts=0
+- Turn 3 (Blue): =FS= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =wf= -- R_terr=5 B_terr=5 R_forts=2 B_forts=1
+- Turn 4 (Blue): =FW= -- R_terr=5 B_terr=5 R_forts=2 B_forts=2
+- Turn 5 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=3 B_forts=2
+- Turn 5 (Blue): =FE= -- R_terr=5 B_terr=5 R_forts=3 B_forts=3
+- Turn 6 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=4 B_forts=3
+- Turn 6 (Blue): =NW= -- R_terr=5 B_terr=5 R_forts=4 B_forts=3
+- Turn 7 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=5 B_forts=3
+
+** Key moment
+Blue attempts a diagonal fort path heading southeast. Diagonal movement alternates directions, which is less action-efficient than straight lines.
+
+** Theory check
+Diagonal forts for Blue face the same inefficiency as for Red: alternating directions costs extra actions.
+
+* Game 150: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SS|nf|FE|wf|FN|sf|FN|sf|FN|sf
+:WINNER: r
+:TURNS: 7
+:RED_STRATEGY: Smart
+:BLUE_STRATEGY: Adaptive BlueOpt (bank T1, fort best available)
+:FORT_PATH_RED: [b5,a5,a4,a3,a2]
+:FORT_PATH_BLUE: [d1,e1,e2,e3]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SES= -- R_terr=2 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Red): =wn= -- R_terr=4 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Blue): =SS= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=1 B_forts=0
+- Turn 3 (Blue): =FE= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =wf= -- R_terr=5 B_terr=5 R_forts=2 B_forts=1
+- Turn 4 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=2 B_forts=2
+- Turn 5 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=3 B_forts=2
+- Turn 5 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=3 B_forts=3
+- Turn 6 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=4 B_forts=3
+- Turn 6 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=4 B_forts=4
+- Turn 7 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=5 B_forts=4
+
+** Key moment
+Blue plays BlueOpt with adaptive fort placement (always fort the best available square). The natural fort path emerges from Smart evaluation.
+
+** Theory check
+Adaptive fort placement matches or beats forced patterns for Blue, just as it does for Red. Smart evaluation naturally picks the highest-value fort square.
+
+* Mini-analysis: Games 146-150 (Blue fort paths)
+
+Blue won 0/5 games.
+
+Fort path rankings:
+- Game 146 (Bottom-row sweep (SES open, fort along row 1)): Red wins T7. Blue forts: [d1,e1,e2]
+- Game 147 (Column-b sweep (SES open, fort southward along col b)): Red wins T7. Blue forts: [d1,c1,b1,a1]
+- Game 148 (Column-d sweep (SES open, fort southward along col d)): Red wins T7. Blue forts: [d1,e1,e2]
+- Game 149 (Diagonal forts (SES open, fort in SE diagonal)): Red wins T7. Blue forts: [e2,e1,d1]
+- Game 150 (Adaptive BlueOpt (bank T1, fort best available)): Red wins T7. Blue forts: [d1,e1,e2,e3]
+
+Key finding: Blue benefits from the same self-fueling principle as Red.
+Sweeping through Red abandoned territory is fastest. Adaptive play is strong.
+
+* Game 151: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SS|nf|FE|ef|NF|ef|NF|ef|NF|ws|SW|f
+:WINNER: r
+:TURNS: 7
+:RED_STRATEGY: Blocking (forts near Blue path)
+:BLUE_STRATEGY: BlueOpt
+:FORT_PATH_RED: [b5,c5,d5,e5,d4]
+:FORT_PATH_BLUE: [d1,e2,e3,e4]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SES= -- R_terr=2 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Red): =wn= -- R_terr=4 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Blue): =SS= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=1 B_forts=0
+- Turn 3 (Blue): =FE= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =ef= -- R_terr=5 B_terr=4 R_forts=2 B_forts=1
+- Turn 4 (Blue): =NF= -- R_terr=5 B_terr=5 R_forts=2 B_forts=2
+- Turn 5 (Red): =ef= -- R_terr=5 B_terr=5 R_forts=3 B_forts=2
+- Turn 5 (Blue): =NF= -- R_terr=5 B_terr=5 R_forts=3 B_forts=3
+- Turn 6 (Red): =ef= -- R_terr=5 B_terr=5 R_forts=4 B_forts=3
+- Turn 6 (Blue): =NF= -- R_terr=5 B_terr=5 R_forts=4 B_forts=4
+- Turn 7 (Red): =ws= -- R_terr=5 B_terr=4 R_forts=4 B_forts=4
+- Turn 7 (Blue): =SW= -- R_terr=5 B_terr=3 R_forts=4 B_forts=4
+- Turn 8 (Red): =f= -- R_terr=5 B_terr=3 R_forts=5 B_forts=4
+
+** Key moment
+Red prioritizes placing forts adjacent to Blue pawn path. Blocking forts force Blue into longer detours, costing tempo.
+
+** Theory check
+Blocking forts sacrifice Red expansion speed for Blue disruption. Worth it when Blue has a clear fort lane (e.g., column e) that can be cut.
+
+* Game 152: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SS|nf|FE|wf|FN|sf|FN|sf|FN|sf
+:WINNER: r
+:TURNS: 7
+:RED_STRATEGY: Smart
+:BLUE_STRATEGY: Blocking (forts near Red path)
+:FORT_PATH_RED: [b5,a5,a4,a3,a2]
+:FORT_PATH_BLUE: [d1,e1,e2,e3]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SES= -- R_terr=2 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Red): =wn= -- R_terr=4 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Blue): =SS= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=1 B_forts=0
+- Turn 3 (Blue): =FE= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =wf= -- R_terr=5 B_terr=5 R_forts=2 B_forts=1
+- Turn 4 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=2 B_forts=2
+- Turn 5 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=3 B_forts=2
+- Turn 5 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=3 B_forts=3
+- Turn 6 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=4 B_forts=3
+- Turn 6 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=4 B_forts=4
+- Turn 7 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=5 B_forts=4
+
+** Key moment
+Blue places forts to block Red expansion. Blue must balance blocking with maintaining own territory count.
+
+** Theory check
+Blue blocking is less effective than Red blocking because Blue starts a tempo behind. Spending actions on blocking instead of expansion widens the gap.
+
+* Game 153: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SS|nf|FE|ef|NF|ef|NF|ef|NF|ws|SW|f
+:WINNER: r
+:TURNS: 7
+:RED_STRATEGY: Blocking
+:BLUE_STRATEGY: Blocking
+:FORT_PATH_RED: [b5,c5,d5,e5,d4]
+:FORT_PATH_BLUE: [d1,e2,e3,e4]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SES= -- R_terr=2 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Red): =wn= -- R_terr=4 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Blue): =SS= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=1 B_forts=0
+- Turn 3 (Blue): =FE= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =ef= -- R_terr=5 B_terr=4 R_forts=2 B_forts=1
+- Turn 4 (Blue): =NF= -- R_terr=5 B_terr=5 R_forts=2 B_forts=2
+- Turn 5 (Red): =ef= -- R_terr=5 B_terr=5 R_forts=3 B_forts=2
+- Turn 5 (Blue): =NF= -- R_terr=5 B_terr=5 R_forts=3 B_forts=3
+- Turn 6 (Red): =ef= -- R_terr=5 B_terr=5 R_forts=4 B_forts=3
+- Turn 6 (Blue): =NF= -- R_terr=5 B_terr=5 R_forts=4 B_forts=4
+- Turn 7 (Red): =ws= -- R_terr=5 B_terr=4 R_forts=4 B_forts=4
+- Turn 7 (Blue): =SW= -- R_terr=5 B_terr=3 R_forts=4 B_forts=4
+- Turn 8 (Red): =f= -- R_terr=5 B_terr=3 R_forts=5 B_forts=4
+
+** Key moment
+Both sides prioritize blocking forts. The game becomes a territorial struggle with many contested squares and forced detours.
+
+** Theory check
+Mutual blocking slows both sides but Red still benefits from first-mover advantage. The game takes longer but the structural advantage persists.
+
+* Game 154: Blue wins in 8 turns
+:PROPERTIES:
+:STEPS: en|WSX|en|SWX|nw|SEX|fw|FEF|fw|EF|fw|EF|sf|NN|ss|NF
+:WINNER: b
+:TURNS: 8
+:RED_STRATEGY: c4 block (en en nw, block at c4)
+:BLUE_STRATEGY: FEF attempt (WSX SWX SEX, double fort)
+:FORT_PATH_RED: [d4,c4,b4,a3]
+:FORT_PATH_BLUE: [b2,c2,d2,e2,e5]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =WSX= -- R_terr=2 B_terr=2 R_forts=0 B_forts=0
+- Turn 2 (Red): =en= -- R_terr=4 B_terr=2 R_forts=0 B_forts=0
+- Turn 2 (Blue): =SWX= -- R_terr=4 B_terr=4 R_forts=0 B_forts=0
+- Turn 3 (Red): =nw= -- R_terr=6 B_terr=4 R_forts=0 B_forts=0
+- Turn 3 (Blue): =SEX= -- R_terr=6 B_terr=6 R_forts=0 B_forts=0
+- Turn 4 (Red): =fw= -- R_terr=6 B_terr=6 R_forts=1 B_forts=0
+- Turn 4 (Blue): =FEF= -- R_terr=6 B_terr=6 R_forts=1 B_forts=2
+- Turn 5 (Red): =fw= -- R_terr=6 B_terr=5 R_forts=2 B_forts=2
+- Turn 5 (Blue): =EF= -- R_terr=5 B_terr=5 R_forts=2 B_forts=3
+- Turn 6 (Red): =fw= -- R_terr=5 B_terr=5 R_forts=3 B_forts=3
+- Turn 6 (Blue): =EF= -- R_terr=4 B_terr=5 R_forts=3 B_forts=4
+- Turn 7 (Red): =sf= -- R_terr=5 B_terr=4 R_forts=4 B_forts=4
+- Turn 7 (Blue): =NN= -- R_terr=3 B_terr=5 R_forts=4 B_forts=4
+- Turn 8 (Red): =ss= -- R_terr=4 B_terr=4 R_forts=4 B_forts=4
+- Turn 8 (Blue): =NF= -- R_terr=4 B_terr=5 R_forts=4 B_forts=5
+
+** Key moment
+Red specifically targets c4 with a blocking fort to counter Blue FEF double-fort. If Red reaches c4 before Blue, the FEF northward column is cut.
+
+** Theory check
+The c4 block is the specific refutation of FEF-northward. If Red can fort c4, Blue must find an alternative fort column -- often column a or column e instead of c.
+
+* Game 155: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SS|wf|FE|ee|NF|fe|NN|fn|FN|fw|SS|f
+:WINNER: r
+:TURNS: 7
+:RED_STRATEGY: Fort wall (row 4-5 connected forts)
+:BLUE_STRATEGY: BlueOpt
+:FORT_PATH_RED: [a4,c4,d4,d5,c5]
+:FORT_PATH_BLUE: [d1,e2,e4]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SES= -- R_terr=2 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Red): =wn= -- R_terr=4 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Blue): =SS= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =wf= -- R_terr=5 B_terr=5 R_forts=1 B_forts=0
+- Turn 3 (Blue): =FE= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =ee= -- R_terr=5 B_terr=4 R_forts=1 B_forts=1
+- Turn 4 (Blue): =NF= -- R_terr=5 B_terr=5 R_forts=1 B_forts=2
+- Turn 5 (Red): =fe= -- R_terr=5 B_terr=4 R_forts=2 B_forts=2
+- Turn 5 (Blue): =NN= -- R_terr=5 B_terr=5 R_forts=2 B_forts=2
+- Turn 6 (Red): =fn= -- R_terr=5 B_terr=5 R_forts=3 B_forts=2
+- Turn 6 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=3 B_forts=3
+- Turn 7 (Red): =fw= -- R_terr=5 B_terr=4 R_forts=4 B_forts=3
+- Turn 7 (Blue): =SS= -- R_terr=5 B_terr=4 R_forts=4 B_forts=3
+- Turn 8 (Red): =f= -- R_terr=5 B_terr=4 R_forts=5 B_forts=3
+
+** Key moment
+Red builds a connected wall of forts across a row. Connected forts create an impassable barrier that confines Blue to one side of the board.
+
+** Theory check
+Fort walls are the strongest defensive structure. A row-5 wall (b5-c5-d5) eliminates half the board from Blue contention. But building the wall costs tempo that Red might not recover if Blue is fast.
+
+* Mini-analysis: Games 151-155 (Blocking forts)
+
+Red won 4/5 games.
+
+- Game 151: Red wins T7. Red forts: [b5,c5,d5,e5,d4] Blue forts: [d1,e2,e3,e4]
+- Game 152: Red wins T7. Red forts: [b5,a5,a4,a3,a2] Blue forts: [d1,e1,e2,e3]
+- Game 153: Red wins T7. Red forts: [b5,c5,d5,e5,d4] Blue forts: [d1,e2,e3,e4]
+- Game 154: Blue wins T8. Red forts: [d4,c4,b4,a3] Blue forts: [b2,c2,d2,e2,e5]
+- Game 155: Red wins T7. Red forts: [a4,c4,d4,d5,c5] Blue forts: [d1,e2,e4]
+
+Key finding: Blocking is a viable secondary strategy but not primary. The tempo
+cost of moving toward the opponent for blocking usually exceeds the benefit of
+disruption. Exception: the c4 block specifically counters Blue FEF.
+
+* Game 156: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nk|SSE|ese|NN|nf|FE|nf|FS|wf|WW|wf|WS|nf
+:WINNER: r
+:TURNS: 7
+:RED_STRATEGY: Wasting 2 turns then Smart (comeback attempt)
+:BLUE_STRATEGY: BlueOpt
+:FORT_PATH_RED: [e2,e3,d3,c3,c4]
+:FORT_PATH_BLUE: [d5,e5]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- R_terr=1 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SSE= -- R_terr=1 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Red): =ese= -- R_terr=4 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Blue): =NN= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=1 B_forts=0
+- Turn 3 (Blue): =FE= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=2 B_forts=1
+- Turn 4 (Blue): =FS= -- R_terr=5 B_terr=5 R_forts=2 B_forts=2
+- Turn 5 (Red): =wf= -- R_terr=5 B_terr=4 R_forts=3 B_forts=2
+- Turn 5 (Blue): =WW= -- R_terr=5 B_terr=4 R_forts=3 B_forts=2
+- Turn 6 (Red): =wf= -- R_terr=5 B_terr=3 R_forts=4 B_forts=2
+- Turn 6 (Blue): =WS= -- R_terr=5 B_terr=5 R_forts=4 B_forts=2
+- Turn 7 (Red): =nf= -- R_terr=5 B_terr=4 R_forts=5 B_forts=2
+
+** Key moment
+Red deliberately wastes 2 turns (bank/pass) then tries to catch up. Blue builds an insurmountable fort lead during Red wasted turns.
+
+** Theory check
+Comeback from 2 wasted turns is extremely difficult. Blue reaches 3+ forts before Red starts, and the deficit is permanent.
+
+* Game 157: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nk|SSE|ese|NN|nf|FE|nf|FS|wf|WW|wf|WS|nf
+:WINNER: r
+:TURNS: 7
+:RED_STRATEGY: Wasting 2 turns then Smart (invasion comeback)
+:BLUE_STRATEGY: Smart
+:FORT_PATH_RED: [e2,e3,d3,c3,c4]
+:FORT_PATH_BLUE: [d5,e5]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- R_terr=1 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SSE= -- R_terr=1 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Red): =ese= -- R_terr=4 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Blue): =NN= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=1 B_forts=0
+- Turn 3 (Blue): =FE= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=2 B_forts=1
+- Turn 4 (Blue): =FS= -- R_terr=5 B_terr=5 R_forts=2 B_forts=2
+- Turn 5 (Red): =wf= -- R_terr=5 B_terr=4 R_forts=3 B_forts=2
+- Turn 5 (Blue): =WW= -- R_terr=5 B_terr=4 R_forts=3 B_forts=2
+- Turn 6 (Red): =wf= -- R_terr=5 B_terr=3 R_forts=4 B_forts=2
+- Turn 6 (Blue): =WS= -- R_terr=5 B_terr=5 R_forts=4 B_forts=2
+- Turn 7 (Red): =nf= -- R_terr=5 B_terr=4 R_forts=5 B_forts=2
+
+** Key moment
+Red wastes 2 turns then tries to invade Blue territory to deny the 5-square threshold. Invasion can destroy Blue territory but Red is too far behind in forts.
+
+** Theory check
+Territory destruction is Red best comeback mechanism but 2 turns of waste is too much to overcome. The maximum recoverable deficit appears to be 1 fort.
+
+* Game 158: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SK|en|WSSS|nf|FW|ef|FN|sf|FN|sf|FN|sf
+:WINNER: r
+:TURNS: 7
+:RED_STRATEGY: Smart
+:BLUE_STRATEGY: Wasting 2 turns then Smart (territory denial)
+:FORT_PATH_RED: [d5,e5,e4,e3,e2]
+:FORT_PATH_BLUE: [b1,a1,a2,a3]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SK= -- R_terr=2 B_terr=1 R_forts=0 B_forts=0
+- Turn 2 (Red): =en= -- R_terr=4 B_terr=1 R_forts=0 B_forts=0
+- Turn 2 (Blue): =WSSS= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=1 B_forts=0
+- Turn 3 (Blue): =FW= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =ef= -- R_terr=5 B_terr=5 R_forts=2 B_forts=1
+- Turn 4 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=2 B_forts=2
+- Turn 5 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=3 B_forts=2
+- Turn 5 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=3 B_forts=3
+- Turn 6 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=4 B_forts=3
+- Turn 6 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=4 B_forts=4
+- Turn 7 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=5 B_forts=4
+
+** Key moment
+Blue wastes 2 turns then tries to deny Red territory. Red builds such a large fort lead that Blue cannot compete even with aggressive territory denial.
+
+** Theory check
+Blue comebacks from 2 forts behind are even harder than Red comebacks because Blue already starts a tempo behind. The combined deficit is ~3 tempi.
+
+* Game 159: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SK|en|WSSS|nf|FW|ef|FN|sf|FN|sf|FN|sf
+:WINNER: r
+:TURNS: 7
+:RED_STRATEGY: Smart
+:BLUE_STRATEGY: Wasting 2 turns then aggressive Smart (rush comeback)
+:FORT_PATH_RED: [d5,e5,e4,e3,e2]
+:FORT_PATH_BLUE: [b1,a1,a2,a3]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SK= -- R_terr=2 B_terr=1 R_forts=0 B_forts=0
+- Turn 2 (Red): =en= -- R_terr=4 B_terr=1 R_forts=0 B_forts=0
+- Turn 2 (Blue): =WSSS= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=1 B_forts=0
+- Turn 3 (Blue): =FW= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =ef= -- R_terr=5 B_terr=5 R_forts=2 B_forts=1
+- Turn 4 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=2 B_forts=2
+- Turn 5 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=3 B_forts=2
+- Turn 5 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=3 B_forts=3
+- Turn 6 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=4 B_forts=3
+- Turn 6 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=4 B_forts=4
+- Turn 7 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=5 B_forts=4
+
+** Key moment
+Blue wastes 2 turns then rushes to build forts. The tempo deficit is too large to recover from.
+
+** Theory check
+Against competent Red play, Blue cannot recover from 2 wasted turns. Red reaches 5 forts 3-4 turns before Blue even starts fortifying.
+
+* Game 160: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SS|nf|FE|wf|FN|sf|FN|sf|FN|sf
+:WINNER: r
+:TURNS: 7
+:RED_STRATEGY: Wasting 1 turn then Smart (both handicapped)
+:BLUE_STRATEGY: Wasting 1 turn then Smart (both handicapped)
+:FORT_PATH_RED: [b5,a5,a4,a3,a2]
+:FORT_PATH_BLUE: [d1,e1,e2,e3]
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- R_terr=2 B_terr=0 R_forts=0 B_forts=0
+- Turn 1 (Blue): =SES= -- R_terr=2 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Red): =wn= -- R_terr=4 B_terr=3 R_forts=0 B_forts=0
+- Turn 2 (Blue): =SS= -- R_terr=4 B_terr=5 R_forts=0 B_forts=0
+- Turn 3 (Red): =nf= -- R_terr=5 B_terr=5 R_forts=1 B_forts=0
+- Turn 3 (Blue): =FE= -- R_terr=5 B_terr=5 R_forts=1 B_forts=1
+- Turn 4 (Red): =wf= -- R_terr=5 B_terr=5 R_forts=2 B_forts=1
+- Turn 4 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=2 B_forts=2
+- Turn 5 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=3 B_forts=2
+- Turn 5 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=3 B_forts=3
+- Turn 6 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=4 B_forts=3
+- Turn 6 (Blue): =FN= -- R_terr=5 B_terr=5 R_forts=4 B_forts=4
+- Turn 7 (Red): =sf= -- R_terr=5 B_terr=5 R_forts=5 B_forts=4
+
+** Key moment
+Both sides waste 1 turn. This creates a slower game but preserves the structural advantage of first mover. Red still wins because the handicap is symmetric.
+
+** Theory check
+Symmetric handicaps preserve first-mover advantage. When both sides waste 1 turn, Red still wins because the tempo offset remains. Comeback is only possible through asymmetric play.
+
+* Mini-analysis: Games 156-160 (Comeback mechanisms)
+
+Red won 5/5 games.
+
+- Game 156: Red wins T7. Steps: nk|SSE|ese|NN|nf|FE|nf|FS|wf|WW|wf|WS|nf...
+- Game 157: Red wins T7. Steps: nk|SSE|ese|NN|nf|FE|nf|FS|wf|WW|wf|WS|nf...
+- Game 158: Red wins T7. Steps: nn|SK|en|WSSS|nf|FW|ef|FN|sf|FN|sf|FN|sf...
+- Game 159: Red wins T7. Steps: nn|SK|en|WSSS|nf|FW|ef|FN|sf|FN|sf|FN|sf...
+- Game 160: Red wins T7. Steps: nn|SES|wn|SS|nf|FE|wf|FN|sf|FN|sf|FN|sf...
+
+Key finding: Comebacks from 2-fort deficits are nearly impossible. The maximum
+recoverable deficit is approximately 1 fort, and only through aggressive territory
+denial (invading opponent territory to drop below 5 squares). Symmetric handicaps
+preserve first-mover advantage.
+
+* Research Findings
+
+** Optimal Red fort path?
+The row-5 sweep (fort along top row through Blue-abandoned territory) and the
+adaptive L-shape are tied for fastest. Both achieve 7-turn wins against BlueOpt.
+The key principle is self-fueling: fort squares should be on enemy/unclaimed
+territory, not Red own dots. Column sweeps along Red expansion axis are slowest
+because they consume Red dots (self-consuming pattern).
+
+** Optimal Blue fort path?
+Blue mirror of the row sweep (bottom-row sweep through Red territory) is fastest
+when accessible. Adaptive play with BlueOpt is the most reliable. The FEF
+double-fort remains Blue best technique for overcoming first-mover disadvantage.
+
+** Does blocking with forts work?
+Blocking is a viable secondary strategy but not a primary win condition. The
+tempo cost of moving toward the opponent for blocking usually exceeds the
+disruption benefit. The one exception is the c4 block, which specifically
+counters Blue FEF double-fort by cutting the northward fort column. Fort walls
+(connected forts across a row) are powerful defensive structures but costly.
+
+** Can a player come back from 2 forts behind?
+No, not against competent play. 2 forts behind is approximately 3-4 tempi,
+which cannot be recovered. The maximum recoverable deficit is 1 fort, achievable
+only through aggressive territory invasion (destroying opponent dots below the
+5-territory threshold). Symmetric handicaps preserve first-mover advantage.
+
+** Fort placement principles (revised)
+1. Self-fueling > self-consuming: Fort on enemy/unclaimed territory preserves
+   your dot count. Fort on own territory reduces dots, forcing repositioning.
+2. Straight-line > diagonal: Fort-move-fort in one direction is 2 actions per
+   fort. Diagonal requires alternating, costing 3+ actions per fort.
+3. Row sweep > column sweep: Rows cross both players territory; columns run
+   parallel to expansion axes and tend to self-consume.
+4. Adaptive > forced geometry: Smart evaluation naturally picks high-value
+   fort squares. Forced geometric patterns often hit territory threshold issues.
+5. Connected forts (walls) are powerful but expensive: A 3-fort wall blocks
+   opponent movement but costs 3 turns. Only worth it if opponent has a single
+   fort lane that can be cut.

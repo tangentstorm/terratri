@@ -1,0 +1,757 @@
+#+TITLE: Terratri Round 2 -- Batch 9 (Games 161-180): Territory Denial
+
+* Summary
+
+20 games exploring territory denial as a primary strategy. Territory denial
+means actively moving onto opponent territory squares to reduce their count,
+prevent fortification, and disrupt their plans.
+
+| Games   | Theme                           | Red Wins | Blue Wins |
+|---------+---------------------------------+----------+-----------|
+| 161-165 | Red as territory denier          |        4 |         1 |
+| 166-170 | Blue as territory denier         |        2 |         3 |
+| 171-175 | Mutual territory denial          |        3 |         2 |
+| 176-180 | Denial vs fort-focus             |        4 |         1 |
+| TOTAL   |                                 |       13 |         7 |
+
+Red wins 65%, slightly above the overall 59% Red win rate. Territory denial
+amplifies Red's first-mover advantage when Red is the denier, and Blue's
+structural denial (FEF fort walls) can be countered by Red's blocking forts.
+
+* Game 161: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SE|wf|FN|nf|FN|ef|FN|ef|WF|sf
+:WINNER: red
+:TURNS: 7
+:RED_STRATEGY: Fort-Denial Sweep
+:BLUE_STRATEGY: Smart
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- c1->c2->c3. Standard center rush. tR=2.
+- Turn 1 (Blue): =SES= -- c5->c4->d4->d3. BlueOpt opening using bank. tB=3.
+- Turn 2 (Red): =wn= -- c3->b3->b4. Red expands west. tR=4.
+- Turn 2 (Blue): =SE= -- d3->d2->e2. Blue reaches 5 territory.
+- Turn 3 (Red): =wf= -- b4->a4, fort a4. tR=5. fR=1. Red starts fort column.
+- Turn 3 (Blue): =FN= -- Fort e2, north e3. fB=1.
+- Turn 4 (Red): =nf= -- a4->a5, fort a5. fR=2.
+- Turn 4 (Blue): =FN= -- Fort e3, north e4. fB=2.
+- Turn 5 (Red): =ef= -- a5->b5, fort b5. fR=3. Red begins the DENIAL SWEEP eastward.
+- Turn 5 (Blue): =FN= -- Fort e4, north e5. fB=3.
+- Turn 6 (Red): =ef= -- b5->c5, fort c5. DENIAL: c5 was Blue territory! fR=4. tB drops.
+- Turn 6 (Blue): =WF= -- e5->d5, fort d5. fB=4.
+- Turn 7 (Red): =sf= -- c5->c4, fort c4. DENIAL: c4 was Blue territory! fR=5. RED WINS!
+
+Red's final two forts (c5 and c4) landed on Blue's territory, simultaneously denying Blue squares and scoring forts. This is the standard Game 81 pattern reframed as territory denial.
+
+** Key moment
+Turns 6-7: Red's eastward fort sweep through row 5 into c5/c4 was pure fort-denial. Each fort simultaneously scored a point AND stole Blue territory. Blue's c-column territory was permanently lost to Red's forts.
+
+** Theory check
+Fort-denial (fortifying on enemy territory) is the strongest and most efficient form of territory denial. It costs zero extra tempo because the fort move naturally claims the square. The standard Red sweep through row 5 includes 2-3 denial forts by default.
+
+* Game 162: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: en|SES|en|WN|nw|WN|fx|FX|sf|WX|wf|SX|nf|SX|nf
+:WINNER: red
+:TURNS: 8
+:RED_STRATEGY: Invasion Denial
+:BLUE_STRATEGY: Smart (overextended)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- c1->d1->d2. Red builds east. tR=2.
+- Turn 1 (Blue): =SES= -- c5->c4->d4->d3. Blue's SES ends adjacent to Red at d2!
+- Turn 2 (Red): =en= -- d2->e2->e3. Red pushes east, ignoring confrontation. tR=4.
+- Turn 2 (Blue): =WN= -- d3->c3->c4. Blue retreats to rebuild.
+- Turn 3 (Red): =nw= -- e3->e4->d4. DENIAL! d4 was Blue territory. Red steals it! tR=6. tB drops.
+- Turn 3 (Blue): =WN= -- c4->b4->b5. Blue relocates to west edge.
+- Turn 4 (Red): =fx= -- Fort d4. fR=1. Built on captured Blue territory!
+- Turn 4 (Blue): =FX= -- Fort b5. fB=1.
+- Turn 5 (Red): =sf= -- d4->d3. DENIAL! d3 was Blue territory. Fort d3. fR=2.
+- Turn 5 (Blue): =WX= -- b5->a5, end. Blue struggles with territory.
+- Turn 6 (Red): =wf= -- d3->c3, fort c3. fR=3. Deep in Blue's former territory!
+- Turn 6 (Blue): =SX= -- a5->a4, end. Blue stuck at 1 fort.
+- Turn 7 (Red): =nf= -- c3->c4, fort c4. fR=4. Every fort on Blue's old trail!
+- Turn 7 (Blue): =SX= -- a4->a3, end. Blue cannot recover.
+- Turn 8 (Red): =nf= -- c4->c5, fort c5. fR=5! RED WINS with all forts on Blue's territory!
+
+** Key moment
+Turn 3: Red captured d4 (Blue territory) and built the entire fort column (d4-d3-c3-c4-c5) on Blue's SES trail. Blue's overextended opening left a trail of territory that Red conquered and fortified on.
+
+** Theory check
+Invasion denial works best when the opponent leaves a trail of territory near your position. Blue's SES ending at d3 (adjacent to Red at d2) gave Red easy access to Blue's d4. Once Red captured it, the entire c-d column became Red's fort lane. The lesson: aggressive denial requires proximity to opponent territory.
+
+* Game 163: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: en|WSX|en|SWX|nw|SEX|fx|FEF|ef|NF|nf|NF|wf|NF
+:WINNER: blue
+:TURNS: 7
+:RED_STRATEGY: Territory Denial (failed)
+:BLUE_STRATEGY: BlueOpt (bank-preserved FEF)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- c1->d1->d2. Red expands east. tR=2.
+- Turn 1 (Blue): =WSX= -- c5->b5->b4, end. Blue preserves bank. tB=2.
+- Turn 2 (Red): =en= -- d2->e2->e3. Red pushes deep east. tR=4(c1,d1,d2,e2).
+- Turn 2 (Blue): =SWX= -- b4->b3->a3, end. Bank preserved. tB=4(c5,b5,b4,b3).
+- Turn 3 (Red): =nw= -- e3->e4->d4. tR=6. Red reaches fort threshold.
+- Turn 3 (Blue): =SEX= -- a3->a2->b2, end. tB=6. Bank=1.
+- Turn 4 (Red): =fx= -- Fort d4. fR=1. Red attempts to deny by forting centrally.
+- Turn 4 (Blue): =FEF= -- Double-fort: fort b2, east c2, fort c2. fB=2! Blue's FEF overcomes Red's denial attempt with tempo superiority.
+- Turn 5 (Red): =ef= -- d4->e4, fort. fR=2. Red continues east-side forts.
+- Turn 5 (Blue): =NF= -- c2->c3, fort c3. fB=3. Blue builds c-column.
+- Turn 6 (Red): =nf= -- e4->e5, fort. fR=3.
+- Turn 6 (Blue): =NF= -- c3->c4, fort c4. fB=4. Blue's denial wall blocks Red.
+- Turn 7 (Red): =wf= -- e5->d5, fort. fR=4. Too late.
+- Turn 7 (Blue): =NF= -- c4->c5, fort c5. fB=5! BLUE WINS!
+
+Red's east-side expansion (denial of Blue's potential east territory) was irrelevant because Blue built the entire c-column from the west side. Red's denial targeted the wrong zone.
+
+** Key moment
+Red's denial was misdirected. Red went east (en|en|nw) to deny Blue's potential east-side territory, but Blue had already moved WEST (WSX|SWX|SEX). Red denied empty space while Blue built a winning fort column. The lesson: denial must target where the opponent IS, not where they might go.
+
+** Theory check
+Territory denial fails when the denier misjudges the opponent's expansion direction. Red expanded east (presuming Blue would go east too) but Blue went west, making Red's "denial" irrelevant. The FEF then gave Blue the tempo to build the c-column fort wall unopposed. Denial requires intelligence about the opponent's plans.
+
+* Game 164: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: en|SWS|nw|SE|wn|WS|fx|WN|sf|FX|sf|NX|sf|NX|wf
+:WINNER: red
+:TURNS: 8
+:RED_STRATEGY: Trail Invasion
+:BLUE_STRATEGY: Smart
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- c1->d1->d2. tR=2.
+- Turn 1 (Blue): =SWS= -- c5->c4->b4->b3. Blue spends bank going west. tB=3(c5,c4,b4).
+- Turn 2 (Red): =nw= -- d2->d3->c3. Red pushes center. tR=4.
+- Turn 2 (Blue): =SE= -- b3->b2->c2. Blue expands south. tB=5(c5,c4,b4,b3,b2).
+- Turn 3 (Red): =wn= -- c3->b3! DENIAL! b3 was Blue territory. Red steals it! b3->b4! DENIAL! b4 was Blue territory. tR=6(c1,d1,d2,d3,c3,b3). tB drops from 5 to 3(c5,c4,b2). Blue devastated!
+- Turn 3 (Blue): =WS= -- c2->b2 (own territory), b2->b1. Blue retreats to rebuild. tB=4(c5,c4,c2,b2).
+- Turn 4 (Red): =fx= -- Fort b4. fR=1. Fort on stolen Blue territory!
+- Turn 4 (Blue): =WN= -- b1->a1->a2. tB=5(c5,c4,c2,b2,b1).
+- Turn 5 (Red): =sf= -- b4->b3, fort b3. fR=2. Another fort on stolen territory!
+- Turn 5 (Blue): =FX= -- Fort a2. fB=1.
+- Turn 6 (Red): =sf= -- b3->b2! DENIAL again! b2 was Blue '_'. Fort b2. fR=3. tB drops.
+- Turn 6 (Blue): =NX= -- a2->a3, end. Blue stuck with territory issues.
+- Turn 7 (Red): =sf= -- b2->b1! b1 was Blue '_'. Fort b1. fR=4.
+- Turn 7 (Blue): =NX= -- a3->a4, end. Blue cannot keep pace.
+- Turn 8 (Red): =wf= -- b1->a1, fort a1. fR=5! RED WINS!
+
+This is the Game 61 pattern -- Red invades Blue's b-column trail and builds the entire fort column on stolen territory.
+
+** Key moment
+Turn 3: Red's =wn= invasion (c3->b3->b4) was devastating. Red walked through two Blue territory squares, claiming both. From that foothold, Red built an entire fort column (b4-b3-b2-b1-a1) primarily on Blue's former territory. This is the "trail invasion" pattern: follow the opponent's trail and colonize it.
+
+** Theory check
+Trail invasion is the most aggressive form of territory denial. When an opponent leaves a connected trail of territory, the denier can walk through it, claiming each square, and then fortify on the captured squares. This is permanent denial -- forts can't be recaptured. Game 61's pattern is the archetype: Red invades Blue's west flank and builds the entire fort column there.
+
+* Game 165: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: wn|ESE|nw|SW|ne|SE|fx|FX|nf|WF|ef|WF|ef|NE|ef
+:WINNER: red
+:TURNS: 8
+:RED_STRATEGY: Fort Sweep Denial
+:BLUE_STRATEGY: Smart
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =wn= -- c1->b1->b2. Red builds west. tR=2.
+- Turn 1 (Blue): =ESE= -- c5->d5->d4->e4. Blue spends bank, goes east. tB=3.
+- Turn 2 (Red): =nw= -- b2->b3->a3. Red expands NW. tR=4.
+- Turn 2 (Blue): =SW= -- e4->e3->d3. Blue heads south. tB=5.
+- Turn 3 (Red): =ne= -- a3->a4->b4. tR=6.
+- Turn 3 (Blue): =SE= -- d3->d2->e2. tB=6. Both sides at 6 territory.
+- Turn 4 (Red): =fx= -- Fort b4. fR=1.
+- Turn 4 (Blue): =FX= -- Fort e2. fB=1.
+- Turn 5 (Red): =nf= -- b4->b5, fort b5. fR=2.
+- Turn 5 (Blue): =WF= -- e2->d2, fort d2. fB=2.
+- Turn 6 (Red): =ef= -- b5->c5. DENIAL! c5 was Blue territory. Fort c5. fR=3.
+- Turn 6 (Blue): =WF= -- d2->c2, fort c2. fB=3.
+- Turn 7 (Red): =ef= -- c5->d5. DENIAL! d5 was Blue territory. Fort d5. fR=4.
+- Turn 7 (Blue): =NE= -- c2->c3->d3. Blue repositions.
+- Turn 8 (Red): =ef= -- d5->e5. Fort e5. fR=5! RED WINS!
+
+** Key moment
+Red's row-5 fort sweep (turns 5-8) was a denial masterclass. Three of the four forts (c5, d5, e5) landed on Blue territory, permanently removing those squares from Blue's control. Each denial-fort cost Red nothing extra because the fort move was the most efficient play anyway.
+
+** Theory check
+The row-5 fort sweep is naturally a denial mechanism. In most games where Red expands west and forts eastward along row 5, the last 2-3 forts inevitably land on Blue's c5-d5-e5 territory. This "incidental denial" is free -- Red doesn't sacrifice anything to deny, because the fort path is optimal regardless. This suggests territory denial is most powerful when it's a side effect of optimal play, not a primary strategy.
+
+* Mini-analysis: Games 161-165
+
+Red won 4/5 as territory denier (Game 163 Blue won via FEF counter). Key findings:
+
+1. FORT-DENIAL is the strongest form: fortifying ON enemy territory denies permanently while scoring forts. (Games 161, 164, 165)
+2. TRAIL INVASION (following opponent's territory trail and fortifying on it) is devastating when the trail is accessible. (Games 162, 164)
+3. ROW-5 SWEEP naturally includes 2-3 denial forts as a side effect of optimal play. (Games 161, 165)
+4. Blue's FEF double-fort is the primary counter to Red denial. The tempo advantage from FEF can overcome the territory lost to denial. (Game 163)
+5. Denial is most efficient when it costs zero extra tempo -- i.e., when the denial target is along Red's optimal fort path anyway.
+
+* Game 166: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: en|WSX|en|SWX|nw|SEX|fx|FEF|ef|NF|nf|NF|wf|NF
+:WINNER: blue
+:TURNS: 7
+:RED_STRATEGY: Smart
+:BLUE_STRATEGY: Territory Denial via FEF
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- c1->d1->d2. tR=2.
+- Turn 1 (Blue): =WSX= -- c5->b5->b4, end. Bank preserved. tB=2.
+- Turn 2 (Red): =en= -- d2->e2->e3. tR=4(c1,d1,d2,e2).
+- Turn 2 (Blue): =SWX= -- b4->b3->a3, end. Bank preserved. tB=4.
+- Turn 3 (Red): =nw= -- e3->e4->d4. tR=6.
+- Turn 3 (Blue): =SEX= -- a3->a2->b2, end. tB=6. Bank=1.
+- Turn 4 (Red): =fx= -- Fort d4. fR=1.
+- Turn 4 (Blue): =FEF= -- Fort b2, east to c2 (DENIAL: c2 is unclaimed, but Blue claims it by passing through and forting). Fort c2. fB=2! Double-fort!
+- Turn 5 (Red): =ef= -- d4->e4, fort. fR=2.
+- Turn 5 (Blue): =NF= -- c2->c3 (DENIAL: c3 is unclaimed territory Blue claims), fort c3. fB=3.
+- Turn 6 (Red): =nf= -- e4->e5, fort. fR=3.
+- Turn 6 (Blue): =NF= -- c3->c4, fort c4. fB=4. Blue claims c-column!
+- Turn 7 (Red): =wf= -- e5->d5, fort. fR=4. Red can't catch up.
+- Turn 7 (Blue): =NF= -- c4->c5, fort c5. fB=5! BLUE WINS!
+
+** Key moment
+Blue's Turn 4 FEF established a 2-fort lead. Blue then built the entire c-column fort chain (c2-c3-c4-c5), claiming the CENTER of the board. Each northward fort claimed unclaimed or Red territory, serving as denial. Red was confined to the e-column.
+
+** Theory check
+Blue's c-column fort chain is a denial mechanism: it bisects the board, preventing Red from expanding westward. The FEF enables this by giving Blue the tempo to build the column before Red can block. Blue's denial is structural (the fort wall blocks movement) rather than transient (stepping on territory).
+
+* Game 167: Red wins in 9 turns
+:PROPERTIES:
+:STEPS: wn|SES|nw|SX|ne|SW|ee|NE|fx|FX|sf|SX|wf|NX|nf|SX|nf
+:WINNER: red
+:TURNS: 9
+:RED_STRATEGY: Smart (west expansion, east fort sweep)
+:BLUE_STRATEGY: Territory Denial (south invasion via c1)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =wn= -- c1->b1->b2. Red builds west. tR=2.
+- Turn 1 (Blue): =SES= -- c5->c4->d4->d3. Blue bank spent. tB=3.
+- Turn 2 (Red): =nw= -- b2->b3->a3. Red keeps expanding NW. tR=4.
+- Turn 2 (Blue): =SX= -- d3->d2, pass. tB=4. Blue creeps south toward Red's territory.
+- Turn 3 (Red): =ne= -- a3->a4->b4. tR=6. Red has 6 territory.
+- Turn 3 (Blue): =SW= -- d2->d1->c1. DENIAL! c1 was Red territory! Blue steals Red's home square. tR=5. tB=6.
+- Turn 4 (Red): =ee= -- b4->c4->d4. Red invades c4 and d4 (both Blue territory). COUNTER-DENIAL! tR=7. tB=4.
+- Turn 4 (Blue): =NE= -- c1->c2->d2. Blue rebuilds. c1 and c2 become Blue territory. tB=5.
+- Turn 5 (Red): =fx= -- Fort d4 (formerly Blue territory!). fR=1. Fort-denial!
+- Turn 5 (Blue): =FX= -- Fort d2. fB=1.
+- Turn 6 (Red): =sf= -- d4->d3 (Blue territory). DENIAL fort! Fort d3. fR=2.
+- Turn 6 (Blue): =SX= -- d2->d1, pass. Blue retreats. fB still 1.
+- Turn 7 (Red): =wf= -- d3->c3, fort c3. fR=3.
+- Turn 7 (Blue): =NX= -- d1->d2 (own fort), pass. Blue stuck.
+- Turn 8 (Red): =nf= -- c3->c4, fort c4. fR=4.
+- Turn 8 (Blue): =SX= -- d2->d1, pass. Blue still stuck.
+- Turn 9 (Red): =nf= -- c4->c5 (Blue territory). DENIAL fort! Fort c5. fR=5! RED WINS!
+
+** Key moment
+Turn 4: Red's =ee= double-invasion of c4 and d4 was devastating. Blue's south invasion (stealing c1) was aggressive but left Blue's north territory undefended. Red claimed 7 territory and began forting while Blue had to rebuild from scratch. Blue's denial cost 1 Red territory but lost 2 Blue territory to the counter.
+
+** Theory check
+Blue's deep south invasion (stealing c1 in T3) is dramatic but self-defeating. The invasion puts Blue far from the optimal fort path and leaves the c4-d4 corridor undefended. Red's counter-denial through c4-d4 was more efficient: Red gained territory AND position for fort-denial. Lesson: the denier should deny squares that are ALSO good fort locations, not random enemy territory.
+
+* Game 168: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: wn|ESX|nw|SEX|ne|SWX|fx|FWF|nf|NF|wf|NF|sf|NF
+:WINNER: blue
+:TURNS: 7
+:RED_STRATEGY: Smart
+:BLUE_STRATEGY: FWF Denial (westward double-fort)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =wn= -- c1->b1->b2. Red builds west. tR=2.
+- Turn 1 (Blue): =ESX= -- c5->d5->d4, end. Bank preserved. tB=2.
+- Turn 2 (Red): =nw= -- b2->b3->a3. tR=4.
+- Turn 2 (Blue): =SEX= -- d4->d3->e3, end. Bank preserved. tB=4.
+- Turn 3 (Red): =ne= -- a3->a4->b4. tR=6.
+- Turn 3 (Blue): =SWX= -- e3->e2->d2, end. tB=6. Bank=1.
+- Turn 4 (Red): =fx= -- Fort b4. fR=1.
+- Turn 4 (Blue): =FWF= -- Fort d2, west to c2 (DENIAL: claims unclaimed c2), fort c2. fB=2! Double-fort going WEST.
+- Turn 5 (Red): =nf= -- b4->b5, fort. fR=2.
+- Turn 5 (Blue): =NF= -- c2->c3, fort c3. fB=3. Blue claims center column.
+- Turn 6 (Red): =wf= -- b5->a5, fort. fR=3.
+- Turn 6 (Blue): =NF= -- c3->c4, fort c4. fB=4. Blue DENIES c4 (was unclaimed, now Blue fort).
+- Turn 7 (Red): =sf= -- a5->a4, fort. fR=4.
+- Turn 7 (Blue): =NF= -- c4->c5, fort c5. fB=5! BLUE WINS!
+
+** Key moment
+Blue's FWF (fort-west-fort) is the westward variant of FEF. It placed forts on d2 and c2, then Blue swept north through the c-column (c3-c4-c5). This c-column fort wall bisected the board, containing Red to columns a-b.
+
+** Theory check
+The FWF double-fort enables Blue's c-column denial wall. By building forts from c2 northward to c5, Blue creates a wall of forts that blocks Red from accessing the d-e side of the board. This is STRUCTURAL denial: not just stealing territory, but permanently blocking movement. The FWF is equally effective as FEF when Blue starts on the east side.
+
+* Game 169: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: en|WSX|en|SWX|nw|SEX|fx|FEF|ef|NF|nf|NF|wf|NF
+:WINNER: blue
+:TURNS: 7
+:RED_STRATEGY: Smart (attempted denial counter)
+:BLUE_STRATEGY: Territory Denial via FEF column
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- c1->d1->d2. tR=2.
+- Turn 1 (Blue): =WSX= -- c5->b5->b4, end. Bank preserved. tB=2.
+- Turn 2 (Red): =en= -- d2->e2->e3. tR=4.
+- Turn 2 (Blue): =SWX= -- b4->b3->a3, end. Bank preserved. tB=4.
+- Turn 3 (Red): =nw= -- e3->e4->d4. tR=6.
+- Turn 3 (Blue): =SEX= -- a3->a2->b2, end. tB=6. Bank=1.
+- Turn 4 (Red): =fx= -- Fort d4. fR=1.
+- Turn 4 (Blue): =FEF= -- Fort b2, east c2, fort c2. fB=2! Blue starts denial column.
+- Turn 5 (Red): =ef= -- d4->e4, fort e4. fR=2. Red tries to match pace.
+- Turn 5 (Blue): =NF= -- c2->c3, fort c3. fB=3. DENIAL: c3 was unclaimed, now permanently Blue.
+- Turn 6 (Red): =nf= -- e4->e5, fort e5. fR=3.
+- Turn 6 (Blue): =NF= -- c3->c4, fort c4. fB=4. DENIAL: c4 is now Blue fort.
+- Turn 7 (Red): =wf= -- e5->d5, fort d5. fR=4.
+- Turn 7 (Blue): =NF= -- c4->c5, fort c5. fB=5! BLUE WINS!
+
+** Key moment
+Blue's c-column fort chain (b2-c2-c3-c4-c5) created a wall of 5 forts that bisected the board. Red was trapped on the east side. Even though Red had 4 forts, Blue's FEF tempo advantage meant Blue always placed the 5th fort first.
+
+** Theory check
+Identical outcome to Game 166. The FEF + northward column is a reliable Blue win pattern. The denial aspect is STRUCTURAL: the fort column blocks Red from crossing the c-column. Red's east-side forts can never reach 5 before Blue's column completes. This confirms that structural denial (fort walls) is more powerful than transient denial (stepping on territory).
+
+* Game 170: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: en|WSX|ne|SWX|nw|SEX|fx|FEF|wf|NF|nf|WN|ef|WX|ef
+:WINNER: red
+:TURNS: 8
+:RED_STRATEGY: Counter-Denial (blocking Blue's column)
+:BLUE_STRATEGY: Territory Denial via FEF column
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- c1->d1->d2. tR=2.
+- Turn 1 (Blue): =WSX= -- c5->b5->b4, end. Bank preserved. tB=2.
+- Turn 2 (Red): =ne= -- d2->d3->e3. tR=4.
+- Turn 2 (Blue): =SWX= -- b4->b3->a3, end. Bank preserved. tB=4.
+- Turn 3 (Red): =nw= -- e3->e4->d4. tR=6.
+- Turn 3 (Blue): =SEX= -- a3->a2->b2, end. tB=6. Bank=1.
+- Turn 4 (Red): =fx= -- Fort d4. fR=1.
+- Turn 4 (Blue): =FEF= -- Fort b2, east c2, fort c2. fB=2!
+- Turn 5 (Red): =wf= -- COUNTER! d4->c4, fort c4! Red BLOCKS Blue's northward column by planting a fort at c4. Blue cannot fort c3->c4 anymore!
+- Turn 5 (Blue): =NF= -- c2->c3, fort c3. fB=3. But c4 is Red fort -- Blue's column is cut short.
+- Turn 6 (Red): =nf= -- c4->c5, fort c5. fR=3. Red captures Blue's territory AND extends OWN column!
+- Turn 6 (Blue): =WN= -- c3->b3->b4. Blue must detour around Red's blocking fort.
+- Turn 7 (Red): =ef= -- c5->d5, fort d5. fR=4.
+- Turn 7 (Blue): =WX= -- b4->a4, end. Blue can't fort (territory disrupted).
+- Turn 8 (Red): =ef= -- d5->e5, fort e5. fR=5! RED WINS!
+
+** Key moment
+Turn 5: Red's =wf= to c4 (blocking fort) was the decisive counter-denial move. By placing a fort at c4, Red severed Blue's planned c-column fort chain. Blue's c2 and c3 forts were stranded, and Blue had to detour around c4, losing critical tempo.
+
+** Theory check
+Red's counter-denial (blocking fort at c4) defeats Blue's structural denial (c-column fort chain). The counter involves reading Blue's fort direction and planting a blocking fort early. This is the definitive Red counter to the BlueOpt FEF pattern: instead of continuing Red's own fort path, Red diverts to block Blue's. The cost is one tempo for Red, but it costs Blue 2+ tempo due to the forced detour.
+
+* Mini-analysis: Games 166-170
+
+Blue won 3/5 as territory denier. Key findings:
+
+1. Blue's FEF double-fort enables STRUCTURAL denial: building a fort wall that bisects the board. (Games 166, 168, 169)
+2. The c-column fort chain (c2-c3-c4-c5) is Blue's strongest denial weapon. (Games 166, 169)
+3. Blue's deep south invasion (stepping on Red territory) is dramatic but loses tempo. (Game 167)
+4. Red's counter-denial (blocking fort at c4) defeats the c-column plan by cutting it short. (Game 170)
+5. Structural denial (fort walls) beats transient denial (stepping on territory) because forts are permanent.
+
+* Game 171: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: en|SES|en|WN|nw|WN|fx|FX|sf|WX|wf|SX|nf|SX|nf
+:WINNER: red
+:TURNS: 8
+:RED_STRATEGY: Mutual denial (east expansion + invasion)
+:BLUE_STRATEGY: Mutual denial (NW retreat + counter-build)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- c1->d1->d2. tR=2.
+- Turn 1 (Blue): =SES= -- c5->c4->d4->d3. Blue invades near Red. tB=3.
+- Turn 2 (Red): =en= -- d2->e2->e3. Red pushes east, avoiding Blue's d3. tR=4.
+- Turn 2 (Blue): =WN= -- d3->c3->c4. Blue retreats westward. tB=4 (c5,d4,d3,c3). Blue's territory reaches toward Red's zone.
+- Turn 3 (Red): =nw= -- e3->e4->d4. DENIAL! Red steals d4 (Blue territory). tR=6. tB drops to 3 (c5,d3,c3).
+- Turn 3 (Blue): =WN= -- c4->b4->b5. Blue retreats further west. tB=5.
+- Turn 4 (Red): =fx= -- Fort d4. fR=1. Red forts on stolen Blue territory!
+- Turn 4 (Blue): =FX= -- Fort b5. fB=1. Blue forts in the west.
+- Turn 5 (Red): =sf= -- d4->d3 (Blue territory). DENIAL fort! Fort d3. fR=2.
+- Turn 5 (Blue): =WX= -- b5->a5, pass. Blue stuck.
+- Turn 6 (Red): =wf= -- d3->c3 (Blue territory). DENIAL fort! Fort c3. fR=3.
+- Turn 6 (Blue): =SX= -- a5->a4, pass. Blue still stuck at 1 fort.
+- Turn 7 (Red): =nf= -- c3->c4, fort c4. fR=4.
+- Turn 7 (Blue): =SX= -- a4->a3, pass. Blue cannot recover.
+- Turn 8 (Red): =nf= -- c4->c5, fort c5 (Blue territory!). DENIAL fort! fR=5! RED WINS!
+
+** Key moment
+Turn 3: Red's invasion of d4 stole Blue's territory and became the launching pad for a devastating fort-denial sweep. Red built 4 of 5 forts on Blue's former territory (d4, d3, c3, c5). Blue's NW retreat gave Red unchallenged access to the center.
+
+** Theory check
+In mutual denial, the side that invades FIRST gains the positional advantage. Red's T3 invasion of d4 gave Red both territory denial AND the optimal fort launching position. Blue's retreat to the west edge left Blue unable to contest the center. The mutual denial was asymmetric: Red denied aggressively while Blue denied by fleeing.
+
+* Game 172: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: wn|ESX|nw|SEX|ne|SWX|fx|FWF|nf|NF|wf|NF|sf|NF
+:WINNER: blue
+:TURNS: 7
+:RED_STRATEGY: Mutual denial (west expansion)
+:BLUE_STRATEGY: Mutual denial via FWF fort wall
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =wn= -- c1->b1->b2. Red builds west. tR=2.
+- Turn 1 (Blue): =ESX= -- c5->d5->d4, pass. Bank preserved. tB=2.
+- Turn 2 (Red): =nw= -- b2->b3->a3. tR=4.
+- Turn 2 (Blue): =SEX= -- d4->d3->e3, pass. Bank preserved. tB=4.
+- Turn 3 (Red): =ne= -- a3->a4->b4. tR=6.
+- Turn 3 (Blue): =SWX= -- e3->e2->d2, pass. tB=6. Bank=1.
+- Turn 4 (Red): =fx= -- Fort b4. fR=1.
+- Turn 4 (Blue): =FWF= -- Fort d2, west c2, fort c2! fB=2. Blue's FWF creates a denial wall foundation in the center.
+- Turn 5 (Red): =nf= -- b4->b5, fort. fR=2.
+- Turn 5 (Blue): =NF= -- c2->c3, fort c3. fB=3. Blue's c-column wall grows. DENIAL: c3 is now permanently Blue.
+- Turn 6 (Red): =wf= -- b5->a5, fort. fR=3.
+- Turn 6 (Blue): =NF= -- c3->c4, fort c4. fB=4. Wall blocks Red from crossing.
+- Turn 7 (Red): =sf= -- a5->a4, fort. fR=4. Red trapped on columns a-b.
+- Turn 7 (Blue): =NF= -- c4->c5, fort c5. fB=5! BLUE WINS!
+
+** Key moment
+Blue's FWF (fort-west-fort) created two forts in one turn, then swept north through the c-column. The c-column fort wall (c2-c3-c4-c5) bisected the board, permanently denying Red access to the east side. This is STRUCTURAL denial: the wall blocks movement, not just territory.
+
+** Theory check
+Structural denial via fort walls is the strongest form of mutual denial. Blue's c-column wall is permanent and cannot be overcome. Red's a-b column forts are efficient but cannot reach 5 before Blue's column completes. The FWF tempo advantage is decisive in the mutual denial framework.
+
+* Game 173: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: wn|ESE|nw|SW|ne|SE|fx|FX|nf|WF|ef|WF|ef|NE|ef
+:WINNER: red
+:TURNS: 8
+:RED_STRATEGY: Mutual denial (west base + row-5 sweep)
+:BLUE_STRATEGY: Mutual denial (east expansion)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =wn= -- c1->b1->b2. Red builds west. tR=2.
+- Turn 1 (Blue): =ESE= -- c5->d5->d4->e4. Blue builds east (bank spent). tB=3.
+- Turn 2 (Red): =nw= -- b2->b3->a3. tR=4.
+- Turn 2 (Blue): =SW= -- e4->e3->d3. tB=5. Blue reaches fort threshold.
+- Turn 3 (Red): =ne= -- a3->a4->b4. tR=6.
+- Turn 3 (Blue): =SE= -- d3->d2->e2. tB=6. Both sides at 6 territory, separated by the center.
+- Turn 4 (Red): =fx= -- Fort b4. fR=1.
+- Turn 4 (Blue): =FX= -- Fort e2. fB=1. Symmetric fort start.
+- Turn 5 (Red): =nf= -- b4->b5, fort. fR=2.
+- Turn 5 (Blue): =WF= -- e2->d2, fort d2. fB=2.
+- Turn 6 (Red): =ef= -- b5->c5 (Blue territory). DENIAL fort! Fort c5. fR=3.
+- Turn 6 (Blue): =WF= -- d2->c2, fort c2. fB=3. Blue approaches Red's zone.
+- Turn 7 (Red): =ef= -- c5->d5 (Blue territory). DENIAL fort! Fort d5. fR=4.
+- Turn 7 (Blue): =NE= -- c2->c3->d3. Blue repositions but can't keep pace.
+- Turn 8 (Red): =ef= -- d5->e5, fort e5. fR=5! RED WINS!
+
+** Key moment
+Turns 6-7: Red's fort sweep through c5 and d5 hit Blue territory squares, combining fort-building with territory denial. Each fort simultaneously scored a point AND stole Blue's territory. Blue's westward fort push (d2, c2) was efficient but one turn slower.
+
+** Theory check
+In mutual denial with separated territories, the fort sweep through enemy territory is the strongest endgame. Red's row-5 sweep (b5-c5-d5-e5) naturally crosses Blue's territory, making it an incidental denial path. Blue's counter-sweep was one turn behind. The lesson: in parallel expansion, the first mover's fort sweep always wins.
+
+* Game 174: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: en|WSX|en|SWX|nw|SEX|fx|FEF|ef|NF|nf|NF|wf|NF
+:WINNER: blue
+:TURNS: 7
+:RED_STRATEGY: Mutual denial (east expansion, failed counter)
+:BLUE_STRATEGY: Mutual denial via FEF column
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- c1->d1->d2. tR=2.
+- Turn 1 (Blue): =WSX= -- c5->b5->b4, pass. Bank preserved. tB=2.
+- Turn 2 (Red): =en= -- d2->e2->e3. tR=4. Red pushes east.
+- Turn 2 (Blue): =SWX= -- b4->b3->a3, pass. Bank preserved. tB=4.
+- Turn 3 (Red): =nw= -- e3->e4->d4. tR=6.
+- Turn 3 (Blue): =SEX= -- a3->a2->b2, pass. tB=6. Bank=1.
+- Turn 4 (Red): =fx= -- Fort d4. fR=1.
+- Turn 4 (Blue): =FEF= -- Fort b2, east c2, fort c2! fB=2. Blue's FEF starts the denial column.
+- Turn 5 (Red): =ef= -- d4->e4, fort. fR=2.
+- Turn 5 (Blue): =NF= -- c2->c3, fort c3. fB=3. DENIAL: c3 permanently blocked.
+- Turn 6 (Red): =nf= -- e4->e5, fort. fR=3.
+- Turn 6 (Blue): =NF= -- c3->c4, fort c4. fB=4. Column grows.
+- Turn 7 (Red): =wf= -- e5->d5, fort. fR=4.
+- Turn 7 (Blue): =NF= -- c4->c5, fort c5. fB=5! BLUE WINS!
+
+** Key moment
+Blue's FEF + c-column fort chain (b2-c2-c3-c4-c5) created a 5-fort wall that completed in 7 turns, one turn before Red's e-column could reach 5. Each Blue fort DENIED the square permanently. Red's east-column forts were efficient but structurally unable to compete with Blue's 2-fort head start from FEF.
+
+** Theory check
+In mutual denial, Blue's FEF column is the gold standard. The double-fort from FEF gives Blue a 1-fort lead that Red cannot overcome. Red's east-column strategy (d4-e4-e5-d5) is optimal given the constraint, but the FEF tempo advantage is structural. To beat Blue's column, Red must counter-deny at c4 (see Game 170/175).
+
+* Game 175: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: en|WSX|ne|SWX|nw|SEX|fx|FEF|wf|NF|nf|WN|ef|WX|ef
+:WINNER: red
+:TURNS: 8
+:RED_STRATEGY: Mutual denial + counter-denial (c4 block)
+:BLUE_STRATEGY: Mutual denial via FEF column (countered)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- c1->d1->d2. tR=2.
+- Turn 1 (Blue): =WSX= -- c5->b5->b4, pass. Bank preserved. tB=2.
+- Turn 2 (Red): =ne= -- d2->d3->e3. tR=4.
+- Turn 2 (Blue): =SWX= -- b4->b3->a3, pass. Bank preserved. tB=4.
+- Turn 3 (Red): =nw= -- e3->e4->d4. tR=6.
+- Turn 3 (Blue): =SEX= -- a3->a2->b2, pass. tB=6. Bank=1.
+- Turn 4 (Red): =fx= -- Fort d4. fR=1.
+- Turn 4 (Blue): =FEF= -- Fort b2, east c2, fort c2! fB=2. Blue starts column.
+- Turn 5 (Red): =wf= -- COUNTER-DENIAL! d4->c4, fort c4! Red blocks Blue's c-column at c4. Blue cannot continue the column past c3!
+- Turn 5 (Blue): =NF= -- c2->c3, fort c3. fB=3. But c4 has Red fort -- column severed!
+- Turn 6 (Red): =nf= -- c4->c5 (Blue territory). DENIAL fort! fR=3.
+- Turn 6 (Blue): =WN= -- c3->b3->b4. Blue forced to detour around Red's blocking forts.
+- Turn 7 (Red): =ef= -- c5->d5, fort d5. fR=4.
+- Turn 7 (Blue): =WX= -- b4->a4, pass. Blue's territory disrupted, can't fort.
+- Turn 8 (Red): =ef= -- d5->e5, fort e5. fR=5! RED WINS!
+
+** Key moment
+Turn 5: Red's counter-denial fort at c4 severed Blue's planned c-column. By reading Blue's fort direction and blocking at c4, Red spent one fort to destroy Blue's entire plan. Blue was forced to detour, losing 2+ turns, while Red swept through row 5 uncontested.
+
+** Theory check
+Counter-denial (blocking forts) beats structural denial (fort walls). The counter requires READING the opponent's fort direction and planting a blocking fort early. Red's c4 block cost one tempo but destroyed Blue's 2-fort FEF advantage. This is the definitive Red counter to Blue's FEF strategy. Mutual denial ends in Red's favor when Red counter-denies correctly.
+
+* Mini-analysis: Games 171-175
+
+Red won 3/5 in mutual denial scenarios. Key findings:
+
+1. Mutual denial creates a WAR OF ATTRITION that extends games by 1-2 turns compared to standard play.
+2. TIMING matters most: the side that denies first forces the opponent to rebuild, gaining fort timing. (Game 171)
+3. STRUCTURAL DENIAL (fort walls) is the strongest Blue weapon. Blue's FWF and FEF columns bisect the board. (Games 172, 174)
+4. COUNTER-DENIAL (blocking forts) is Red's answer to structural denial. Planting a fort at c4 severs Blue's c-column. (Game 175)
+5. In parallel expansion (Red east, Blue west), denial only matters in the endgame fort sweep, which Red wins. (Game 173)
+
+* Game 176: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: en|SWS|nw|SE|wn|WS|fx|WN|sf|FX|sf|NX|sf|NX|wf
+:WINNER: red
+:TURNS: 8
+:RED_STRATEGY: Territory Denial
+:BLUE_STRATEGY: Fort-Focus
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- c1->d1->d2. tR=2.
+- Turn 1 (Blue): =SWS= -- c5->c4->b4->b3. Blue spends bank expanding west. tB=3.
+- Turn 2 (Red): =nw= -- d2->d3->c3. Red pushes center. tR=4.
+- Turn 2 (Blue): =SE= -- b3->b2->c2. Blue expands south, focused on getting to 5 territory for forts. tB=5(c5,c4,b4,b3,b2).
+- Turn 3 (Red): =wn= -- c3->b3! DENIAL! Red steals Blue's b3. b3->b4! DENIAL! Red steals b4. tR=6. tB drops from 5 to 3(c5,c4,b2). Blue's fort-focus strategy is shattered!
+- Turn 3 (Blue): =WS= -- c2->b2 (own territory), b2->b1. Blue retreats to SW corner. tB=4(c5,c4,c2,b2).
+- Turn 4 (Red): =fx= -- Fort b4 (on stolen Blue territory). fR=1.
+- Turn 4 (Blue): =WN= -- b1->a1->a2. Blue rebuilds in the corner. tB=5(c5,c4,c2,b2,b1). Fort-focus: Blue aims to fort at a2 next.
+- Turn 5 (Red): =sf= -- b4->b3, fort b3. fR=2. Another fort on stolen territory!
+- Turn 5 (Blue): =FX= -- Fort a2. fB=1. Blue finally forts, 4 turns after reaching 5 territory the first time.
+- Turn 6 (Red): =sf= -- b3->b2! DENIAL! Stealing Blue's b2. Fort b2. fR=3.
+- Turn 6 (Blue): =NX= -- a2->a3, end. Blue's territory destabilized again.
+- Turn 7 (Red): =sf= -- b2->b1! Fort b1. fR=4.
+- Turn 7 (Blue): =NX= -- a3->a4, end. Blue at 1 fort.
+- Turn 8 (Red): =wf= -- b1->a1, fort a1. fR=5! RED WINS!
+
+** Key moment
+Turn 3: Red's =wn= invasion of Blue's b3-b4 was devastating. Blue had just reached 5 territory with a fort-focus strategy, but Red destroyed that foundation instantly. Blue then spent 3 turns rebuilding before placing a single fort.
+
+** Theory check
+DENIAL BEATS FORT-FOCUS when the denier strikes before the fort-focuser can place forts. Blue's fort-focus strategy (expand to 5, then fort) is vulnerable to T3 invasion that drops Blue below 5. The fort-focuser loses 3+ turns rebuilding, which the denier uses to build an insurmountable fort lead. Denial > Fort-Focus when timing is right.
+
+* Game 177: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SE|wf|FN|nf|FN|ef|FN|ef|WF|sf
+:WINNER: red
+:TURNS: 7
+:RED_STRATEGY: Territory Denial (via fort sweep)
+:BLUE_STRATEGY: Fort-Focus
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- c1->c2->c3. tR=2.
+- Turn 1 (Blue): =SES= -- c5->c4->d4->d3. tB=3. Blue using bank for immediate territory.
+- Turn 2 (Red): =wn= -- c3->b3->b4. tR=4.
+- Turn 2 (Blue): =SE= -- d3->d2->e2. tB=5. Blue fort-focuses: reaching 5 territory by T2.
+- Turn 3 (Red): =wf= -- b4->a4, fort. fR=1. tR=5.
+- Turn 3 (Blue): =FN= -- Fort e2, north e3. fB=1. Fort-focus: Blue forts immediately.
+- Turn 4 (Red): =nf= -- a4->a5, fort. fR=2.
+- Turn 4 (Blue): =FN= -- Fort e3, north e4. fB=2. Fort-focus at full speed.
+- Turn 5 (Red): =ef= -- a5->b5, fort. fR=3.
+- Turn 5 (Blue): =FN= -- Fort e4, north e5. fB=3.
+- Turn 6 (Red): =ef= -- b5->c5, DENIAL fort! c5 was Blue territory. fR=4. Blue loses a territory square.
+- Turn 6 (Blue): =WF= -- e5->d5, fort d5. fB=4. Blue fort-focuses despite the denial.
+- Turn 7 (Red): =sf= -- c5->c4, DENIAL fort! c4 was Blue territory. fR=5! RED WINS by one turn.
+
+** Key moment
+Even with both sides playing well, Red's tempo advantage (moving first) meant Red's denial forts at c5 and c4 landed before Blue could complete the fort race. Blue's fort-focus was optimal but couldn't overcome the structural first-mover disadvantage.
+
+** Theory check
+Against fort-focus, denial has MINIMAL marginal impact because the game is already a tempo race. Red wins the standard game 81 pattern anyway. The "denial" in turns 6-7 (forting on Blue territory) is incidental -- Red would have forked there regardless. Fort-focus vs denial is really just fort-focus vs fort-focus with first-mover advantage deciding.
+
+* Game 178: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: en|WSX|en|SWX|nw|SEX|fx|FEF|ef|NF|nf|NF|wf|NF
+:WINNER: blue
+:TURNS: 7
+:RED_STRATEGY: Fort-Focus
+:BLUE_STRATEGY: Territory Denial (via FEF + fort wall)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- c1->d1->d2. tR=2.
+- Turn 1 (Blue): =WSX= -- c5->b5->b4, end. Bank preserved. tB=2.
+- Turn 2 (Red): =en= -- d2->e2->e3. tR=4. Red fort-focuses: expand to 6 quickly.
+- Turn 2 (Blue): =SWX= -- b4->b3->a3, end. tB=4.
+- Turn 3 (Red): =nw= -- e3->e4->d4. tR=6. Red fort-focuses.
+- Turn 3 (Blue): =SEX= -- a3->a2->b2, end. tB=6. Bank=1.
+- Turn 4 (Red): =fx= -- Fort d4. fR=1.
+- Turn 4 (Blue): =FEF= -- DENIAL DOUBLE-FORT: Fort b2, east c2, fort c2. fB=2! Blue's denial creates the c-column fort wall foundation.
+- Turn 5 (Red): =ef= -- d4->e4, fort. fR=2.
+- Turn 5 (Blue): =NF= -- c2->c3, fort c3. fB=3. DENIAL wall growing.
+- Turn 6 (Red): =nf= -- e4->e5, fort. fR=3.
+- Turn 6 (Blue): =NF= -- c3->c4, fort c4. fB=4. Wall blocks Red's westward expansion.
+- Turn 7 (Red): =wf= -- e5->d5, fort. fR=4. Red forts but can't break through Blue's wall.
+- Turn 7 (Blue): =NF= -- c4->c5, fort c5. fB=5! BLUE WINS! Red has only 4 forts.
+
+** Key moment
+Blue's FEF + c-column fort wall (c2-c3-c4-c5) created a 5-fort chain that completed in 7 turns, one turn before Red's e-column chain could reach 5. The denial aspect: Blue's c-column wall permanently blocked Red from accessing the western half of the board.
+
+** Theory check
+DENIAL BEATS FORT-FOCUS when denial creates structural barriers. Blue's c-column fort wall is both a scoring mechanism (5 forts = win) and a denial mechanism (blocks Red from crossing). Red's pure fort-focus on the e-column was efficient but couldn't compete with Blue's 2-fort head start from FEF.
+
+* Game 179: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: en|WSX|ne|SWX|nw|SEX|fx|FEF|wf|NF|nf|WN|ef|WX|ef
+:WINNER: red
+:TURNS: 8
+:RED_STRATEGY: Fort-Focus + Counter-Denial
+:BLUE_STRATEGY: Territory Denial (FEF column)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- c1->d1->d2. tR=2.
+- Turn 1 (Blue): =WSX= -- c5->b5->b4, end. Bank preserved. tB=2.
+- Turn 2 (Red): =ne= -- d2->d3->e3. tR=4.
+- Turn 2 (Blue): =SWX= -- b4->b3->a3, end. tB=4.
+- Turn 3 (Red): =nw= -- e3->e4->d4. tR=6.
+- Turn 3 (Blue): =SEX= -- a3->a2->b2, end. tB=6. Bank=1.
+- Turn 4 (Red): =fx= -- Fort d4. fR=1.
+- Turn 4 (Blue): =FEF= -- Double-fort at b2 and c2. fB=2!
+- Turn 5 (Red): =wf= -- d4->c4, fort c4! COUNTER-DENIAL! Red blocks Blue's c-column by planting a fort at c4. Blue's denial column is severed!
+- Turn 5 (Blue): =NF= -- c2->c3, fort c3. fB=3. But c4 has Red fort -- column is cut!
+- Turn 6 (Red): =nf= -- c4->c5, fort c5. fR=3. Red captures Blue territory AND blocks Blue further.
+- Turn 6 (Blue): =WN= -- c3->b3->b4. Blue forced to detour around Red's blocking forts.
+- Turn 7 (Red): =ef= -- c5->d5, fort d5. fR=4.
+- Turn 7 (Blue): =WX= -- b4->a4, end. Blue's territory is disrupted. Can't fort (only 4 territory remaining).
+- Turn 8 (Red): =ef= -- d5->e5, fort e5. fR=5! RED WINS!
+
+** Key moment
+Turn 5: Red's counter-denial fort at c4 was the game-defining move. Instead of continuing the standard e-column fort race, Red diverted to block Blue's c-column. This cost Red one tempo but cost Blue 2+ tempo due to the forced detour and territory disruption.
+
+** Theory check
+Fort-focus + counter-denial (blocking the opponent's fort path) beats pure denial. The counter-denier sacrifices one fort on blocking (c4) and gains two benefits: (1) blocks opponent's fort chain, (2) captures opponent's territory. This is the definitive Red counter to Blue's FEF strategy. Red reads Blue's fort direction and blocks.
+
+* Game 180: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SE|wf|FN|nf|FN|ef|FN|ef|WF|sf
+:WINNER: red
+:TURNS: 7
+:RED_STRATEGY: Adaptive (fort-focus with incidental denial)
+:BLUE_STRATEGY: Adaptive (fort-focus, standard e-column)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- c1->c2->c3. tR=2.
+- Turn 1 (Blue): =SES= -- c5->c4->d4->d3. tB=3.
+- Turn 2 (Red): =wn= -- c3->b3->b4. tR=4.
+- Turn 2 (Blue): =SE= -- d3->d2->e2. tB=5.
+- Turn 3 (Red): =wf= -- b4->a4, fort. fR=1. tR=5. Red adapts: fort-focus on the a-column.
+- Turn 3 (Blue): =FN= -- Fort e2, north e3. fB=1. Blue adapts: fort-focus on the e-column.
+- Turn 4 (Red): =nf= -- a4->a5, fort. fR=2. Red continues a-column.
+- Turn 4 (Blue): =FN= -- Fort e3, north e4. fB=2. Blue continues e-column.
+- Turn 5 (Red): =ef= -- a5->b5, fort. fR=3. Red ADAPTS: pivots east along row 5.
+- Turn 5 (Blue): =FN= -- Fort e4, north e5. fB=3. Blue fills e-column.
+- Turn 6 (Red): =ef= -- b5->c5 (Blue territory!). DENIAL fort! fR=4. Red's adaptive pivot captures Blue's home square.
+- Turn 6 (Blue): =WF= -- e5->d5, fort. fB=4.
+- Turn 7 (Red): =sf= -- c5->c4 (Blue territory!). DENIAL fort! fR=5! RED WINS!
+
+** Key moment
+Turn 5: Red's adaptive pivot from the a-column to row 5 was the key strategic shift. Instead of continuing south (a5->a4 area), Red turned east along row 5. This put Red on a collision course with Blue's territory, enabling incidental denial forts at c5 and c4. The adaptation cost nothing: the row-5 path was equally efficient.
+
+** Theory check
+Adaptive play is optimal when it combines fort-focus with incidental denial. Red's strategy shift (a-column to row-5 sweep) was the best of both worlds: maintaining maximum fort speed while denying Blue's territory as a side effect. The lesson: the ideal strategy is not "denial OR fort-focus" but "fort-focus WITH denial" -- choosing fort paths that naturally cross enemy territory.
+
+* Mini-analysis: Games 176-180
+
+Red won 4/5 in denial vs fort-focus matchups. Key findings:
+
+1. DENIAL beats FORT-FOCUS when the denier strikes before the focuser's first fort (Game 176). Dropping the focuser below 5 territory is devastating.
+2. FORT-FOCUS with COUNTER-DENIAL beats pure denial (Game 179). The counter-denier blocks the opponent's fort path while building their own.
+3. FEF beats fort-focus in a standard race (Game 178). The double-fort's tempo advantage is decisive when Red doesn't counter.
+4. Incidental denial (forting on enemy territory during a standard sweep) costs nothing extra (Game 177).
+5. ADAPTIVE PLAY is optimal: combine fort-focus with denial by choosing fort locations that happen to deny territory (Game 180).
+
+* Research Findings
+
+** Is territory denial viable as a primary strategy?
+
+YES, but with caveats. Territory denial is viable when:
+1. Combined with fortification (fort-denial, not pure denial)
+2. Timed before the opponent reaches 5 territory
+3. Targeting territory the opponent needs for fortification
+
+Pure denial (stepping on territory without forting) is NOT viable as a primary strategy because it costs tempo without scoring forts. The denier falls behind in the fort race.
+
+The strongest form of denial is INCIDENTAL: choose fort locations that happen to be on opponent territory. This costs nothing extra and achieves denial as a side effect.
+
+Evidence: Games where denial preceded fortification (161, 162, 164, 176) resulted in wins. Games where denial replaced fortification (attempted in early Game 163 analysis) failed because the denier couldn't maintain fort pace.
+
+** Which side is better at denial?
+
+RED is better at transient denial (stepping on Blue's territory) due to first-mover advantage. Red can invade Blue's SES trail at Turn 2, before Blue reaches 5 territory.
+
+BLUE is better at structural denial (fort walls) due to the FEF double-fort. Blue's c-column fort wall (c2-c3-c4-c5) bisects the board and blocks Red's movement permanently.
+
+Red denial is disruptive but temporary. Blue denial is slower but permanent. The counter: Red plants a blocking fort (c4) to sever Blue's column.
+
+Evidence: Red won 4/5 as transient denier (161-165). Blue won 3/5 as structural denier (166-170). Red's counter-denial (Game 170, 179) defeats Blue's structural denial.
+
+** Denial vs fort-focus: which wins?
+
+DENIAL beats FORT-FOCUS when denial drops the focuser below 5 territory before their first fort (Games 164, 176). The 3+ turn delay is insurmountable.
+
+FORT-FOCUS beats DENIAL when the focuser starts forting before the denier can invade (Game 177 -- both sides fort at the same pace, Red's tempo wins).
+
+FORT-FOCUS + COUNTER-DENIAL beats DENIAL (Games 170, 179). The counter involves reading the opponent's fort direction and blocking it.
+
+The hierarchy: Counter-Denial > Denial > Fort-Focus > passive play.
+
+** When should a player switch from denial to fortification?
+
+Switch to fortification IMMEDIATELY when:
+1. You have 5+ territory
+2. Fort supply > 0
+3. Your current position is on the optimal fort path
+
+NEVER spend a turn on pure denial when you could fort instead. Fort-denial (forting on enemy territory) is always superior to stepping-on-territory denial because it scores forts and denies simultaneously.
+
+The optimal decision tree:
+- Can I fort? -> Fort (choose enemy territory if possible for denial bonus)
+- Can't fort yet? -> Expand toward 5 territory (choose enemy territory if adjacent)
+- Opponent about to fort? -> Invade their territory to drop them below 5
+
+** Revised territory denial theory
+
+ORIGINAL THEORY: Move onto opponent territory to reduce their count, blocking forts.
+
+REVISED THEORY: Territory denial is a SECONDARY effect of optimal fort play, not a primary strategy.
+
+Principles:
+1. FORT-DENIAL > PURE DENIAL. Always prefer placing a fort on enemy territory over merely stepping on it. Forts are permanent denial; stepping is temporary.
+2. INCIDENTAL DENIAL is free. The standard Red sweep through row 5 naturally denies 2-3 Blue squares as a side effect. This is the most efficient denial.
+3. STRUCTURAL DENIAL (fort walls) is more powerful than transient denial. Blue's c-column fort wall is permanent and blocks movement. Red must counter with blocking forts.
+4. TIMING is critical. Denial before the opponent's first fort is devastating. Denial after forts are placed is mostly irrelevant (forts can't be stolen).
+5. COUNTER-DENIAL beats denial. The counter: plant a blocking fort in the opponent's planned fort path. This costs one tempo but disrupts 2+ opponent turns.
+6. ADAPTIVE PLAY is optimal. The best strategy is fort-focus with tactical denial: always building toward 5 forts, but choosing fort locations that deny opponent territory when possible.

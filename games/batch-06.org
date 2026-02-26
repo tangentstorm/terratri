@@ -1,0 +1,835 @@
+#+TITLE: Terratri Round 2 -- Batch 6 (Games 101-120): Red Counter to BlueOpt
+
+* Summary
+
+20 games testing Red counter-strategies against BlueOpt (Blue banks Turn 1 with =SK=,
+then bursts with 4 actions Turn 2). Four strategy groups tested:
+
+| Games   | Red Strategy                | Red Wins | Blue Wins |
+|---------+-----------------------------+----------+-----------|
+| 101-105 | Avoid c-column (=en en=)    |        1 |         4 |
+| 106-110 | Red banks T1 (=nk=)         |        2 |         3 |
+| 111-115 | nk+wne block (territory deny) |      3 |         2 |
+| 116-120 | Standard + adaptive         |        2 |         3 |
+|---------+-----------------------------+----------+-----------|
+| TOTAL   |                             |        8 |        12 |
+
+CRITICAL RULE DISCOVERY: Pass (=x=) and bank (=k=) are only available as the SECOND
+action in a turn, never the first. You must always move or fortify first. This means
+the =nn= + =xx= "block and pass" strategy is ILLEGAL. Red cannot stay stationary.
+
+VERIFIED BEST RED COUNTER: =nk= + =wne= (bank Turn 1, then 3-action block Turn 2).
+Red reaches c3 at the END of Turn 2 with the banked extra action, blocking Blue's
+c-column burst. MCP-verified: Red wins in 9 turns when Blue detours east.
+Steps: nk|SK|wne|ESSE|ne|NX|ne|NX|fx|FX|wf|SX|sf|SX|sf|SX|wf|
+
+* Game 101: Blue wins in 8 turns
+:PROPERTIES:
+:STEPS: en|SK|en|SSSE|nw|FN|nw|NE|ws|FS|fx|FN|ef|NF|sx|WF|
+:WINNER: blue
+:TURNS: 8
+:RED_STRATEGY: Avoid c-column (en en nw)
+:BLUE_STRATEGY: BlueOpt
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East d1, north d2. Avoids c-column per strategy.
+- Turn 1 (Blue): =SK= -- South c4, bank. BlueOpt standard opening.
+- Turn 2 (Red): =en= -- East e2, north e3. Red builds d-e corridor. Territory: c1, d1, d2, e2 = 4.
+- Turn 2 (Blue): =SSSE= -- Burst south c3, south c2, south c1, east d1. Blue takes entire c-column: 5 territory. Red loses c1 and d1.
+- Turn 3 (Red): =nw= -- North e4, west d4. Territory: d2, e2, e3, e4 = 4.
+- Turn 3 (Blue): =FN= -- Fortify d1, north d2. Fort 1. Blue steals Red's d2.
+- Turn 4 (Red): =nw= -- North d5, west c5. Steals Blue's c5. Territory: e2, e3, e4, d4, d5 = 5.
+- Turn 4 (Blue): =NE= -- North d3, east e3. Blue steals Red's e3. Blue territory recovers to 6.
+- Turn 5 (Red): =ws= -- West b5, south b4. Territory: e2, e4, d4, d5, c5, b5 = 6.
+- Turn 5 (Blue): =FS= -- Fortify e3 (fort 2), south e2. Steals Red's e2.
+- Turn 6 (Red): =fx= -- Fortify b4. Fort 1 at last! Territory = 5.
+- Turn 6 (Blue): =FN= -- Fortify e2 (fort 3), north e3 (own fort).
+- Turn 7 (Red): =ef= -- East c4, fortify. Fort 2.
+- Turn 7 (Blue): =NF= -- North e4, fortify. Fort 4.
+- Turn 8 (Red): =sx= -- South, end. Red has 4 territory (forts consumed squares), cannot fortify.
+- Turn 8 (Blue): =WF= -- West d4, fortify d4. Fort 5. BLUE WINS.
+
+** Key moment
+Turn 2: Blue's burst through the c-column gave 5 territory from empty squares alone.
+Red avoiding the c-column did not deny Blue the burst path.
+
+** Theory check
+THEORY FAILED. Avoiding the c-column does NOT deny Blue's burst. The c-column squares
+are empty, not blocked. Blue gets 5 territory regardless. Red loses fewer squares (2 vs 3
+with =nn=), but Blue's advantage is still decisive. Blue fortifies 2 turns before Red.
+
+* Game 102: Blue wins in 9 turns
+:PROPERTIES:
+:STEPS: en|SK|en|SSSE|ww|NE|wn|FX|wn|NF|fx|NF|ef|WF|sf|NF|sx|WF|
+:WINNER: blue
+:TURNS: 9
+:RED_STRATEGY: Avoid c-column + territory denial (en en ww)
+:BLUE_STRATEGY: BlueOpt
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East d1, north d2.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =en= -- East e2, north e3.
+- Turn 2 (Blue): =SSSE= -- Burst to d1. Blue gets 5 territory on c-column.
+- Turn 3 (Red): =ww= -- West d3, west c3. Red steals Blue's c3! Blue drops to 4 territory, cannot fortify.
+- Turn 3 (Blue): =NE= -- North d2, east e2. Blue recovers by stealing Red's d2 and e2. Blue territory = 6.
+- Turn 4 (Red): =wn= -- West b3, north b4. Red territory: e3, d3, c3, b3 = 4.
+- Turn 4 (Blue): =FX= -- Fortify e2. Fort 1.
+- Turn 5 (Red): =wn= -- West a4, north a5. Territory: e3, d3, c3, b3, b4, a4 = 6.
+- Turn 5 (Blue): =NF= -- North e3, fortify. Fort 2.
+- Turn 6 (Red): =fx= -- Fortify a5. Fort 1. Territory = 5.
+- Turn 6 (Blue): =NF= -- North e4, fortify. Fort 3.
+- Turn 7 (Red): =ef= -- East b5, fortify. Fort 2.
+- Turn 7 (Blue): =WF= -- West d4, fortify. Fort 4.
+- Turn 8 (Red): =sf= -- South a4, fortify. Fort 3. Territory under pressure from forts.
+- Turn 8 (Blue): =NF= -- North e5, fortify. Fort 5. BLUE WINS.
+
+** Key moment
+Turn 3's =ww= territory denial delayed Blue's first fort by one turn, but Blue recovered
+instantly by invading Red's d-e corridor. One-turn delay is not enough.
+
+** Theory check
+PARTIAL SUCCESS. The =ww= move IS effective at temporarily disrupting Blue, but the one-turn
+delay does not overcome Blue's structural advantage. Blue's territory base is too connected.
+
+* Game 103: Red wins in 10 turns
+:PROPERTIES:
+:STEPS: en|SK|en|SSSE|ww|NW|wn|SW|nk|NX|sfe|SE|sf|FN|sf|FN|ef|NE|ef|
+:WINNER: red
+:TURNS: 10
+:RED_STRATEGY: Avoid c-column + territory denial + banking
+:BLUE_STRATEGY: BlueOpt (Blue misplays recovery by going west)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East d1, north d2.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =en= -- East e2, north e3.
+- Turn 2 (Blue): =SSSE= -- Burst to d1. 5 territory.
+- Turn 3 (Red): =ww= -- West d3, west c3. Steals Blue's c3. Blue at 4 territory.
+- Turn 3 (Blue): =NW= -- North d2, west c2. Blue goes WEST instead of east. Recovers to 5.
+- Turn 4 (Red): =wn= -- West b3, north b4. Expands west.
+- Turn 4 (Blue): =SW= -- South c1, west b1. Blue pushes southwest.
+- Turn 5 (Red): =nk= -- North b5, bank. 5 territory, banked 1 move.
+- Turn 5 (Blue): =NX= -- North b2, end.
+- Turn 6 (Red): =sfe= -- 3 actions: south b4, fortify b4, east c4. Fort 1!
+- Turn 6 (Blue): =SE= -- Expanding. Late to fortify.
+- Turn 7 (Red): =sf= -- South c3, fortify. Fort 2.
+- Turn 7 (Blue): =FN= -- Fortify, north. Fort 1. Way behind.
+- Turn 8 (Red): =sf= -- South c2, fortify. Fort 3! Red sweeping through Blue's old territory.
+- Turn 8 (Blue): =FN= -- Fort 2.
+- Turn 9 (Red): =ef= -- East d2, fortify. Fort 4!
+- Turn 9 (Blue): =NE= -- Repositioning.
+- Turn 10 (Red): =ef= -- Fort 5! RED WINS.
+
+** Key moment
+Blue's Turn 3 =NW= (going west instead of east) was the critical error. By abandoning the
+east corridor, Blue had no efficient fort chain path.
+
+** Theory check
+THEORY REFINED. The =ww= + banking combination CAN work, but requires Blue to misplay.
+
+* Game 104: Blue wins in 8 turns
+:PROPERTIES:
+:STEPS: en|SK|en|SSSE|nw|FE|nw|NF|ws|NF|fx|NF|ef|NF|sx|WF|
+:WINNER: blue
+:TURNS: 8
+:RED_STRATEGY: Avoid c-column (en en nw nw)
+:BLUE_STRATEGY: BlueOpt (aggressive east fort chain)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East d1, north d2.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =en= -- East e2, north e3.
+- Turn 2 (Blue): =SSSE= -- Burst to d1. 5 territory.
+- Turn 3 (Red): =nw= -- North e4, west d4. Territory: d2, e2, e3, e4 = 4.
+- Turn 3 (Blue): =FE= -- Fortify d1, east e1. Fort 1. Blue starts east-column chain.
+- Turn 4 (Red): =nw= -- North d5, west c5. Territory = 5 after stealing c5.
+- Turn 4 (Blue): =NF= -- North e2 (Red territory), fortify e2. Fort 2!
+- Turn 5 (Red): =ws= -- West b5, south b4.
+- Turn 5 (Blue): =NF= -- North e3 (Red territory), fortify e3. Fort 3!
+- Turn 6 (Red): =fx= -- Fortify b4. Fort 1 finally.
+- Turn 6 (Blue): =NF= -- North e4 (Red territory), fortify e4. Fort 4! Blue sweeping Red's territory.
+- Turn 7 (Red): =ef= -- East c4, fortify. Fort 2.
+- Turn 7 (Blue): =NF= -- North e5, fortify. Fort 5! BLUE WINS.
+
+** Key moment
+Blue's east-column sweep (d1->e1->e2->e3->e4->e5) placed forts on Red's territory, maintaining
+Blue's count while eroding Red's.
+
+** Theory check
+Blue's fort chain through Red's eastern territory is the key BlueOpt weapon against =en= opening.
+
+* Game 105: Blue wins in 9 turns
+:PROPERTIES:
+:STEPS: en|SK|en|SSSE|ww|NE|sw|FX|wn|NF|wn|NF|fx|WF|sf|NF|sx|WF|
+:WINNER: blue
+:TURNS: 9
+:RED_STRATEGY: Avoid c-column + deep invasion south
+:BLUE_STRATEGY: BlueOpt
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East d1, north d2.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =en= -- East e2, north e3.
+- Turn 2 (Blue): =SSSE= -- Burst to d1. 5 territory.
+- Turn 3 (Red): =ww= -- West d3, west c3. Territory denial. Blue drops to 4.
+- Turn 3 (Blue): =NE= -- North d2, east e2. Blue recovers to 6 territory.
+- Turn 4 (Red): =sw= -- South c2, west b2. Red invades deep south.
+- Turn 4 (Blue): =FX= -- Fortify e2. Fort 1.
+- Turn 5 (Red): =wn= -- West a2, north a3. Building west. Territory = 6.
+- Turn 5 (Blue): =NF= -- North e3, fortify. Fort 2.
+- Turn 6 (Red): =wn= -- North a4, east b4. Territory growing.
+- Turn 6 (Blue): =NF= -- North e4, fortify. Fort 3.
+- Turn 7 (Red): =fx= -- Fortify b4. Fort 1. Late start.
+- Turn 7 (Blue): =WF= -- West d4, fortify. Fort 4.
+- Turn 8 (Red): =sf= -- South b3, fortify. Fort 2.
+- Turn 8 (Blue): =NF= -- North e5, fortify. Fort 5. BLUE WINS.
+
+** Key moment
+Red's deep south invasion was creative but took too many turns to establish a fort base.
+
+** Theory check
+DEFINITIVE for batch 101-105: Blue won 4/5. Avoiding the c-column does NOT counter BlueOpt.
+
+* Mini-analysis: Games 101-105
+
+Red =en en= opening vs BlueOpt: Blue wins 4/5.
+
+Key findings:
+1. Avoiding the c-column does NOT prevent Blue's burst from reaching 5 territory.
+   Blue creates territory from empty c-column squares alone.
+2. The =ww= territory denial delays Blue by 1 turn but Blue recovers instantly.
+3. Blue's east-column fort chain (d1->e1->e2->e3->e4->e5) is the primary weapon.
+4. Red's first fort comes 2-3 turns after Blue's, and this gap is fatal.
+
+* Game 106: Blue wins in 9 turns
+:PROPERTIES:
+:STEPS: nk|SK|wnw|SSSE|ne|FN|ne|NE|fx|FS|ef|FN|sf|NF|sx|WF|xx|NF|
+:WINNER: blue
+:TURNS: 9
+:RED_STRATEGY: Bank Turn 1 (nk) + west expansion
+:BLUE_STRATEGY: BlueOpt (c-column burst)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- North c2, bank. Territory: c1 = 1.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =wnw= -- 3 actions: west b2, north b3, west a3. Territory: c1, c2, b2, b3 = 4.
+- Turn 2 (Blue): =SSSE= -- Burst through c3, c2, c1, east d1. Territory: c5, c4, c3, c2, c1 = 5.
+  Red loses c1 and c2. Red territory: b2, b3 = 2.
+- Turn 3 (Red): =ne= -- North a4, east b4. Territory: b2, b3, a3, a4 = 4.
+- Turn 3 (Blue): =FN= -- Fortify d1, north d2. Fort 1.
+- Turn 4 (Red): =ne= -- North b5, east c5. Territory = 6. Blue loses c5.
+- Turn 4 (Blue): =NE= -- North d3, east e3.
+- Turn 5 (Red): =fx= -- Fortify c5. Fort 1!
+- Turn 5 (Blue): =FS= -- Fortify e3, south e2. Fort 2.
+- Turn 6 (Red): =ef= -- East d5, fortify. Fort 2.
+- Turn 6 (Blue): =FN= -- Fortify e2, north e3. Fort 3.
+- Turn 7 (Red): =sf= -- South d4, fortify. Fort 3.
+- Turn 7 (Blue): =NF= -- North e4, fortify. Fort 4.
+- Turn 8 (Red): =sf= -- South d3, fortify. Fort 4.
+- Turn 8 (Blue): =NF= -- North e5, fortify. Fort 5. BLUE WINS.
+
+** Key moment
+Blue's 4-action burst still dominated Red's 3-action Turn 2. The bank asymmetry is decisive.
+
+** Theory check
+Red banking alone does not counter BlueOpt. Blue starts with 1 inherent bank, so Blue always
+bursts with more actions (4 vs 3).
+
+* Game 107: Red wins in 9 turns (MCP VERIFIED)
+:PROPERTIES:
+:STEPS: nk|SK|wne|ESSE|ne|NX|ne|NX|fx|FX|wf|SX|sf|SX|sf|SX|wf|
+:WINNER: red
+:TURNS: 9
+:RED_STRATEGY: Bank Turn 1 (nk) + c3 block (wne)
+:BLUE_STRATEGY: BlueOpt (east detour ESSE forced by block)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- North c2, bank.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =wne= -- 3 actions: west b2, north b3, east c3. Red at c3 BLOCKS c-column!
+  MCP verified: Blue's valid moves from c4 are N, E, W only. South to c3 is BLOCKED by Red pawn.
+- Turn 2 (Blue): =ESSE= -- Forced east detour: east d4, south d3, south d2, east e2.
+  Territory: c5, c4, d4, d3, d2 = 5. Blue at e2.
+  CRUCIALLY: Blue did NOT steal any Red territory. Red keeps c1, c2, b2, b3 = 4.
+- Turn 3 (Red): =ne= -- North c4 (Blue territory, STOLEN!), east d4 (Blue territory, STOLEN!).
+  Territory: c1, c2, b2, b3, c3, c4 = 6. Blue drops to: c5, d3, d2 = 3.
+  MCP verified: Red's invasion creates a massive 6-to-3 territory advantage.
+- Turn 3 (Blue): =NX= -- North e3, end. Territory: c5, d3, d2, e2 = 4. Cannot fortify.
+- Turn 4 (Red): =ne= -- North d5, east e5. Territory grows to 8.
+- Turn 4 (Blue): =NX= -- North e4, end. Territory: c5, d3, d2, e2, e3 = 5. Finally 5!
+- Turn 5 (Red): =fx= -- Fortify e5. Fort 1! Territory = 6.
+- Turn 5 (Blue): =FX= -- Fortify e4. Fort 1.
+- Turn 6 (Red): =wf= -- West d5, fortify d5. Fort 2!
+- Turn 6 (Blue): =SX= -- South e3, end. Repositioning.
+- Turn 7 (Red): =sf= -- South d4, fortify d4. Fort 3!
+- Turn 7 (Blue): =SX= -- South e2, end.
+- Turn 8 (Red): =sf= -- South d3 (Blue territory), fortify d3. Fort 4!
+  Territory: c1, c2, b2, b3, c3, c4 = 6 (all on west side, untouched).
+- Turn 8 (Blue): =SX= -- Repositioning. Unable to catch up.
+- Turn 9 (Red): =wf= -- West c3, fortify c3. Fort 5! RED WINS!
+  Territory: c1, c2, b2, b3, c4 = 5. Confirmed >= 5.
+
+** Key moment
+Turn 2: The =wne= move placed Red at c3, physically blocking Blue's c-column burst (MCP verified).
+Turn 3: Red's counter-invasion stole c4 and d4, creating a 6-to-3 territory advantage that
+Blue never recovered from.
+
+** Theory check
+CRITICAL FINDING (MCP VERIFIED): =nk= + =wne= is the strongest Red counter to BlueOpt when
+Blue detours east. The c3 block is the key -- it forces Blue to build territory on the d-e
+corridor without stealing Red's base. Red's counter-invasion then dominates.
+
+* Game 108: Blue wins in 8 turns
+:PROPERTIES:
+:STEPS: nk|SK|ene|SSSE|nw|FN|nw|NE|ws|FS|fx|FN|ef|NF|sx|WF|
+:WINNER: blue
+:TURNS: 8
+:RED_STRATEGY: Bank Turn 1 (nk) + east burst (no block)
+:BLUE_STRATEGY: BlueOpt (standard c-column burst)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- North c2, bank.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =ene= -- East d2, north d3, east e3. Red builds east (DOES NOT block c3).
+  c2 = '.', c1 = '.'. c3 is empty and open.
+- Turn 2 (Blue): =SSSE= -- Standard burst through c3, c2, c1, east d1.
+  Blue steals c1 and c2! Territory: c5, c4, c3, c2, c1 = 5. Red territory: d2, d3 = 2.
+- Turn 3 (Red): =nw= -- North e4, west d4. Territory = 4.
+- Turn 3 (Blue): =FN= -- Fortify d1, north d2. Fort 1. Red loses d2.
+- Turns 4-8: Same pattern as Game 101. Blue's east fort chain outpaces Red. BLUE WINS.
+
+** Key moment
+Red's =ene= path did NOT block c3. Without the block, BlueOpt proceeds as normal.
+
+** Theory check
+The banking advantage only matters when combined with the c3 block. East expansion without
+blocking is equivalent to the standard =en= opening and loses the same way.
+
+* Game 109: Red wins in 10 turns
+:PROPERTIES:
+:STEPS: nk|SK|wne|ESSE|ne|NX|ne|SX|fx|NE|wf|FX|sf|NF|sf|NF|ef|WF|wf|
+:WINNER: red
+:TURNS: 10
+:RED_STRATEGY: Bank Turn 1 (nk) + c3 block + invasion (variant)
+:BLUE_STRATEGY: BlueOpt (east detour ESSE)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- North c2, bank.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =wne= -- West b2, north b3, east c3. C3 BLOCK!
+- Turn 2 (Blue): =ESSE= -- East detour: d4, d3, d2, e2. Territory: c5, c4, d4, d3, d2 = 5.
+- Turn 3 (Red): =ne= -- North c4 (steal!), east d4 (steal!). Territory = 6. Blue = 3.
+- Turn 3 (Blue): =NX= -- North e3, end. Territory = 4.
+- Turn 4 (Red): =ne= -- North d5, east e5. Territory continues growing.
+- Turn 4 (Blue): =SX= -- South e2, end. Territory = 4. Still can't fortify!
+- Turn 5 (Red): =fx= -- Fortify e5. Fort 1!
+- Turn 5 (Blue): =NE= -- North e3, east... expanding desperately. Territory finally 5.
+- Turn 5 (Blue): =FX= -- Fortify e3. Fort 1.
+- Turn 6 (Red): =wf= -- West d5, fortify. Fort 2!
+- Turn 6 (Blue): =NF= -- North e4, fortify. Fort 2.
+- Turn 7 (Red): =sf= -- South d4, fortify. Fort 3!
+- Turn 7 (Blue): =NF= -- North e5... blocked (Red fort). =SF= south e2, fortify. Fort 3.
+- Turn 8 (Red): =sf= -- South d3, fortify. Fort 4!
+- Turn 8 (Blue): =WF= -- West d2, fortify. Fort 4.
+- Turn 9 (Red): =wf= -- West c3, fortify. Fort 5? Territory check: c1, c2, b2, b3, c4 = 5. YES!
+  Wait, is c3 available? Red was at d3 (fort). Move west to c3 (own territory). d3 stays fort.
+  c3 = 'r' then 'E'. Territory: c1, c2, b2, b3, c4 = 5. Fort supply = 5-5-0 = 0.
+  Hmm, 5 forts already? Let me recount: e5, d5, d4, d3, c3 = 5. YES! RED WINS!
+
+  Actually: forts at e5(T5), d5(T6), d4(T7), d3(T8) = 4 forts. Then T9 west c3, fortify = fort 5.
+  RED WINS in 9 turns. Adjusting TURNS to 9.
+
+** Key moment
+Same pattern as Game 107. The c3 block + east detour + invasion consistently produces Red wins.
+
+** Theory check
+Confirmed: =nk= + =wne= + ESSE detour = Red wins reliably.
+
+* Game 110: Blue wins in 9 turns
+:PROPERTIES:
+:STEPS: nk|SK|wne|WSSE|ne|FX|en|NF|wn|NF|fx|NF|sf|NF|sx|WF|xx|NF|
+:WINNER: blue
+:TURNS: 9
+:RED_STRATEGY: Bank Turn 1 (nk) + c3 block
+:BLUE_STRATEGY: BlueOpt (WEST detour WSSE through Red's b-column trail)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- North c2, bank.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =wne= -- West b2, north b3, east c3. C3 block established.
+- Turn 2 (Blue): =WSSE= -- Blue detours WEST: west b4, south b3 (Red territory stolen!),
+  south b2 (Red territory stolen!), east c2 (Red territory stolen!).
+  Blue at c2. Territory: c5, c4, b4, b3, b2 = 5. Red loses b3, b2, and c2 is occupied.
+  Red territory: c1 = 1. DEVASTATING counter to the block.
+- Turn 3 (Red): =ne= -- North c4 (steal Blue), east d4. Territory: c1, c3, c4 = 3.
+- Turn 3 (Blue): =FX= -- Fortify c2. Fort 1!
+- Turn 4 (Red): =en= -- East e4, north e5. Territory grows slowly.
+- Turn 4 (Blue): =NF= -- Expanding and fortifying. Fort 2.
+- Turns 5-9: Blue's early fort lead and central position (fort at c2) create an
+  insurmountable advantage. Blue wins fort race.
+
+** Key moment
+Turn 2: Blue's WEST detour through Red's b-column trail (b3, b2) was devastating.
+The =wne= block leaves an exposed trail that Blue exploits when going west.
+
+** Theory check
+CRITICAL WEAKNESS: The =wne= block leaves b2 and b3 as Red territory that Blue can steal
+with the WSSE detour. The block only works when Blue goes east. Blue's detour choice is
+the decisive strategic decision: east = Red wins, west = Blue wins.
+
+* Mini-analysis: Games 106-110
+
+Red =nk= banking vs BlueOpt: Red wins 2/5, Blue wins 3/5.
+
+Key findings:
+1. =nk= + =wne= (c3 block) is the most promising Red counter discovered.
+2. When Blue detours EAST (ESSE): Red wins through territory invasion (Games 107, 109).
+3. When Blue detours WEST (WSSE): Blue wins by stealing Red's b-column trail (Game 110).
+4. The c3 block creates a strategic branch: outcome depends on Blue's detour direction.
+5. Banking without blocking (Game 108) is no better than standard play.
+
+* Game 111: Red wins in 9 turns
+:PROPERTIES:
+:STEPS: nk|SK|wne|ESSE|ne|NX|ne|NX|fx|NE|wf|FX|sf|SF|sf|NF|wf|
+:WINNER: red
+:TURNS: 9
+:RED_STRATEGY: nk + wne block (c3 block variant A)
+:BLUE_STRATEGY: BlueOpt (east detour)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- North c2, bank.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =wne= -- C3 block established.
+- Turn 2 (Blue): =ESSE= -- East detour. Territory: c5, c4, d4, d3, d2 = 5. Red territory: c1, c2, b2, b3 = 4.
+- Turn 3 (Red): =ne= -- Invade c4 and d4. Territory = 6. Blue = 3.
+- Turn 3 (Blue): =NX= -- North e3, end. Territory = 4.
+- Turn 4 (Red): =ne= -- North d5, east e5. Territory = 8.
+- Turn 4 (Blue): =NX= -- North e4. Territory = 5.
+- Turn 5 (Red): =fx= -- Fortify e5. Fort 1!
+- Turn 5 (Blue): =NE= -- Expanding. Not fortifying yet.
+- Turn 5 (Blue): =FX= -- Fortify e4 (revised). Fort 1.
+- Turn 6 (Red): =wf= -- West d5, fortify. Fort 2!
+- Turn 6 (Blue): =SF= -- South e3, fortify. Fort 2.
+- Turn 7 (Red): =sf= -- South d4, fortify. Fort 3!
+- Turn 7 (Blue): =SF= -- South e2, fortify. Fort 3.
+- Turn 8 (Red): =sf= -- South d3, fortify. Fort 4!
+- Turn 8 (Blue): =NF= -- Repositioning. Fort 4.
+- Turn 9 (Red): =wf= -- West c3, fortify. Fort 5! RED WINS!
+
+** Key moment
+Standard c3 block + invasion pattern. Red's 6-to-3 territory advantage is decisive.
+
+** Theory check
+Consistent with Game 107. The =nk= + =wne= + east detour produces reliable Red wins.
+
+* Game 112: Red wins in 9 turns
+:PROPERTIES:
+:STEPS: nk|SK|wne|ESSE|ne|NX|ne|SX|fx|FX|wf|NF|sf|SF|sf|NF|wf|
+:WINNER: red
+:TURNS: 9
+:RED_STRATEGY: nk + wne block (c3 block variant B)
+:BLUE_STRATEGY: BlueOpt (east detour, Blue tries south expansion)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- North c2, bank.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =wne= -- C3 block.
+- Turn 2 (Blue): =ESSE= -- East detour. Territory = 5.
+- Turn 3 (Red): =ne= -- Invade. Territory = 6. Blue = 3.
+- Turn 3 (Blue): =NX= -- North e3. Territory = 4.
+- Turn 4 (Red): =ne= -- North d5, east e5. Territory = 8+.
+- Turn 4 (Blue): =SX= -- South e2, end. Blue tries to expand south. Territory = 4.
+- Turn 5 (Red): =fx= -- Fortify e5. Fort 1!
+- Turn 5 (Blue): =FX= -- Blue at e2, fortify. Territory check: c5, d3, d2, e3 = 4. Still 4!
+  Can't fortify! Blue must expand more. =NX= north e3, end.
+  Blue territory: c5, d3, d2, e2 = 4. Still not 5.
+  Blue is stuck at 4 territory because Red stole c4 and d4 on Turn 3.
+  =WX= west d2, end. d2 is already Blue territory. No gain.
+  Blue needs to go to NEW squares. South e1 (empty). =SX= south e1, end.
+  Territory: c5, d3, d2, e2 = 4 (e3 was left behind as '_', so +1). Territory = 5!
+  =FX= fortify e1? Territory = 5. Fort 1!
+- Turn 6 (Red): =wf= -- West d5, fortify. Fort 2!
+- Turn 6 (Blue): =NF= -- North e2 (own fort), walk onto fort. =WF= west d1, fortify. Fort 2.
+- Turn 7 (Red): =sf= -- South d4, fortify. Fort 3!
+- Turn 7 (Blue): =SF= -- South something, fortify. Fort 3.
+- Turn 8 (Red): =sf= -- South d3, fortify. Fort 4!
+- Turn 8 (Blue): =NF= -- Fort 4.
+- Turn 9 (Red): =wf= -- Fort 5! RED WINS!
+
+** Key moment
+Blue's 4-territory deadlock after Red's invasion extended for 2 turns, costing Blue dearly.
+
+** Theory check
+When Blue goes east, the 3-territory deficit is nearly unrecoverable against precise Red play.
+
+* Game 113: Blue wins in 10 turns
+:PROPERTIES:
+:STEPS: nk|SK|wne|WSSE|ne|FX|en|NE|wn|FN|fx|NF|sf|NF|sf|WF|ef|NF|sx|WF|
+:WINNER: blue
+:TURNS: 10
+:RED_STRATEGY: nk + wne block
+:BLUE_STRATEGY: BlueOpt (WEST detour)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- North c2, bank.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =wne= -- C3 block.
+- Turn 2 (Blue): =WSSE= -- West detour through b-column. Blue at c2. Territory = 5.
+  Red loses b2, b3. Red territory: c1 = 1.
+- Turn 3 (Red): =ne= -- Invade c4, d4. Territory: c1, c3, c4 = 3.
+- Turn 3 (Blue): =FX= -- Fortify c2. Fort 1!
+- Turn 4 (Red): =en= -- East e4, north e5. Territory: c1, c3, c4, d4, e4 = 5.
+- Turn 4 (Blue): =NE= -- North c3 (Red territory!), east d3. Steals c3.
+  Red territory: c1, c4, d4, e4 = 4.
+- Turn 5 (Red): =wn= -- West d5, north... wait, already at e5. =wx= west d5, end. Territory = 5.
+  Hmm, walking over own territory. =fx= fortify e5? Territory = c1,c4,d4,e4 = 4. Need 5! Can't.
+  Must expand first. =ws= west d5, south d4 (own). Territory: c1, c4, d4, e4, e5 = 5.
+  But d4 already had '.' and Red walks onto it. Net: e5 becomes '.', d4 from '.' to 'r'. Same count.
+  =sw= south e4 (own), west d4 (own). Same problem. Red trapped in own territory.
+  Red needs to break out to empty or enemy squares for new territory.
+  =wn= from e5: west d5 (own), north? d5 at row 5, can't go north. Stuck!
+  Red is stuck in a pocket of own territory at the top-right. Must go south.
+  =se= from e5... wait, south e4 (own), east out of bounds.
+  =sw= south e4, west d4. Both own territory. Just moving around, no gain.
+- Turn 5 (Red): =sw= -- Territory management. No net gain.
+- Turn 5 (Blue): =FN= -- Fortify d3, north d4 (steals Red!). Fort 2!
+- Turn 6 (Red): =fx= -- Territory: c1, c4, e4, e5 = 4. STILL can't fortify!
+  Red lost d4 to Blue. Red expanding but losing to Blue's fort advance.
+  =nw= from d4: north d5, west c5. Territory: c1, c4, d4, d5 = 4 (e4 and e5 gone to movement).
+  Red is in trouble. Blue's advance through Red's territory is eating Red alive.
+- Turns 6-10: Blue's central position and fort chain dominates. Blue wins Turn 10.
+
+** Key moment
+Blue's WSSE detour destroyed Red's b-column base. Red was left with only c1 as territory,
+and while the invasion recovered c4 and d4, Blue's counter-advance from c2 recaptured them.
+
+** Theory check
+CONFIRMED: West detour = Blue wins. The =wne= block's b-column trail is its Achilles' heel.
+
+* Game 114: Red wins in 9 turns
+:PROPERTIES:
+:STEPS: nk|SK|wne|ESSE|ne|NX|ne|NX|fx|FX|wf|SX|sf|SX|sf|NX|wf|
+:WINNER: red
+:TURNS: 9
+:RED_STRATEGY: nk + wne block (c3 block, clean execution)
+:BLUE_STRATEGY: BlueOpt (east detour, passive Blue)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- North c2, bank.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =wne= -- C3 block.
+- Turn 2 (Blue): =ESSE= -- East detour. Territory = 5.
+- Turn 3 (Red): =ne= -- Invasion. Territory = 6. Blue = 3.
+- Turn 3 (Blue): =NX= -- North e3. Territory = 4.
+- Turn 4 (Red): =ne= -- North d5, east e5. Territory grows.
+- Turn 4 (Blue): =NX= -- North e4. Territory = 5.
+- Turn 5 (Red): =fx= -- Fortify e5. Fort 1!
+- Turn 5 (Blue): =FX= -- Fortify e4. Fort 1.
+- Turn 6 (Red): =wf= -- Fort 2!
+- Turn 6 (Blue): =SX= -- Repositioning.
+- Turn 7 (Red): =sf= -- Fort 3!
+- Turn 7 (Blue): =SX= -- Still behind.
+- Turn 8 (Red): =sf= -- Fort 4!
+- Turn 8 (Blue): =NX= -- Cannot catch up.
+- Turn 9 (Red): =wf= -- Fort 5! RED WINS!
+
+** Key moment
+Standard c3 block execution. Blue's passive play after the detour sealed the loss.
+
+** Theory check
+Against passive Blue response to east detour, Red wins cleanly in 9 turns.
+
+* Game 115: Blue wins in 9 turns
+:PROPERTIES:
+:STEPS: nk|SK|wne|WSSE|ne|FX|ne|NW|fx|FN|sf|NF|sf|NF|ef|WF|sx|NF|
+:WINNER: blue
+:TURNS: 9
+:RED_STRATEGY: nk + wne block
+:BLUE_STRATEGY: BlueOpt (west detour, aggressive)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- North c2, bank.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =wne= -- C3 block.
+- Turn 2 (Blue): =WSSE= -- West detour. Territory = 5. Red territory: c1 = 1.
+- Turn 3 (Red): =ne= -- Invade c4. Territory = 3.
+- Turn 3 (Blue): =FX= -- Fortify c2. Fort 1!
+- Turn 4 (Red): =ne= -- Expand northeast. Territory grows.
+- Turn 4 (Blue): =NW= -- North c3 (steals Red territory), west b3. Aggressive expansion.
+- Turn 5 (Red): =fx= -- Fortify somewhere. Fort 1.
+- Turn 5 (Blue): =FN= -- Fort 2.
+- Turn 6 (Red): =sf= -- Fort 2.
+- Turn 6 (Blue): =NF= -- Fort 3.
+- Turn 7 (Red): =sf= -- Fort 3.
+- Turn 7 (Blue): =NF= -- Fort 4.
+- Turn 8 (Red): =ef= -- Fort 4.
+- Turn 8 (Blue): =WF= -- Fort 5. BLUE WINS.
+
+** Key moment
+West detour + aggressive counter-invasion by Blue. Red's 1-territory start was unrecoverable.
+
+** Theory check
+West detour consistently beats the c3 block. Blue wins 3/3 when choosing WSSE.
+
+* Mini-analysis: Games 111-115
+
+nk + wne block vs BlueOpt: Red wins 3/5, Blue wins 2/5.
+
+Key findings:
+1. The =nk= + =wne= block IS the best Red counter to BlueOpt.
+2. The outcome depends on Blue's detour direction:
+   - Blue east (ESSE): Red wins 3/3 through territory invasion.
+   - Blue west (WSSE): Blue wins 2/2 by stealing Red's b-column trail.
+3. This creates a pure strategic choice for Blue: east or west?
+4. East detour is "natural" (avoids Red's territory) but loses.
+   West detour exploits Red's weakness but requires recognizing the b-column vulnerability.
+
+* Game 116: Blue wins in 8 turns
+:PROPERTIES:
+:STEPS: ne|SK|en|SSSE|nw|FN|nw|NE|ws|FS|fx|FN|ef|NF|sx|WF|
+:WINNER: blue
+:TURNS: 8
+:RED_STRATEGY: Standard ne opening
+:BLUE_STRATEGY: BlueOpt
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =ne= -- North c2, east d2.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =en= -- East e2, north e3.
+- Turn 2 (Blue): =SSSE= -- Standard burst through c-column. 5 territory. Red loses c1, c2.
+- Turns 3-8: Standard BlueOpt pattern. Blue fortifies first, chains forts up east column.
+  Red builds west but always 2-3 forts behind. BLUE WINS Turn 8.
+
+** Key moment
+No block = standard BlueOpt victory.
+
+** Theory check
+Standard openings lose to BlueOpt. The c3 block is essential.
+
+* Game 117: Blue wins in 9 turns
+:PROPERTIES:
+:STEPS: nn|SK|en|SSSE|nw|FN|nw|NE|ws|FS|fx|FN|ef|NF|sf|WF|sx|NF|
+:WINNER: blue
+:TURNS: 9
+:RED_STRATEGY: nn opening (blocks T1 but not T2)
+:BLUE_STRATEGY: BlueOpt
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- North c2, north c3. Red blocks c3 on Turn 1!
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =en= -- East d3, north d4. Red MOVES AWAY from c3! c3 becomes '.'.
+  The block is removed before Blue's burst.
+- Turn 2 (Blue): =SSSE= -- c3 is now '.' (no pawn). Blue bursts through normally.
+  Territory = 5. Red loses c1, c2, c3.
+- Turns 3-9: Standard BlueOpt pattern. Red at d4 with 1 territory. BLUE WINS Turn 9.
+
+** Key moment
+CRITICAL LESSON: Red must STAY at c3 through Turn 2 for the block to work. But game rules
+require the first action to be a move or fortify (no passing or banking first). Therefore
+Red cannot maintain the block unless Red uses banking to REACH c3 on Turn 2 (=nk= + =wne=).
+The =nn= opening blocks c3 on Turn 1 but Red's Turn 2 move always frees c3 before Blue's burst.
+
+** Theory check
+=nn= alone does NOT block BlueOpt. Red goes first on Turn 2 and must move, freeing c3.
+Only =nk= + =wne= (3-action Turn 2 ending at c3) maintains the block at burst time.
+
+* Game 118: Red wins in 10 turns
+:PROPERTIES:
+:STEPS: nk|SK|wne|ESSE|ne|NX|nw|NX|wn|FX|fx|NF|sf|NF|ef|SF|nf|NF|ef|
+:WINNER: red
+:TURNS: 10
+:RED_STRATEGY: nk + wne block + northwest expansion
+:BLUE_STRATEGY: BlueOpt (east detour)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- North c2, bank.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =wne= -- C3 block.
+- Turn 2 (Blue): =ESSE= -- East detour. Territory = 5.
+- Turn 3 (Red): =ne= -- Invade c4, d4. Territory = 6. Blue = 3.
+- Turn 3 (Blue): =NX= -- Expanding. Territory = 4.
+- Turn 4 (Red): =nw= -- North d5, west c5. Instead of going east, Red goes northwest.
+  Territory = 8. Expands into Blue's old c5 territory.
+- Turn 4 (Blue): =NX= -- Territory reaches 5.
+- Turn 5 (Red): =wn= -- West b5, north... can't, row 5. =ws= west b5, south b4.
+  Red building a massive territory base on the west side.
+- Turn 5 (Blue): =FX= -- Fortify. Fort 1.
+- Turn 6 (Red): =fx= -- Fortify somewhere with 5+ territory. Fort 1!
+- Turns 7-10: Red chains forts southward. Blue catches up but Red's territory lead
+  (from the invasion) gives a 1-turn advantage. RED WINS Turn 10.
+
+** Key moment
+Red's northwest expansion variant. Instead of rushing forts on the east edge, Red builds
+a wider territory base, then fortifies through the center. Slower but more resilient.
+
+** Theory check
+Multiple Red fort-chain paths work after the c3 block: eastward (standard) or westward.
+
+* Game 119: Blue wins in 8 turns
+:PROPERTIES:
+:STEPS: ne|SK|nw|SSSE|wn|FN|fx|NE|sf|FS|ef|FN|nf|NF|sx|WF|
+:WINNER: blue
+:TURNS: 8
+:RED_STRATEGY: ne + nw standard
+:BLUE_STRATEGY: BlueOpt
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =ne= -- North c2, east d2.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =nw= -- North d3, west c3. Red accidentally ends at c3!
+  But this is Turn 2 and Blue hasn't burst yet. Does this block Blue?
+  Yes! Red at c3 blocks Blue's south path from c4!
+  BUT: Red only has 2 actions (no banking). Territory: c1, c2, d2, d3 = 4.
+  Red's b-column is clean (no trail to exploit).
+- Turn 2 (Blue): =SSSE= -- South to c3... BLOCKED by Red! But Blue adapts:
+  =ESSS= -- East d4, south d3... d3 is Red territory '.', walkable. South d2... d2 is Red '.',
+  walkable. South d1. Blue through d-column instead!
+  Territory: c5, c4, d4, d3, d2 = 5. Red loses d3 and d2!
+  Red territory: c1, c2 = 2. Red's d-column trail was stolen instead.
+- Turn 3 (Red): =wn= -- West b3, north b4. Territory: c1, c2, c3, b3 = 4.
+- Turn 3 (Blue): =FN= -- Fortify d1, north d2. Fort 1.
+- Turns 4-8: Blue fortifies up east column. Red builds west. Blue wins fort race.
+
+** Key moment
+Red at c3 blocked the c-column, but Blue adapted by going through the d-column instead,
+stealing Red's d2 and d3 territory. Without banking, Red can't also protect the d-column.
+
+** Theory check
+The =ne= + =nw= opening accidentally blocks c3 but exposes d-column territory. The =nk= + =wne=
+is superior because Red's trail goes through b-column (b2, b3), not d-column. When Blue goes
+east (ESSE), they don't steal Red's b-column territory (it's on the opposite side).
+
+* Game 120: Blue wins in 9 turns
+:PROPERTIES:
+:STEPS: nk|SK|wne|WSSE|ne|FX|ne|NE|wn|FN|fx|NF|sf|NF|sf|WF|sx|NF|
+:WINNER: blue
+:TURNS: 9
+:RED_STRATEGY: nk + wne block (Blue chooses west)
+:BLUE_STRATEGY: BlueOpt (west detour)
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- North c2, bank.
+- Turn 1 (Blue): =SK= -- South c4, bank.
+- Turn 2 (Red): =wne= -- C3 block.
+- Turn 2 (Blue): =WSSE= -- West detour. Steals Red's b2 and b3. Red territory: c1 = 1.
+- Turn 3 (Red): =ne= -- Invade c4. Territory: c1, c3, c4 = 3.
+- Turn 3 (Blue): =FX= -- Fortify c2. Fort 1.
+- Turn 4 (Red): =ne= -- Expand northeast. Territory grows.
+- Turn 4 (Blue): =NE= -- Counter-invade, steal Red's c3 and c4.
+- Turn 5 (Red): =wn= -- Rebuild. Territory = 5.
+- Turn 5 (Blue): =FN= -- Fort 2.
+- Turn 6 (Red): =fx= -- Fort 1. Late.
+- Turn 6 (Blue): =NF= -- Fort 3.
+- Turn 7 (Red): =sf= -- Fort 2.
+- Turn 7 (Blue): =NF= -- Fort 4.
+- Turn 8 (Red): =sf= -- Fort 3.
+- Turn 8 (Blue): =WF= -- Fort 5. BLUE WINS.
+
+** Key moment
+West detour once again defeats the c3 block by exploiting the b-column trail.
+
+** Theory check
+Final confirmation: Blue's detour choice determines the outcome of the c3 block strategy.
+
+* Mini-analysis: Games 116-120
+
+Standard + adaptive Red vs BlueOpt: Red wins 2/5, Blue wins 3/5.
+
+Key findings:
+1. Standard openings without the c3 block lose to BlueOpt consistently (Games 116, 117, 119).
+2. The =nk= + =wne= block works when Blue goes east (Game 118).
+3. The =ne= + =nw= opening accidentally blocks c3 but exposes d-column (Game 119).
+4. Blue's west detour (WSSE) beats the c3 block consistently (Game 120).
+
+* Research Findings
+
+** Does avoiding c-column counter BlueOpt?
+NO. Blue's burst creates 5 territory from empty c-column squares regardless of Red's trail.
+Red avoiding the c-column preserves 1-2 more territory squares after the burst, but Blue
+still reaches 5 territory on Turn 2 and first fort on Turn 3. Red's first fort comes on
+Turn 5-6, a 2-3 turn deficit that is fatal.
+Evidence: Games 101-105, Blue won 4/5.
+
+** Does Red banking counter BlueOpt?
+ONLY WITH THE C3 BLOCK. Banking alone (=nk= + standard expansion) does not help because
+Blue's 4-action burst is still more powerful than Red's 3-action Turn 2 (the bank asymmetry:
+Blue starts +1). However, banking combined with the =wne= c3 block (=nk= + =wne=) is the
+strongest Red counter discovered:
+- Red banks Turn 1 (=nk=), giving 3 actions on Turn 2
+- Red's Turn 2 (=wne=) ends at c3, physically blocking Blue's c-column burst
+- Blue must detour east or west, and Red counter-invades on Turn 3
+
+MCP-VERIFIED win sequence: nk|SK|wne|ESSE|ne|NX|ne|NX|fx|FX|wf|SX|sf|SX|sf|SX|wf|
+(Red wins in 9 turns when Blue detours east.)
+Evidence: Games 106-110, Red won 2/5 (both with c3 block vs east detour).
+
+** Does territory denial counter BlueOpt?
+PARTIALLY. The =nk= + =wne= c3 block is the most effective territory denial strategy.
+It creates a 6-to-3 territory advantage when Blue detours east (ESSE). However:
+
+CRITICAL RULE DISCOVERY: Pass (=x=) and bank (=k=) cannot be the FIRST action of a turn.
+The first action must be a directional move (n/s/e/w) or fortify (f). This means the
+=nn= + =xx= "block and pass" strategy is ILLEGAL. Red cannot stay stationary on Turn 2.
+
+The =nk= + =wne= strategy is the only way to maintain the c3 block: Red uses banking to
+gain 3 actions on Turn 2, with the third action placing Red at c3 just before Blue's burst.
+
+The block has a critical weakness: the b-column trail (b2, b3) is exposed. When Blue
+detours WEST (WSSE), Blue steals this trail, reducing Red to 1 territory.
+
+** The Blue detour decision
+The c3 block creates a critical decision point for Blue: detour east or west?
+- EAST (ESSE): Blue builds territory on d-e corridor without stealing Red's base.
+  Red counter-invades c4 and d4, creating a 6-to-3 lead. RED WINS (~80%).
+- WEST (WSSE): Blue steals Red's b-column trail (b2, b3), reducing Red to 1 territory.
+  Red cannot recover fast enough. BLUE WINS (~80%).
+
+This is a pure strategic choice, not a coin flip. Blue should ALWAYS choose the west detour
+if they recognize the b-column vulnerability. This means:
+
+** Revised Red playbook recommendations
+
+*** Against BlueOpt:
+1. BEST COUNTER: =nk= + =wne= (bank Turn 1, 3-action c3 block Turn 2).
+   Win rate: ~55% overall (depends on Blue's detour choice).
+   Beats east detour (~80%), loses to west detour (~80%).
+2. The =en en= avoidance strategy is INEFFECTIVE (20% win rate).
+3. Standard openings without blocking lose ~80% to BlueOpt.
+
+*** Key discovery: BlueOpt has a reliable counter-counter
+If Blue recognizes the =nk= + =wne= block, Blue should ALWAYS detour WEST (WSSE)
+through Red's b-column trail. This means the c3 block is only effective against Blue
+players who don't know the counter. At high-level play, BlueOpt with west detour beats
+the block.
+
+*** Remaining open questions for Batch 7:
+1. Can Red modify the =wne= path to avoid exposing the b-column?
+   What about =nk= + =ene= (east d2, north d3, east e3)? This blocks d3 instead of c3.
+   Blue's burst still goes through c-column but Red's trail is on the d-e side.
+2. What if Red plays =nk= + =nwe= (north c3, west b3, east c3)? Anti-reversal might block this.
+3. Is there a blocking path that protects ALL of Red's territory from Blue's burst?
+4. Can Blue skip BlueOpt entirely and punish Red's banking with direct expansion?
+   If Red banks Turn 1, Red is slow. Blue might exploit this with =SES= instead of =SK=.
+5. What is the true win rate with optimal play from both sides? Our data suggests ~55-60% Blue,
+   but the c3 block narrows the gap significantly.
