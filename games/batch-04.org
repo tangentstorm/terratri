@@ -1,0 +1,546 @@
+#+TITLE: Terratri Games -- Batch 4 (Games 61-80)
+
+* Game 61: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: en|SWS|nw|SE|wn|WS|fx|WN|sf|FX|sf|NX|sf|NX|wf
+:WINNER: red
+:TURNS: 8
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East to d1, north to d2. Red builds east-side territory.
+- Turn 1 (Blue): =SWS= -- South to c4, west to b4, south to b3. Blue spends bank immediately for aggressive west-side expansion.
+- Turn 2 (Red): =nw= -- North to d3, west to c3. Red pushes into the center.
+- Turn 2 (Blue): =SE= -- South to b2, east to c2. Blue expands south-center.
+- Turn 3 (Red): =wn= -- West to b3 (capturing Blue territory), north to b4. Red steals Blue's west flank, reaching 6 territory.
+- Turn 3 (Blue): =WS= -- West to b1, south? No -- west to a2, south to a1. Blue retreats to rebuild in the corner.
+- Turn 4 (Red): =fx= -- Fortify b4. Red fort 1.
+- Turn 4 (Blue): =WN= -- West to a1? Re-checking: Blue at b1, west a1, north a2. Blue builds a-column territory.
+- Turn 5 (Red): =sf= -- South to b3, fortify. Red fort 2. Fort wall forming along b-column.
+- Turn 5 (Blue): =FX= -- Fortify at current position. Blue fort 1.
+- Turn 6 (Red): =sf= -- South to b2, fortify. Red fort 3. Wall extends: b4-b3-b2.
+- Turn 6 (Blue): =NX= -- North, end. Blue repositions but is boxed in.
+- Turn 7 (Red): =sf= -- South to b1, fortify. Red fort 4.
+- Turn 7 (Blue): =NX= -- North, end. Blue cannot keep pace.
+- Turn 8 (Red): =wf= -- West to a1, fortify. Red fort 5! Red wins.
+
+** Key moment
+Turn 3: Red's invasion of Blue's west flank (=wn= to b3-b4) was decisive. By capturing Blue territory, Red gained 6 squares for immediate fortification while denying Blue the base needed to compete.
+
+** Lesson
+Red's first-mover advantage enables aggressive territory theft. Expanding toward Blue's territory denies Blue the 5 squares needed for fortification.
+
+* Game 62: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: wn|ESE|nw|SW|ne|SE|fx|FX|nf|WF|ef|WF|ef|NE|ef
+:WINNER: red
+:TURNS: 8
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =wn= -- West to b1, north to b2. Red builds west-side territory.
+- Turn 1 (Blue): =ESE= -- East to d5, south to d4, east to e4. Blue spends bank to claim the east side aggressively.
+- Turn 2 (Red): =nw= -- North to b3, west to a3. Red extends along a-b columns.
+- Turn 2 (Blue): =SW= -- South to e3, west to d3. Blue expands into center.
+- Turn 3 (Red): =ne= -- North to a4, east to b4. Red reaches 6 territory.
+- Turn 3 (Blue): =SE= -- South to d2, east to e2. Blue reaches 6 territory.
+- Turn 4 (Red): =fx= -- Fortify b4. Red fort 1.
+- Turn 4 (Blue): =FX= -- Fortify e2. Blue fort 1.
+- Turn 5 (Red): =nf= -- North to b5, fortify. Red fort 2.
+- Turn 5 (Blue): =WF= -- West to d2, fortify. Blue fort 2.
+- Turn 6 (Red): =ef= -- East to c5, fortify. Red fort 3. Red invades Blue's territory in row 5.
+- Turn 6 (Blue): =WF= -- West to c2, fortify. Blue fort 3.
+- Turn 7 (Red): =ef= -- East to d5, fortify. Red fort 4. Sweeping east through Blue territory.
+- Turn 7 (Blue): =NE= -- North to c3, east to d3. Blue repositions.
+- Turn 8 (Red): =ef= -- East to e5, fortify. Red fort 5! Red wins.
+
+** Key moment
+Red's fort sweep across row 5 (b5 to c5 to d5 to e5) was devastating. Each fort was placed on Blue territory, maintaining Red's own square count while advancing toward victory.
+
+** Lesson
+Building forts by advancing into enemy territory preserves your own territory count. Red's eastward sweep fueled itself with Blue's squares.
+
+* Game 63: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: en|WSE|en|SW|nw|SW|fx|FX|ef|NF|nf|NF|wf|NF|wf
+:WINNER: red
+:TURNS: 8
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East to d1, north to d2. Red starts building east column.
+- Turn 1 (Blue): =WSE= -- West to b5, south to b4, east to c4. Blue spends bank for west-center expansion.
+- Turn 2 (Red): =en= -- East to e2, north to e3. Red pushes deep east.
+- Turn 2 (Blue): =SW= -- South to c3, west to b3. Blue builds west side.
+- Turn 3 (Red): =nw= -- North to e4, west to d4. Red at 6 territory (c1, d1, d2, e2, e3, e4).
+- Turn 3 (Blue): =SW= -- South to b2, west to a2. Blue reaches 7 territory.
+- Turn 4 (Red): =fx= -- Fortify d4. Red fort 1.
+- Turn 4 (Blue): =FX= -- Fortify a2. Blue fort 1.
+- Turn 5 (Red): =ef= -- East to e4, fortify. Red fort 2.
+- Turn 5 (Blue): =NF= -- North to a3, fortify. Blue fort 2.
+- Turn 6 (Red): =nf= -- North to e5, fortify. Red fort 3.
+- Turn 6 (Blue): =NF= -- North to a4, fortify. Blue fort 3.
+- Turn 7 (Red): =wf= -- West to d5, fortify. Red fort 4.
+- Turn 7 (Blue): =NF= -- North to a5, fortify. Blue fort 4.
+- Turn 8 (Red): =wf= -- West to c5, fortify. Red fort 5! Red wins by one turn.
+
+** Key moment
+Both sides built parallel fort columns -- Red along row 4-5 sweeping west, Blue along column a going north. The race was perfectly symmetric except Red went first, winning by exactly one turn.
+
+** Lesson
+In a symmetric game, the first-mover advantage is decisive. Both sides reach 5 forts in 8 turns, but Red always arrives first. Blue needs an asymmetric technique (the double-fort) to overcome this.
+
+* Game 64: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: en|WSX|en|SWX|nw|SEX|fx|FX|ef|NFX|nf|NEX|wf|FX|wf
+:WINNER: red
+:TURNS: 8
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East to d1, north to d2.
+- Turn 1 (Blue): =WSX= -- West to b5, south to b4, end. Blue preserves bank=1.
+- Turn 2 (Red): =en= -- East to e2, north to e3.
+- Turn 2 (Blue): =SWX= -- South to b3, west to a3, end. Bank still=1.
+- Turn 3 (Red): =nw= -- North to e4, west to d4. Red reaches 6 territory.
+- Turn 3 (Blue): =SEX= -- South to a2, east to b2, end. Blue at 6 territory. Bank still=1.
+- Turn 4 (Red): =fx= -- Fortify d4. Red fort 1.
+- Turn 4 (Blue): =FX= -- Fortify b2. Blue fort 1. Bank preserved.
+- Turn 5 (Red): =ef= -- East to e4, fortify. Red fort 2.
+- Turn 5 (Blue): =NFX= -- North to b3, fortify, end. Blue fort 2. Bank still=1.
+- Turn 6 (Red): =nf= -- North to e5, fortify. Red fort 3.
+- Turn 6 (Blue): =NEX= -- North to b4, east to c4, end. Blue repositions.
+- Turn 7 (Red): =wf= -- West to d5, fortify. Red fort 4.
+- Turn 7 (Blue): =FX= -- Fortify c4. Blue fort 3. Blue falls behind.
+- Turn 8 (Red): =wf= -- West to c5, fortify. Red fort 5! Red wins.
+
+** Key moment
+Blue preserved the bank for the entire game but never used it for a double-fort. The bank sat idle while Red's tempo advantage decided the contest.
+
+** Lesson
+Preserving the bank is only valuable if spent at the right moment. The optimal use is the double-fort (FEF) at Turn 4. Saving it beyond that means Red's first-mover advantage decides the game.
+
+* Game 65: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: en|ESW|en|SW|nw|SW|fx|FX|ef|NF|nf|NF|wf|NF|wf
+:WINNER: red
+:TURNS: 8
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East to d1, north to d2.
+- Turn 1 (Blue): =ESW= -- East to d5, south to d4, west to c4. Blue spends bank going east first (contrast with Game 63's WSE).
+- Turn 2 (Red): =en= -- East to e2, north to e3.
+- Turn 2 (Blue): =SW= -- South to c3, west to b3. Blue builds west side.
+- Turn 3 (Red): =nw= -- North to e4, west to d4. Red reaches 6 territory.
+- Turn 3 (Blue): =SW= -- South to b2, west to a2. Blue reaches 6 territory.
+- Turn 4 (Red): =fx= -- Fortify d4. Red fort 1.
+- Turn 4 (Blue): =FX= -- Fortify a2. Blue fort 1.
+- Turn 5-8: Same symmetric fort race as Game 63. Red builds east forts, Blue builds west forts. Red wins by one turn.
+
+** Key moment
+Despite Blue choosing a different bank-spend direction (ESW instead of WSE), both paths end at c4. The game converges to the same symmetric race that Red always wins.
+
+** Lesson
+Blue's bank-spend direction (ESW vs WSE) does not change the outcome when both end at the same position. The opening path matters less than the structural decision of whether to use FEF later.
+
+* Game 66: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: en|WSX|en|SWX|nw|SEX|fx|FEF|ef|NF|nf|NF|wf|NF
+:WINNER: blue
+:TURNS: 7
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East to d1, north to d2.
+- Turn 1 (Blue): =WSX= -- West to b5, south to b4, end. Blue preserves bank=1.
+- Turn 2 (Red): =en= -- East to e2, north to e3.
+- Turn 2 (Blue): =SWX= -- South to b3, west to a3, end. Bank preserved.
+- Turn 3 (Red): =nw= -- North to e4, west to d4. Red at 6 territory.
+- Turn 3 (Blue): =SEX= -- South to a2, east to b2, end. Blue at 6 territory. Bank=1.
+- Turn 4 (Red): =fx= -- Fortify d4. Red fort 1.
+- Turn 4 (Blue): =FEF= -- DOUBLE FORT. Fortify b2, east to c2, fortify c2. Bank spent on the third action. Blue forts: 2!
+- Turn 5 (Red): =ef= -- East to e4, fortify. Red fort 2.
+- Turn 5 (Blue): =NF= -- North to c3, fortify. Blue fort 3.
+- Turn 6 (Red): =nf= -- North to e5, fortify. Red fort 3.
+- Turn 6 (Blue): =NF= -- North to c4, fortify. Blue fort 4.
+- Turn 7 (Red): =wf= -- West to d5, fortify. Red fort 4.
+- Turn 7 (Blue): =NF= -- North to c5, fortify. Blue fort 5! Blue wins!
+
+** Key moment
+Turn 4 Blue's =FEF= double-fort was the game-winning move. By placing 2 forts in one turn (spending the banked move on the third action), Blue gained a permanent 1-fort lead that Red could never recover.
+
+** Lesson
+The double-fort technique (FEF = fortify, east, fortify) is Blue's strongest use of the bank. It compensates for going second by creating a tempo advantage in the fort race.
+
+* Game 67: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: wn|ESX|nw|SEX|ne|SWX|fx|FWF|nf|NF|wf|NF|sf|NF
+:WINNER: blue
+:TURNS: 7
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =wn= -- West to b1, north to b2. Red builds west side.
+- Turn 1 (Blue): =ESX= -- East to d5, south to d4, end. Blue preserves bank. Blue builds east side.
+- Turn 2 (Red): =nw= -- North to b3, west to a3. Red extends through a-b columns.
+- Turn 2 (Blue): =SEX= -- South to d3, east to e3, end. Bank preserved.
+- Turn 3 (Red): =ne= -- North to a4, east to b4. Red reaches 6 territory.
+- Turn 3 (Blue): =SWX= -- South to e2, west to d2, end. Blue at 6 territory. Bank=1.
+- Turn 4 (Red): =fx= -- Fortify b4. Red fort 1.
+- Turn 4 (Blue): =FWF= -- DOUBLE FORT. Fortify d2, west to c2 (unclaimed), fortify c2. Bank spent. Blue forts: 2!
+- Turn 5 (Red): =nf= -- North to b5, fortify. Red fort 2.
+- Turn 5 (Blue): =NF= -- North to c3, fortify. Blue fort 3.
+- Turn 6 (Red): =wf= -- West to a5, fortify. Red fort 3.
+- Turn 6 (Blue): =NF= -- North to c4, fortify. Blue fort 4.
+- Turn 7 (Red): =sf= -- South to a4, fortify. Red fort 4.
+- Turn 7 (Blue): =NF= -- North to c5, fortify. Blue fort 5! Blue wins!
+
+** Key moment
+Turn 4 Blue's =FWF= double-fort is the westward variant: fortify, west, fortify. The key is that west leads to unclaimed territory (c2), preserving Blue's territory count for subsequent forts.
+
+** Lesson
+The double-fort works in any direction as long as the middle step goes to unclaimed or enemy territory (not Blue's own territory). FWF is the mirror image of FEF.
+
+* Game 68: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: en|WSX|ne|SWX|nw|SEX|fx|FEF|ef|NF|nf|NF|wf|NF
+:WINNER: blue
+:TURNS: 7
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East to d1, north to d2.
+- Turn 1 (Blue): =WSX= -- West to b5, south to b4, end. Bank preserved.
+- Turn 2 (Red): =ne= -- North to d3, east to e3. Red takes a different path than Game 66 (ne instead of en).
+- Turn 2 (Blue): =SWX= -- South to b3, west to a3, end.
+- Turn 3 (Red): =nw= -- North to e4, west to d4. Red at 6 territory.
+- Turn 3 (Blue): =SEX= -- South to a2, east to b2, end. Blue at 6 territory. Bank=1.
+- Turn 4 (Red): =fx= -- Fortify d4. Red fort 1.
+- Turn 4 (Blue): =FEF= -- Double fort at b2 and c2. Blue forts: 2.
+- Turn 5-7: Same fort race as Game 66. Blue wins by one fort.
+
+** Key moment
+Red's T2 path change (=ne= instead of =en=) created a slightly different territory layout (d3 claimed instead of e2) but did not alter the game outcome. Blue's FEF still wins.
+
+** Lesson
+Red's opening variation cannot overcome Blue's double-fort. Once Blue has 6 territory and bank=1 at Turn 4, the FEF wins regardless of Red's exact path.
+
+* Game 69: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: wn|ESX|wn|SEX|ne|SWX|fx|FWF|nf|NF|wf|NF|sf|NF
+:WINNER: blue
+:TURNS: 7
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =wn= -- West to b1, north to b2.
+- Turn 1 (Blue): =ESX= -- East to d5, south to d4, end. Bank preserved.
+- Turn 2 (Red): =wn= -- West to a2, north to a3. Red takes a deep-west path (wn twice).
+- Turn 2 (Blue): =SEX= -- South to d3, east to e3, end. Bank preserved.
+- Turn 3 (Red): =ne= -- North to a4, east to b4. Red at 6 territory.
+- Turn 3 (Blue): =SWX= -- South to e2, west to d2, end. Blue at 6 territory. Bank=1.
+- Turn 4 (Red): =fx= -- Fortify b4. Red fort 1.
+- Turn 4 (Blue): =FWF= -- Double fort: fortify d2, west to c2, fortify c2. Blue forts: 2.
+- Turn 5-7: Fort race, Blue leads by 1 and wins.
+
+** Key moment
+Red's double-west opening (=wn= twice) pushed Red deep into column a, but this gave no advantage in the fort race. Blue's FWF double-fort still delivers the decisive tempo.
+
+** Lesson
+Red's opening depth (whether shallow or deep on one side) does not matter if Blue executes the double-fort correctly. The bank advantage is structural, not positional.
+
+* Game 70: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: en|WSX|en|SWX|wn|SEX|fx|FEF|ef|NF|nf|NF|wf|NF
+:WINNER: blue
+:TURNS: 7
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East to d1, north to d2.
+- Turn 1 (Blue): =WSX= -- West to b5, south to b4, end. Bank preserved.
+- Turn 2 (Red): =en= -- East to e2, north to e3.
+- Turn 2 (Blue): =SWX= -- South to b3, west to a3, end. Bank preserved.
+- Turn 3 (Red): =wn= -- West to d3, north to d4. Different T3 from Game 66 (wn instead of nw, going through d3 before d4).
+- Turn 3 (Blue): =SEX= -- South to a2, east to b2, end. Blue at 6 territory. Bank=1.
+- Turn 4 (Red): =fx= -- Fortify d4. Red fort 1.
+- Turn 4 (Blue): =FEF= -- Double fort at b2 and c2. Blue forts: 2.
+- Turn 5-7: Same fort race. Blue wins.
+
+** Key moment
+Red's T3 goes west-north (through d3 then d4) instead of north-west (through e4 then d4). The intermediate territory differs but the endpoint is the same.
+
+** Lesson
+Red's path to d4 -- whether via e4 or d3 -- does not affect the outcome. The double-fort's structural advantage is path-independent.
+
+* Game 71: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: nw|ESE|wn|SW|ne|SE|fx|FX|nf|WF|ef|WF|ef|NE|ef
+:WINNER: red
+:TURNS: 8
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nw= -- North to c2, west to b2. Red starts with a north-west opening (contrast with Game 62's west-north).
+- Turn 1 (Blue): =ESE= -- East to d5, south to d4, east to e4. Blue spends bank for east-side expansion.
+- Turn 2 (Red): =wn= -- West to a2, north to a3. Red builds the a-b corridor.
+- Turn 2 (Blue): =SW= -- South to e3, west to d3. Blue expands into center.
+- Turn 3 (Red): =ne= -- North to a4, east to b4. Red at 6 territory.
+- Turn 3 (Blue): =SE= -- South to d2, east to e2. Blue at 6 territory.
+- Turn 4 (Red): =fx= -- Fortify b4. Red fort 1. Blocks Blue from entering west side.
+- Turn 4 (Blue): =FX= -- Fortify e2. Blue fort 1.
+- Turn 5 (Red): =nf= -- North to b5, fortify. Red fort 2. Fort wall on b-column blocks lateral movement.
+- Turn 5 (Blue): =WF= -- West to d2, fortify. Blue fort 2.
+- Turn 6 (Red): =ef= -- East to c5, fortify. Red fort 3. Invading Blue's territory.
+- Turn 6 (Blue): =WF= -- West to c2, fortify. Blue fort 3.
+- Turn 7 (Red): =ef= -- East to d5, fortify. Red fort 4. Fort wall across row 5.
+- Turn 7 (Blue): =NE= -- North to c3, east to d3. Blue repositions.
+- Turn 8 (Red): =ef= -- East to e5, fortify. Red fort 5! Red wins.
+
+** Key moment
+Red's forts across row 5 (b5-c5-d5-e5) form a wall that completely seals the top of the board. Blue is confined below this wall, unable to expand or contest Red's territory above.
+
+** Lesson
+Fort walls serve dual purpose: scoring toward the win condition and blocking opponent movement. A row-5 fort wall is especially powerful as it eliminates one entire side of the board from contention.
+
+* Game 72: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: en|SSW|en|WS|nw|SE|fx|FX|ef|NF|nf|NF|wf|NF|wf
+:WINNER: red
+:TURNS: 8
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East to d1, north to d2.
+- Turn 1 (Blue): =SSW= -- South to c4, south to c3, west to b3. Blue spends bank going straight south then west, a unique diagonal approach.
+- Turn 2 (Red): =en= -- East to e2, north to e3.
+- Turn 2 (Blue): =WS= -- West to a3, south to a2. Blue builds the a-column.
+- Turn 3 (Red): =nw= -- North to e4, west to d4. Red at 6 territory.
+- Turn 3 (Blue): =SE= -- South to a1, east to b1. Blue reaches 6 territory along the bottom edge.
+- Turn 4 (Red): =fx= -- Fortify d4. Red fort 1.
+- Turn 4 (Blue): =FX= -- Fortify b1. Blue fort 1. Blue's fort is at the bottom edge -- far from the c-column fort lane.
+- Turn 5-8: Symmetric fort race. Red builds east-side forts (e4, e5, d5, c5). Blue builds west-side forts (b2, b3, b4, ...). Red wins by first-mover advantage.
+
+** Key moment
+Blue's SSW bank-spend drove Blue deep south, away from the center column that would have been ideal for the fort race. Blue's forts end up along the b-column from the bottom, while Red sweeps through Blue's territory from the top.
+
+** Lesson
+Blue's bank-spend direction has consequences. Going straight south (SSW) pushes Blue to the edge, making it harder to contest the center. The WSE and ESW patterns keep Blue closer to strategic fort lanes.
+
+* Game 73: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: ne|WSX|en|SWX|wn|SEX|fx|FEF|ef|NF|nf|NF|wf|NF
+:WINNER: blue
+:TURNS: 7
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =ne= -- North to c2, east to d2. Red opens through c2 (different from Game 66's en through d1).
+- Turn 1 (Blue): =WSX= -- West to b5, south to b4, end. Bank preserved.
+- Turn 2 (Red): =en= -- East to e2, north to e3. Red pushes east.
+- Turn 2 (Blue): =SWX= -- South to b3, west to a3, end. Bank preserved.
+- Turn 3 (Red): =wn= -- West to d3, north to d4. Red at d4 via d3.
+- Turn 3 (Blue): =SEX= -- South to a2, east to b2, end. Blue at 6 territory. Bank=1.
+- Turn 4 (Red): =fx= -- Fortify d4. Red fort 1.
+- Turn 4 (Blue): =FEF= -- Double fort: fortify b2, east to c2 (Red territory, captured!), fortify c2. Blue forts: 2.
+- Turn 5-7: Fort race. Blue leads by 1 and wins at Turn 7.
+
+** Key moment
+Blue's FEF captured Red's c2 territory (Red had claimed c2 in Turn 1 via =ne=). This did not matter -- Blue's 6 territory on the west side was unaffected, and the fort race outcome was unchanged.
+
+** Lesson
+Even when FEF captures enemy territory (rather than unclaimed space), it still works. The double-fort advantage is robust regardless of what occupies the middle square.
+
+* Game 74: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: ne|WSE|ne|SW|nw|SW|fx|FX|ef|NF|nf|NF|wf|NF|wf
+:WINNER: red
+:TURNS: 8
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =ne= -- North to c2, east to d2. Red opens through c2 first.
+- Turn 1 (Blue): =WSE= -- West to b5, south to b4, east to c4. Blue spends bank.
+- Turn 2 (Red): =ne= -- North to d3, east to e3. Red pushes east (ne twice).
+- Turn 2 (Blue): =SW= -- South to c3, west to b3. Blue builds west side.
+- Turn 3 (Red): =nw= -- North to e4, west to d4. Red at 6 territory.
+- Turn 3 (Blue): =SW= -- South to b2, west to a2. Blue reaches 6 territory.
+- Turn 4-8: Symmetric fort race identical to Game 63. Red wins by one turn.
+
+** Key moment
+Red's =ne ne nw= path through c2-d2-d3-e3-e4-d4 creates the same 6-territory footprint as =en en nw= but goes through c2 instead of d1. The structural advantage of going first remains decisive.
+
+** Lesson
+Multiple Red opening paths converge to equivalent positions. Whether Red opens =en= or =ne=, the east-side 6-territory configuration is achievable, and the first-mover fort race follows.
+
+* Game 75: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: en|WSX|ne|SWX|nw|SEX|fx|FEF|wf|NF|nf|WN|ef|WX|ef
+:WINNER: red
+:TURNS: 8
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East to d1, north to d2.
+- Turn 1 (Blue): =WSX= -- West to b5, south to b4, end. Bank preserved.
+- Turn 2 (Red): =ne= -- North to d3, east to e3.
+- Turn 2 (Blue): =SWX= -- South to b3, west to a3, end. Bank preserved.
+- Turn 3 (Red): =nw= -- North to e4, west to d4. Red at 6 territory.
+- Turn 3 (Blue): =SEX= -- South to a2, east to b2, end. Blue at 6 territory. Bank=1.
+- Turn 4 (Red): =fx= -- Fortify d4. Red fort 1.
+- Turn 4 (Blue): =FEF= -- Double fort: fortify b2, east to c2, fortify c2. Blue forts: 2!
+- Turn 5 (Red): =wf= -- COUNTER MOVE! West to c4 (blocking Blue's c-column), fortify. Red fort 2. Red forts INTO Blue's planned fort path!
+- Turn 5 (Blue): =NF= -- North to c3, fortify. Blue fort 3.
+- Turn 6 (Red): =nf= -- North to c5, fortify. Red fort 3. Red captures Blue's c5 territory!
+- Turn 6 (Blue): =WN= -- West to b3, north to b4. Blue must detour around Red's c4 fort.
+- Turn 7 (Red): =ef= -- East to d5, fortify. Red fort 4.
+- Turn 7 (Blue): =WX= -- West to a4, end. Blue cannot fortify (only 4 territory remaining).
+- Turn 8 (Red): =ef= -- East to e5, fortify. Red fort 5! Red wins despite Blue's FEF!
+
+** Key moment
+Turn 5 Red's =wf= (west to c4, fortify) was the critical counter to Blue's double-fort. By placing a fort on c4, Red blocked Blue's northward fort column AND captured Blue's territory at c5 in Turn 6, reducing Blue's square count below the fortification threshold.
+
+** Lesson
+The double-fort is not invincible. If Red forts INTO Blue's planned fort path instead of continuing east, Red can block Blue's expansion. The key is reading Blue's fort direction and planting a blocking fort. This is the strongest Red counter to FEF.
+
+* Game 76: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: en|WSE|ne|SW|wn|SW|fx|FX|ef|NF|nf|NF|wf|NF|wf
+:WINNER: red
+:TURNS: 8
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East to d1, north to d2.
+- Turn 1 (Blue): =WSE= -- West to b5, south to b4, east to c4. Bank spent for territory.
+- Turn 2 (Red): =ne= -- North to d3, east to e3. Red varies the middle turn (ne instead of en).
+- Turn 2 (Blue): =SW= -- South to c3, west to b3. Blue builds west.
+- Turn 3 (Red): =wn= -- West to d3, north to d4. Red arrives at d4 through d3.
+- Turn 3 (Blue): =SW= -- South to b2, west to a2. Blue reaches 6 territory.
+- Turn 4-8: Standard fort race. Red builds east (d4, e4, e5, d5, c5). Blue builds west (a2, a3, a4, a5). Red wins by one turn.
+
+** Key moment
+Red's varied opening (=en ne wn= instead of =en en nw=) shows that speed comes from the structure, not the exact path. Red reaches the fortification phase at the same time regardless of which intermediate squares are claimed.
+
+** Lesson
+In the speed race, what matters is reaching 6 territory by Turn 3 and starting forts at Turn 4. The exact path is secondary to the timing. Red's first-mover advantage makes this a consistent win.
+
+* Game 77: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: ne|WSX|nw|SWX|en|SEX|fx|FEF|en|NF|wf|NF|se|NF
+:WINNER: blue
+:TURNS: 7
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =ne= -- North to c2, east to d2. Red opens through the center.
+- Turn 1 (Blue): =WSX= -- West to b5, south to b4, end. Bank preserved.
+- Turn 2 (Red): =nw= -- North to d3, west to c3. Red pushes into the center-west.
+- Turn 2 (Blue): =SWX= -- South to b3, west to a3, end. Bank preserved.
+- Turn 3 (Red): =en= -- East to d3 (own territory), north to d4. Red at d4 with 5 territory (c1, c2, d2, d3, c3).
+- Turn 3 (Blue): =SEX= -- South to a2, east to b2, end. Blue at 6 territory. Bank=1.
+- Turn 4 (Red): =fx= -- Fortify d4. Red fort 1.
+- Turn 4 (Blue): =FEF= -- Double fort: fortify b2, east to c2 (Red territory -- captured!), fortify c2. Blue forts: 2!
+- Turn 5 (Red): =en= -- East to e4, north to e5. Red's squareCount is only 4 (c1, d2, d3) -- c2 and c3 were captured by Blue's FEF. Red cannot fortify!
+- Turn 5 (Blue): =NF= -- North to c3, fortify. Blue fort 3.
+- Turn 6 (Red): =wf= -- West to d5, fortify. Red gains e5 as territory, squareCount now 5. Red fort 2.
+- Turn 6 (Blue): =NF= -- North to c4, fortify. Blue fort 4.
+- Turn 7 (Red): =se= -- South to d4 (own fort), east to e4. Red still at 2 forts.
+- Turn 7 (Blue): =NF= -- North to c5, fortify. Blue fort 5! Blue wins!
+
+** Key moment
+Blue's FEF captured Red's c2 territory (Red had claimed c2 in Turn 1 via =ne=). This reduced Red's squareCount below the fortification threshold, costing Red an entire turn (T5) where Red could not fortify. That lost tempo sealed the game.
+
+** Lesson
+Red's central opening (=ne nw en=) through c2 is vulnerable to FEF because Blue's eastward step in FEF captures c2. Red loses territory AND tempo. The safer Red openings go through d1 (via =en=), keeping territory away from Blue's FEF capture square.
+
+* Game 78: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: en|SES|en|WN|nw|WN|fx|FX|sf|WX|wf|SX|nf|SX|nf
+:WINNER: red
+:TURNS: 8
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East to d1, north to d2.
+- Turn 1 (Blue): =SES= -- South to c4, east to d4, south to d3. Blue spends bank going south-east-south, ending adjacent to Red!
+- Turn 2 (Red): =en= -- East to e2, north to e3. Red ignores the confrontation and pushes east.
+- Turn 2 (Blue): =WN= -- West to c3, north to c4. Blue retreats to rebuild territory.
+- Turn 3 (Red): =nw= -- North to e4, west to d4 (capturing Blue's d4 territory!). Red at 6 territory.
+- Turn 3 (Blue): =WN= -- West to b4, north to b5. Blue relocates to the west edge.
+- Turn 4 (Red): =fx= -- Fortify d4. Red fort 1. Built on captured Blue territory.
+- Turn 4 (Blue): =FX= -- Fortify b5. Blue fort 1.
+- Turn 5 (Red): =sf= -- South to d3 (capturing Blue's d3 territory), fortify. Red fort 2. Red invades Blue's center!
+- Turn 5 (Blue): =WX= -- West to a5, end. Blue has only 4 territory -- cannot fortify.
+- Turn 6 (Red): =wf= -- West to c3, fortify. Red fort 3. Deep in Blue's former territory.
+- Turn 6 (Blue): =SX= -- South to a4, end. Blue still cannot fortify.
+- Turn 7 (Red): =nf= -- North to c4, fortify. Red fort 4.
+- Turn 7 (Blue): =SX= -- South to a3, end. Blue stuck at 1 fort.
+- Turn 8 (Red): =nf= -- North to c5, fortify. Red fort 5! Red wins while Blue has only 1 fort!
+
+** Key moment
+Blue's aggressive T1 bank-spend (SES toward Red) backfired catastrophically. Red captured Blue's d4 territory and then invaded southward through Blue's center (d3, c3, c4, c5), destroying Blue's territory base. Blue could never rebuild above 5 squares.
+
+** Lesson
+Speed of territory destruction is a powerful Red strategy. When Blue overextends toward Red's side, Red can capture and hold that territory, denying Blue the 5 squares needed for fortification. The invasion pattern (forts placed on enemy territory) is Red's strongest speed play.
+
+* Game 79: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: en|WSX|nw|SWX|en|SEX|fx|FEF|ef|NF|nx|NF|wf|NF
+:WINNER: blue
+:TURNS: 7
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East to d1, north to d2.
+- Turn 1 (Blue): =WSX= -- West to b5, south to b4, end. Bank preserved.
+- Turn 2 (Red): =nw= -- North to d3, west to c3. Red pushes center-west (contrast with T2 =en= in Game 66).
+- Turn 2 (Blue): =SWX= -- South to b3, west to a3, end. Bank preserved.
+- Turn 3 (Red): =en= -- East to d3 (own territory), north to d4. Red at d4 with 5 territory (c1, d1, d2, c3, d3).
+- Turn 3 (Blue): =SEX= -- South to a2, east to b2, end. Blue at 6 territory. Bank=1.
+- Turn 4 (Red): =fx= -- Fortify d4. Red fort 1.
+- Turn 4 (Blue): =FEF= -- Double fort: fortify b2, east to c2 (Red territory -- captured!), fortify c2. Blue forts: 2! Red's c2 lost.
+- Turn 5 (Red): =ef= -- East to e4, fortify. Red squareCount is 4 (c1, d1, d2, d3). Wait -- check: c3 was Red territory (`.`) but Blue's FEF step went to c2, not c3. Red territory: c1, d1, d2, c3, d3 minus c2 captured = c1, d1, d2, c3, d3 = 5. Red loses 1 territory from FEF. squareCount = 5 minus pawn-on-territory effects... Moving east from d4 to e4 (unclaimed), squareCount stays 4 (c1, d1, d2, d3 -- c3 becomes `.` when pawn leaves but Red was at d4 fort). Actually squareCount = c1, d1, d2, c3, d3 = 5 minus c2 (captured) = 4. Red cannot fortify!
+- Turn 5 (Red continued): Red goes =ef=: east to e4, then cannot fortify. Red actually plays =nx=: north to e5, end turn. Red cannot fortify with squareCount = 4.
+- Turn 5 (Blue): =NF= -- North to c3 (captures Red's c3 territory!), fortify. Blue fort 3.
+- Turn 6 (Red): =wf= -- West to d5, fortify. With e5 as new territory, Red's squareCount reaches 5. Red fort 2.
+- Turn 6 (Blue): =NF= -- North to c4, fortify. Blue fort 4.
+- Turn 7 (Red): =wf= -- Would need to fort, but Red at d5 goes west? Actually Red plays the remaining fort race but cannot catch up.
+- Turn 7 (Blue): =NF= -- North to c5, fortify. Blue fort 5! Blue wins!
+
+** Key moment
+Red's =nw= at Turn 2 (going through c3 instead of e2) left Red with only 5 territory by Turn 3, and when Blue's FEF captured c2, Red dropped to 4 territory. This forced Red to waste Turn 5 on a non-fortifying move (=nx=), losing a critical tempo.
+
+** Lesson
+Red's path choices have consequences. The =en nw en= path creates territory (c3) that is adjacent to Blue's FEF capture zone. When Blue captures c2 and then moves north to c3, Red loses two territory squares. The safest Red path avoids the c-column entirely, going through the e-column (=en en nw=) to keep territory far from Blue's FEF.
+
+* Game 80: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: en|WSX|ne|SWX|nw|SEX|fx|FEF|wf|NF|nf|WN|ef|WX|ef
+:WINNER: red
+:TURNS: 8
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =en= -- East to d1, north to d2.
+- Turn 1 (Blue): =WSX= -- West to b5, south to b4, end. Bank preserved.
+- Turn 2 (Red): =ne= -- North to d3, east to e3.
+- Turn 2 (Blue): =SWX= -- South to b3, west to a3, end. Bank preserved.
+- Turn 3 (Red): =nw= -- North to e4, west to d4. Red at 6 territory.
+- Turn 3 (Blue): =SEX= -- South to a2, east to b2, end. Blue at 6 territory. Bank=1.
+- Turn 4 (Red): =fx= -- Fortify d4. Red fort 1.
+- Turn 4 (Blue): =FEF= -- Double fort: b2 and c2. Blue takes the fort lead with 2 forts.
+- Turn 5 (Red): =wf= -- West to c4, fortify! Red blocks Blue's fort column at c4. Red fort 2.
+- Turn 5 (Blue): =NF= -- North to c3, fortify. Blue fort 3.
+- Turn 6 (Red): =nf= -- North to c5, fortify. Red captures c5 from Blue. Red fort 3.
+- Turn 6 (Blue): =WN= -- West to b3, north to b4. Blue detours around Red's c4 blocking fort.
+- Turn 7 (Red): =ef= -- East to d5, fortify. Red fort 4.
+- Turn 7 (Blue): =WX= -- West to a4, end. Blue's territory count is 4 -- below the threshold for fortification. Blue is stuck at 3 forts.
+- Turn 8 (Red): =ef= -- East to e5, fortify. Red fort 5! Red wins!
+
+** Key moment
+Turn 5 Red's =wf= to c4 was the key counter. Instead of continuing east (the standard plan), Red planted a fort directly in Blue's planned fort column. This forced Blue to detour, costing a tempo that negated the double-fort advantage. By Turn 6, Red captured c5, permanently reducing Blue's territory below the fortification threshold.
+
+** Lesson
+The double-fort is not unbeatable. Red's counter-strategy is to recognize Blue's fort direction and block it with a fort of their own. The c4 blocking fort is a concrete refutation of the standard FEF-northward plan. This means Blue must either vary the fort direction or Red will always have a counter.

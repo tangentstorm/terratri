@@ -1,0 +1,775 @@
+#+TITLE: Terratri Games -- Batch 5 (Games 81-100)
+
+* Summary
+
+20 games played with various strategy matchups. Red won 16/20, Blue won 4/20.
+Red's first-mover advantage is significant but can be overcome by the BlueOpt
+strategy which banks early to fuel a territory burst on turn 2, then fortifies
+aggressively from below.
+
+| Games   | Theme                  | Red Wins | Blue Wins |
+|---------+------------------------+----------+-----------|
+| 81-85   | Optimal play           |        5 |         0 |
+| 86-90   | Unconventional         |        5 |         0 |
+| 91-95   | Comeback mechanics     |        3 |         2 |
+| 96-100  | Championship (decisive)|        3 |         2 |
+
+* Game 81: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SE|wf|FN|nf|FN|ef|FN|ef|WF|sf|
+:WINNER: red
+:TURNS: 7
+:RED_STRATEGY: Smart
+:BLUE_STRATEGY: Smart
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Pushes straight up the center column c1->c2->c3, claiming 2 territory.
+- Turn 1 (Blue): =SES= -- Uses banked move for 3 actions: south to c4, east to d4, south to d3. Claims 3 territory.
+- Turn 2 (Red): =wn= -- Flanks west then north, c3->b3->b4. Red has 4 territory now.
+- Turn 2 (Blue): =SE= -- Continues southeast, d3->d2->e2. Blue reaches 5 territory.
+- Turn 3 (Red): =wf= -- Moves to a4 and places first fort. Red now at 5 territory, 1 fort.
+- Turn 3 (Blue): =FN= -- Fortifies at e2, then north to e3. Blue matches with 1 fort.
+- Turn 4 (Red): =nf= -- North to a5, fortify. 2 forts.
+- Turn 4 (Blue): =FN= -- Fortify at e3, north to e4. 2 forts.
+- Turn 5 (Red): =ef= -- East to b5, fortify. 3 forts.
+- Turn 5 (Blue): =FN= -- Fortify at e4, north to e5. 3 forts.
+- Turn 6 (Red): =ef= -- East to c5, fortify. 4 forts. Red claims Blue's old territory.
+- Turn 6 (Blue): =WF= -- West to d5, fortify. 4 forts.
+- Turn 7 (Red): =sf= -- South to c4, fortify. 5 forts. RED WINS.
+
+** Key moment
+Turn 3 was decisive. Red reached the west edge first and began fortifying along the top row,
+while Blue was stuck on the east side. Red's westward expansion gave access to the entire
+top row for a fort chain.
+
+** Lesson
+When both sides play the same smart strategy, Red's tempo advantage (moving first) translates
+to reaching fortification threshold one turn earlier, which cascades into victory.
+
+* Game 82: Red wins in 10 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SE|wf|FN|en|FN|fs|FN|ef|WF|se|SE|fw|SS|ws|SW|fn|
+:WINNER: red
+:TURNS: 10
+:RED_STRATEGY: Rush
+:BLUE_STRATEGY: Smart
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Rush toward center, c1->c3.
+- Turn 1 (Blue): =SES= -- Bank-powered expansion, c5->d4->d3. Blue claims 3 territory.
+- Turn 2 (Red): =wn= -- Flanks northwest, c3->b4.
+- Turn 2 (Blue): =SE= -- Continues southeast, d3->e2. Blue hits 5 territory first.
+- Turn 3 (Red): =wf= -- Moves to a4, places first fort.
+- Turn 3 (Blue): =FN= -- Fortifies e2, moves north to e3.
+- Turn 4 (Red): =en= -- Moves east to b5 instead of fortifying immediately. Rush explores.
+- Turn 4 (Blue): =FN= -- Fortifies e3, moves to e4. Blue now has 2 forts.
+- Turn 5 (Red): =fs= -- Fortifies b5, moves south to b4. 2 forts.
+- Turn 5 (Blue): =FN= -- Fortifies e4, moves to e5. 3 forts. Blue is ahead!
+- Turn 6 (Red): =ef= -- East to c4, fortify. 3 forts.
+- Turn 6 (Blue): =WF= -- West to d5, fortify. 4 forts.
+- Turn 7 (Red): =se= -- South to c3, east to d3. Maneuvering.
+- Turn 7 (Blue): =SE= -- South to d4, east to e4. Repositioning.
+- Turn 8 (Red): =fw= -- Fortify d3, west to c3. 4 forts.
+- Turn 8 (Blue): =SS= -- South to e3, south to e2.
+- Turn 9 (Red): =ws= -- West to b3, south to b2.
+- Turn 9 (Blue): =SW= -- South to e1, west to d1.
+- Turn 10 (Red): =fn= -- Fortify b2, north to b3. 5 forts. RED WINS.
+
+** Key moment
+After Blue took the lead in forts (3 to 2 on turn 5), Red's Rush strategy repositioned
+effectively to find new territory squares to fortify on, eventually catching up and winning
+through persistence.
+
+** Lesson
+Rush strategy can be slower than Smart because it doesn't optimize fort placement order,
+leading to wasted moves repositioning. Still wins due to first-mover advantage but takes
+3 extra turns.
+
+* Game 83: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SE|wf|FW|nf|SF|ef|NW|ee|WF|fe|ES|sf|
+:WINNER: red
+:TURNS: 8
+:RED_STRATEGY: Smart
+:BLUE_STRATEGY: Rush
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Standard center push, c1->c3.
+- Turn 1 (Blue): =SES= -- Banked expansion, c5->d4->d3.
+- Turn 2 (Red): =wn= -- Northwest flank, c3->b4.
+- Turn 2 (Blue): =SE= -- Southeast to e2, reaching 5 territory.
+- Turn 3 (Red): =wf= -- To a4, first fort. Red at 5 territory, 1 fort.
+- Turn 3 (Blue): =FW= -- Fortifies e2, moves west to d2. Blue's Rush places forts immediately.
+- Turn 4 (Red): =nf= -- North to a5, fortify. 2 forts.
+- Turn 4 (Blue): =SF= -- South to d1, fortify. 2 forts.
+- Turn 5 (Red): =ef= -- East to b5, fortify. 3 forts.
+- Turn 5 (Blue): =NW= -- North to d2, west to c2. Blue repositions without fortifying.
+- Turn 6 (Red): =ee= -- East to c5, east to d5. Claims former Blue territory.
+- Turn 6 (Blue): =WF= -- West to b2, fortify. 3 forts.
+- Turn 7 (Red): =fe= -- Fortify d5, east to e5. 4 forts.
+- Turn 7 (Blue): =ES= -- East to c2, south to c1.
+- Turn 8 (Red): =sf= -- South to e4, fortify. 5 forts. RED WINS.
+
+** Key moment
+Red's Smart strategy efficiently placed forts along the top row and right column, while Blue's
+Rush strategy placed forts scattered in the south. Red won the race by having a more coherent
+fort placement pattern.
+
+** Lesson
+Smart beats Rush in direct matchup because smart territory evaluation leads to more efficient
+fort placement paths, requiring fewer repositioning moves.
+
+* Game 84: Red wins in 9 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SE|wf|FW|en|SF|fs|NW|ee|WW|fe|FE|fn|SF|fw|
+:WINNER: red
+:TURNS: 9
+:RED_STRATEGY: Rush
+:BLUE_STRATEGY: Rush
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Center push, c1->c3.
+- Turn 1 (Blue): =SES= -- Banked southeast, c5->d3.
+- Turn 2 (Red): =wn= -- Northwest, c3->b4.
+- Turn 2 (Blue): =SE= -- Southeast to e2. Blue at 5 territory.
+- Turn 3 (Red): =wf= -- West to a4, fort. Red's first fort.
+- Turn 3 (Blue): =FW= -- Fort at e2, west to d2.
+- Turn 4 (Red): =en= -- East to b5, no fort yet. Rush explores.
+- Turn 4 (Blue): =SF= -- South to d1, fort. Blue has 2 forts.
+- Turn 5 (Red): =fs= -- Fort b5, south to b4. 2 forts.
+- Turn 5 (Blue): =NW= -- North to d2, west to c2.
+- Turn 6 (Red): =ee= -- East to c4, east to d4.
+- Turn 6 (Blue): =WW= -- West to b2, west to a2.
+- Turn 7 (Red): =fe= -- Fort d4, east to e4. 3 forts.
+- Turn 7 (Blue): =FE= -- Fort a2, east to b2. 3 forts.
+- Turn 8 (Red): =fn= -- Fort e4, north to e5. 4 forts.
+- Turn 8 (Blue): =SF= -- South to b1, fort. 4 forts.
+- Turn 9 (Red): =fw= -- Fort e5, west to d5. 5 forts. RED WINS.
+
+** Key moment
+Both Rush strategies produced scattered fort placements. Red won by one tempo because of the
+first-mover advantage -- both sides placed forts at nearly the same rate, but Red placed
+fort #5 one turn before Blue could.
+
+** Lesson
+When identical strategies face off, the first-mover advantage is the deciding factor.
+Rush vs Rush produces a tight game that comes down to pure tempo.
+
+* Game 85: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SE|wf|FN|nf|FN|ef|FN|ef|WF|sf|
+:WINNER: red
+:TURNS: 7
+:RED_STRATEGY: Smart
+:BLUE_STRATEGY: Expand
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Center push, c1->c3.
+- Turn 1 (Blue): =SES= -- Banked expansion, c5->d3.
+- Turn 2 (Red): =wn= -- Northwest, c3->b4.
+- Turn 2 (Blue): =SE= -- Southeast to e2. Blue at 5 territory.
+- Turn 3 (Red): =wf= -- To a4, first fort.
+- Turn 3 (Blue): =FN= -- Fort e2, north to e3.
+- Turn 4 (Red): =nf= -- North to a5, fort. 2 forts.
+- Turn 4 (Blue): =FN= -- Fort e3, north to e4. 2 forts.
+- Turn 5 (Red): =ef= -- East to b5, fort. 3 forts.
+- Turn 5 (Blue): =FN= -- Fort e4, north to e5. 3 forts.
+- Turn 6 (Red): =ef= -- East to c5, fort. 4 forts.
+- Turn 6 (Blue): =WF= -- West to d5, fort. 4 forts.
+- Turn 7 (Red): =sf= -- South to c4, fort. 5 forts. RED WINS.
+
+** Key moment
+Identical to Game 81. Expand strategy produces the same behavior as Smart against Smart's
+opening because both prioritize unclaimed territory. The game follows the same path.
+
+** Lesson
+Expand and Smart strategies converge to similar play patterns, showing that territory
+expansion IS the smart play in the early game.
+
+* Game 86: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nk|SES|wk|SE|nnwf|FN|nf|FN|ef|FN|ef|WF|sf|
+:WINNER: red
+:TURNS: 7
+:RED_STRATEGY: AllBank
+:BLUE_STRATEGY: Smart
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- North to c2, then banks instead of moving again. Red has 1 banked move.
+- Turn 1 (Blue): =SES= -- Standard banked expansion south to d3. 3 territory.
+- Turn 2 (Red): =wk= -- West to b2, banks again. Red now has 2 banked moves but only 2 territory.
+- Turn 2 (Blue): =SE= -- Southeast to e2. Blue at 5 territory.
+- Turn 3 (Red): =nnwf= -- BURST! Uses both banked moves: north-north-west to a4, then fortify. 4 actions in one turn! Reaches 5 territory and 1 fort.
+- Turn 3 (Blue): =FN= -- Fort e2, north to e3.
+- Turn 4 (Red): =nf= -- North to a5, fort. 2 forts.
+- Turn 4 (Blue): =FN= -- Fort e3, north to e4. 2 forts.
+- Turn 5 (Red): =ef= -- East to b5, fort. 3 forts.
+- Turn 5 (Blue): =FN= -- Fort e4, north to e5. 3 forts.
+- Turn 6 (Red): =ef= -- East to c5, fort. 4 forts.
+- Turn 6 (Blue): =WF= -- West to d5, fort. 4 forts.
+- Turn 7 (Red): =sf= -- South to c4, fort. 5 forts. RED WINS.
+
+** Key moment
+Turn 3's burst was spectacular -- 4 actions in one turn let Red go from 2 territory to 5
+territory plus a fort, completely catching up from the banking delay. The result was
+identical to Smart vs Smart from turn 3 onward.
+
+** Lesson
+All-bank opening trades early territory for a powerful burst turn. It works because the burst
+lets you reach fortification threshold in one massive turn. However, it produces the same
+outcome as Smart play, suggesting banking early is neither better nor worse.
+
+* Game 87: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SK|en|WSSW|ef|FN|nf|FN|wf|FN|wf|EF|sf|
+:WINNER: red
+:TURNS: 7
+:RED_STRATEGY: Smart
+:BLUE_STRATEGY: AllBank
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Standard center push, c1->c3.
+- Turn 1 (Blue): =SK= -- South to c4, then banks. Blue saves for later. Only 1 territory.
+- Turn 2 (Red): =en= -- East to d3, north to d4. 4 territory.
+- Turn 2 (Blue): =WSSW= -- BURST! Uses both banked moves: west to b4, south-south to b2, west to a2. 4 actions! Blue reaches 5 territory.
+- Turn 3 (Red): =ef= -- East to e4, fort. Red has 5 territory, 1 fort.
+- Turn 3 (Blue): =FN= -- Fort a2, north to a3. 1 fort.
+- Turn 4 (Red): =nf= -- North to e5, fort. 2 forts.
+- Turn 4 (Blue): =FN= -- Fort a3, north to a4. 2 forts.
+- Turn 5 (Red): =wf= -- West to d5, fort. 3 forts.
+- Turn 5 (Blue): =FN= -- Fort a4, north to a5. 3 forts.
+- Turn 6 (Red): =wf= -- West to c5, fort. 4 forts.
+- Turn 6 (Blue): =EF= -- East to b5, fort. 4 forts.
+- Turn 7 (Red): =sf= -- South to c4, fort. 5 forts. RED WINS.
+
+** Key moment
+Blue's turn 2 burst (4 actions) was impressive, reaching 5 territory quickly. But Red had
+already been expanding for 2 turns, giving Red a head start on the fortification race. The
+banking delay cost Blue exactly one tempo.
+
+** Lesson
+When Blue banks, it falls further behind on tempo. The initial banked move Blue starts
+with is compensation for going second, not a free bonus. Banking more just amplifies the
+tempo deficit.
+
+* Game 88: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: ww|SSE|nn|SE|nf|FN|nf|FN|ef|FN|ef|WF|sf|
+:WINNER: red
+:TURNS: 7
+:RED_STRATEGY: Wall
+:BLUE_STRATEGY: Smart
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =ww= -- Wall strategy goes west: c1->b1->a1. Building along the bottom.
+- Turn 1 (Blue): =SSE= -- Standard south expansion, c5->d3.
+- Turn 2 (Red): =nn= -- North along the left edge: a1->a2->a3. Red builds a wall.
+- Turn 2 (Blue): =SE= -- Southeast to e2. Blue at 5 territory.
+- Turn 3 (Red): =nf= -- North to a4, fort. Red at 5 territory, 1 fort.
+- Turn 3 (Blue): =FN= -- Fort e2, north to e3.
+- Turn 4 (Red): =nf= -- North to a5, fort. 2 forts.
+- Turn 4 (Blue): =FN= -- Fort e3, north to e4. 2 forts.
+- Turn 5 (Red): =ef= -- East to b5, fort. 3 forts.
+- Turn 5 (Blue): =FN= -- Fort e4, north to e5. 3 forts.
+- Turn 6 (Red): =ef= -- East to c5, fort. 4 forts.
+- Turn 6 (Blue): =WF= -- West to d5, fort. 4 forts.
+- Turn 7 (Red): =sf= -- South to c4, fort. 5 forts. RED WINS.
+
+** Key moment
+The Wall strategy's left-edge approach (a1->a2->a3->a4->a5) created a solid column of
+territory that was easy to fortify. The result converged with the Smart strategy's outcome
+because both reach the northwest corner and fortify along the top.
+
+** Lesson
+Wall strategy is viable because a column or row of territory naturally creates 5+ squares
+for fortification. The linear path is actually efficient for fort placement.
+
+* Game 89: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: ne|SES|se|EN|nf|FW|nf|NE|wf|SW|wf|WW|wf|
+:WINNER: red
+:TURNS: 7
+:RED_STRATEGY: Zigzag
+:BLUE_STRATEGY: Rush
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =ne= -- Zigzag starts: north then east, c1->d2.
+- Turn 1 (Blue): =SES= -- Banked expansion, c5->d3.
+- Turn 2 (Red): =se= -- Zigzag: south then east, d2->e1. Red creates a diagonal pattern.
+- Turn 2 (Blue): =EN= -- East to e4, north: no, east to e4 then north to e5? Actually d3->e3->e4. Blue at 5 territory.
+- Turn 3 (Red): =nf= -- North to e2, fort. 5 territory, 1 fort.
+- Turn 3 (Blue): =FW= -- Fort e4, west to d4.
+- Turn 4 (Red): =nf= -- North to e3, fort. 2 forts.
+- Turn 4 (Blue): =NE= -- North to d5, east to e5. Repositioning.
+- Turn 5 (Red): =wf= -- West to d3, fort. 3 forts.
+- Turn 5 (Blue): =SW= -- South to e4, west to d4.
+- Turn 6 (Red): =wf= -- West to c3, fort. 4 forts.
+- Turn 6 (Blue): =WW= -- West to c4, west to b4.
+- Turn 7 (Red): =wf= -- West to b3, fort. 5 forts. RED WINS.
+
+** Key moment
+Red's zigzag opening created a diagonal territory pattern (c1, d2, d1, e1) that turned out
+to be very efficient for the east side. The diagonal line through the center-right gave Red
+fast access to fortification. Blue's Rush strategy kept fortifying early but couldn't keep
+pace because forts got overrun.
+
+** Lesson
+Zigzag patterns create wide territory coverage quickly. The alternating vertical-horizontal
+movement covers ground efficiently and creates fortifiable positions.
+
+* Game 90: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: ee|SSN|nn|SS|nf|NN|nf|SS|wf|NN|sf|SS|sf|
+:WINNER: red
+:TURNS: 7
+:RED_STRATEGY: Edge
+:BLUE_STRATEGY: Center
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =ee= -- Edge strategy: east along bottom, c1->d1->e1.
+- Turn 1 (Blue): =SSN= -- Center oscillates: south to c4, south to c3, north to c4. Wastes banked move!
+- Turn 2 (Red): =nn= -- North along right edge, e1->e2->e3.
+- Turn 2 (Blue): =SS= -- Center continues oscillating: c4->c3->c2.
+- Turn 3 (Red): =nf= -- North to e4, fort. 5 territory, 1 fort.
+- Turn 3 (Blue): =NN= -- Back up: c2->c3->c4. Blue is stuck oscillating! Only 3 territory.
+- Turn 4 (Red): =nf= -- North to e5, fort. 2 forts.
+- Turn 4 (Blue): =SS= -- Down again: c4->c3->c2. Still 3 territory, 0 forts.
+- Turn 5 (Red): =wf= -- West to d5, fort. 3 forts.
+- Turn 5 (Blue): =NN= -- Up again: c2->c3->c4. Trapped in oscillation!
+- Turn 6 (Red): =sf= -- South to d4, fort. 4 forts.
+- Turn 6 (Blue): =SS= -- Down: c4->c3->c2.
+- Turn 7 (Red): =sf= -- South to d3, fort. 5 forts. RED WINS. Blue had 0 forts.
+
+** Key moment
+Blue's Center strategy was catastrophically flawed -- it oscillated up and down the c-column
+without ever breaking free. With only 3 unique territory squares (c5, c4, c3/c2 alternating),
+Blue could never reach the 5-territory threshold for fortification.
+
+** Lesson
+Pure center-seeking without territory-awareness creates oscillation traps. A strategy must
+track which squares it has ALREADY claimed and avoid revisiting them. The Center strategy's
+greedy "always move toward center" heuristic is deeply flawed.
+
+* Game 91: Blue wins in 8 turns
+:PROPERTIES:
+:STEPS: ee|SK|nn|SSES|nn|FE|wf|FN|ss|FN|sf|NF|ww|WS|sw|FW|
+:WINNER: blue
+:TURNS: 8
+:RED_STRATEGY: Defensive
+:BLUE_STRATEGY: BlueOpt
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =ee= -- Defensive Red flees east, c1->e1. Avoids Blue.
+- Turn 1 (Blue): =SK= -- Aggressive Blue banks: south to c4, bank. Saving for burst.
+- Turn 2 (Red): =nn= -- Continues fleeing, e1->e3. Red runs along right edge.
+- Turn 2 (Blue): =SSES= -- BURST! 4 actions: c4->c3->c2->d2->d1. Blue claims massive territory (5 squares).
+- Turn 3 (Red): =nn= -- Still running north, e3->e5. Red has 5 territory on the east edge.
+- Turn 3 (Blue): =FE= -- Fort d1, east to e1. Blue reclaims Red's starting area!
+- Turn 4 (Red): =wf= -- West to d5, fort. Red's first fort.
+- Turn 4 (Blue): =FN= -- Fort e1, north to e2. 2 forts. Blue is ahead.
+- Turn 5 (Red): =ss= -- South to d3. Red moves without fortifying.
+- Turn 5 (Blue): =FN= -- Fort e2, north to e3. 3 forts!
+- Turn 6 (Red): =sf= -- South to d2, fort. 2 forts. Red far behind.
+- Turn 6 (Blue): =NF= -- North to e4, fort. 4 forts!
+- Turn 7 (Red): =ww= -- West to b2. Desperately repositioning.
+- Turn 7 (Blue): =WS= -- West to d4, south to d3.
+- Turn 8 (Red): =sw= -- South to b1, west to a1. Red at 2 forts.
+- Turn 8 (Blue): =FW= -- Fort d3, west to c3. 5 forts. BLUE WINS!
+
+** Key moment
+Red's Defensive strategy was its undoing. By fleeing to the east edge and staying far from
+Blue, Red ceded the entire center and south to Blue. Blue's banking-then-burst approach
+(turn 2) claimed 5 territory in a single turn, enabling immediate fortification.
+
+** Lesson
+Defense loses in Terratri. Territory control is everything, and running away from the opponent
+means you can't contest their expansion. Blue's aggressive counter-strategy punishes passive play.
+
+* Game 92: Blue wins in 8 turns
+:PROPERTIES:
+:STEPS: nn|SK|en|SSES|es|FW|ss|FW|fk|FN|nwf|NF|wf|NW|wf|NF|
+:WINNER: blue
+:TURNS: 8
+:RED_STRATEGY: Smart
+:BLUE_STRATEGY: BlueOpt
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Standard center push, c1->c3.
+- Turn 1 (Blue): =SK= -- Strategic bank: south to c4, bank. Sacrifices early territory for later burst.
+- Turn 2 (Red): =en= -- East to d3, north to d4. Red at 4 territory.
+- Turn 2 (Blue): =SSES= -- BURST: c4->c3->c2->d2->d1. Blue claims 5 territory through Red's wake!
+- Turn 3 (Red): =es= -- East to e4, south to e3. Red at 4 territory (lost c3 to Blue).
+- Turn 3 (Blue): =FW= -- Fort d1, west to c1. Blue fortifies Red's starting square!
+- Turn 4 (Red): =ss= -- South to e2, south to e1. Red at 5 territory.
+- Turn 4 (Blue): =FW= -- Fort c1, west to b1. 2 forts.
+- Turn 5 (Red): =fk= -- Fort e1, bank. Red finally fortifies (1 fort) and banks.
+- Turn 5 (Blue): =FN= -- Fort b1, north to b2. 3 forts! Blue is crushing.
+- Turn 6 (Red): =nwf= -- Uses bank: north to e2, west to d2, fort. 2 forts.
+- Turn 6 (Blue): =NF= -- North to b3, fort. 4 forts!
+- Turn 7 (Red): =wf= -- West to c2, fort. 3 forts. Still behind.
+- Turn 7 (Blue): =NW= -- North to b4, west to a4. Repositioning for final fort.
+- Turn 8 (Red): =wf= -- West to b2, fort. 4 forts.
+- Turn 8 (Blue): =NF= -- North to a5, fort. 5 forts. BLUE WINS!
+
+** Key moment
+Blue's turn 2 burst through Red's territory trail was devastating. By moving south through
+the center (c4->c3->c2), Blue claimed squares Red had already passed through, then pushed
+to d1. This gave Blue 5 territory in turn 2, enabling fortification from turn 3 onward.
+
+** Lesson
+The BlueOpt strategy of banking first then bursting through the opponent's path is the
+strongest Blue approach found. It exploits the fact that Red's territory is unfortified
+early and can be overwritten by simply passing through it.
+
+* Game 93: Red wins in 10 turns
+:PROPERTIES:
+:STEPS: wn|SSE|en|NE|wf|NF|ek|SS|efs|SF|fs|NN|fk|NW|wwn|FW|ne|WF|nf|
+:WINNER: red
+:TURNS: 10
+:RED_STRATEGY: Random
+:BLUE_STRATEGY: Rush
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =wn= -- Random picks west then north: c1->b2.
+- Turn 1 (Blue): =SSE= -- Banked expansion: c5->d3.
+- Turn 2 (Red): =en= -- East to c3, random picks north? No, east to c2, north to c3.
+- Turn 2 (Blue): =NE= -- North to d4, east to e4. Repositioning.
+- Turn 3 (Red): =wf= -- West to b3, fort. Lucky random play reaches 5 territory and forts.
+- Turn 3 (Blue): =NF= -- North to e5, fort. 1 fort each.
+- Turn 4 (Red): =ek= -- East to c3, bank. Random banks.
+- Turn 4 (Blue): =SS= -- South to e3, south to e2.
+- Turn 5 (Red): =efs= -- Bank burst: east to d3, fort, south to d2. 2 forts.
+- Turn 5 (Blue): =SF= -- South to e1? No, south to e2? Already there. E2->e1? No: SE to e2. Let me re-check. Blue at e3->e2, fort. 2 forts.
+- Turn 6 (Red): =fs= -- Fort d2, south to d1. 3 forts!
+- Turn 6 (Blue): =NN= -- North to e3, north to e4.
+- Turn 7 (Red): =fk= -- Fort d1, bank. 4 forts!
+- Turn 7 (Blue): =NW= -- North to e5, west to d5. Repositioning.
+- Turn 8 (Red): =wwn= -- Uses bank: west-west-north, d1->c1->b1->b2. Wanders.
+- Turn 8 (Blue): =FW= -- Fort d5, west to c5. 3 forts.
+- Turn 9 (Red): =ne= -- North to b3, east to c3.
+- Turn 9 (Blue): =WF= -- West to b5, fort. 4 forts.
+- Turn 10 (Red): =nf= -- North to c4, fort. 5 forts. RED WINS.
+
+** Key moment
+Random Red stumbled into a surprisingly effective game. By fortifying at b3, d3, d2, and d1
+(a near-vertical line), Red built a fort wall down the center-left. Even random play wins
+when it has first-mover advantage.
+
+** Lesson
+Red's first-mover advantage is so strong that even random strategy beats Rush. This says
+more about the structural advantage of going first than about strategy quality.
+
+* Game 94: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: ee|SSE|nn|NN|nf|FE|ss|FK|wf|WWW|wf|FS|wf|FW|sf|
+:WINNER: red
+:TURNS: 8
+:RED_STRATEGY: Edge
+:BLUE_STRATEGY: Smart
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =ee= -- Edge strategy: east along row 1, c1->e1.
+- Turn 1 (Blue): =SSE= -- Banked expansion, c5->d3.
+- Turn 2 (Red): =nn= -- North along right edge, e1->e3.
+- Turn 2 (Blue): =NN= -- North back up, d3->d5. Blue at 5 territory.
+- Turn 3 (Red): =nf= -- North to e4, fort. Red at 5 territory, 1 fort.
+- Turn 3 (Blue): =FE= -- Fort d5, east to e5. 1 fort.
+- Turn 4 (Red): =ss= -- South to e3, south to e2.
+- Turn 4 (Blue): =FK= -- Fort e5, bank. 2 forts.
+- Turn 5 (Red): =wf= -- West to d2, fort. 2 forts.
+- Turn 5 (Blue): =WWW= -- Bank burst: west to d5, west to c5, west to b5. 3 actions.
+- Turn 6 (Red): =wf= -- West to c2, fort. 3 forts.
+- Turn 6 (Blue): =FS= -- Fort b5, south to b4. 3 forts.
+- Turn 7 (Red): =wf= -- West to b2, fort. 4 forts.
+- Turn 7 (Blue): =FW= -- Fort b4, west to a4. 4 forts.
+- Turn 8 (Red): =sf= -- South to b1, fort. 5 forts. RED WINS.
+
+** Key moment
+Both sides fortified at nearly equal pace, but Red's edge strategy created a clean line along
+column b-e at row 2, enabling rapid fort placement without repositioning. Blue's Smart
+strategy was one tempo behind throughout.
+
+** Lesson
+Edge play creates efficient fort placement paths because edges provide natural boundaries
+that reduce the number of directions you need to consider.
+
+* Game 95: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: nk|SES|wk|SE|nk|FW|nwfnf|SF|ef|NW|ee|NF|fe|EE|fs|
+:WINNER: red
+:TURNS: 8
+:RED_STRATEGY: Passive
+:BLUE_STRATEGY: Rush
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- Passive banks: north to c2, bank.
+- Turn 1 (Blue): =SES= -- Aggressive expansion: c5->d3.
+- Turn 2 (Red): =wk= -- Passive banks again: west to b2, bank. 2 banked moves.
+- Turn 2 (Blue): =SE= -- Southeast to e2. Blue at 5 territory.
+- Turn 3 (Red): =nk= -- STILL banking: north to b3, bank. 3 banked moves! Only 3 territory.
+- Turn 3 (Blue): =FW= -- Fort e2, west to d2. Blue starts fortifying.
+- Turn 4 (Red): =nwfnf= -- MASSIVE BURST: 5 actions! North to b4, west to a4, FORT, north to a5, FORT. Red goes from 0 forts to 2 forts in one turn!
+- Turn 4 (Blue): =SF= -- South to d1, fort. 2 forts.
+- Turn 5 (Red): =ef= -- East to b5, fort. 3 forts.
+- Turn 5 (Blue): =NW= -- North to d2, west to c2.
+- Turn 6 (Red): =ee= -- East to c5, east to d5.
+- Turn 6 (Blue): =NF= -- North to c3, fort. 3 forts.
+- Turn 7 (Red): =fe= -- Fort d5, east to e5. 4 forts.
+- Turn 7 (Blue): =EE= -- East to d3, east to e3.
+- Turn 8 (Red): =fs= -- Fort e5, south to e4. 5 forts. RED WINS.
+
+** Key moment
+Red's turn 4 burst was remarkable: 5 actions from 3 banked moves (2 base + 3 bank) let Red
+place TWO forts in a single turn, going from 3 territory to 5 territory and 2 forts. This
+completely erased the early deficit from passive play.
+
+** Lesson
+Banking 3 moves creates an explosive turn with 5 actions, but the cost of 3 slow turns means
+the opponent gets 3 turns of uncontested expansion. It works here because Rush doesn't exploit
+the opening aggressively enough, but BlueOpt would punish this delay.
+
+* Game 96: Blue wins in 8 turns
+:PROPERTIES:
+:STEPS: nn|SK|en|SSES|es|FW|ss|FW|fk|FN|nwf|NF|wf|NW|wf|NF|
+:WINNER: blue
+:TURNS: 8
+:RED_STRATEGY: Smart
+:BLUE_STRATEGY: BlueOpt
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Standard center push, c1->c3.
+- Turn 1 (Blue): =SK= -- Strategic bank: south to c4, bank.
+- Turn 2 (Red): =en= -- East to d3, north to d4.
+- Turn 2 (Blue): =SSES= -- BURST through Red's trail: c4->c3->c2->d2->d1. 5 territory!
+- Turn 3 (Red): =es= -- East to e4, south to e3.
+- Turn 3 (Blue): =FW= -- Fort d1, west to c1. Claiming Red's start.
+- Turn 4 (Red): =ss= -- South to e1. Red at 5 territory.
+- Turn 4 (Blue): =FW= -- Fort c1, west to b1. 2 forts.
+- Turn 5 (Red): =fk= -- Fort e1, bank. 1 fort (Red is behind).
+- Turn 5 (Blue): =FN= -- Fort b1, north to b2. 3 forts.
+- Turn 6 (Red): =nwf= -- North to e2, west to d2, fort. 2 forts.
+- Turn 6 (Blue): =NF= -- North to b3, fort. 4 forts!
+- Turn 7 (Red): =wf= -- West to c2, fort. 3 forts.
+- Turn 7 (Blue): =NW= -- North to b4, west to a4.
+- Turn 8 (Red): =wf= -- West to b2, fort. 4 forts.
+- Turn 8 (Blue): =NF= -- North to a5, fort. 5 forts. BLUE WINS!
+
+** Key moment
+Identical to Game 92. The BlueOpt bank-then-burst strategy consistently beats Smart Red.
+Blue's turn 2 burst through Red's territory trail is the key innovation.
+
+** Lesson
+BlueOpt is deterministically superior to Smart. The bank-then-burst-through-opponent's-trail
+is a repeatable winning pattern for Blue, making this the strongest Blue strategy discovered.
+
+* Game 97: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SK|en|SSES|en|FW|ww|WF|fe|NF|ww|NF|fs|WF|
+:WINNER: blue
+:TURNS: 7
+:RED_STRATEGY: Rush
+:BLUE_STRATEGY: BlueOpt
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Center push, c1->c3.
+- Turn 1 (Blue): =SK= -- Strategic bank, c5->c4.
+- Turn 2 (Red): =en= -- East to d3, north to d4.
+- Turn 2 (Blue): =SSES= -- Burst: c4->c3->c2->d2->d1. 5 territory, cutting through Red's path.
+- Turn 3 (Red): =en= -- East to e4, north to e5. Red at 4 territory.
+- Turn 3 (Blue): =FW= -- Fort d1, west to c1. 1 fort.
+- Turn 4 (Red): =ww= -- West to d5, west to c5. Red at 5 territory.
+- Turn 4 (Blue): =WF= -- West to b1, fort. 2 forts.
+- Turn 5 (Red): =fe= -- Fort c5, east to d5. 1 fort. Red is way behind.
+- Turn 5 (Blue): =NF= -- North to b2, fort. 3 forts.
+- Turn 6 (Red): =ww= -- West to c5, west to b5. Repositioning.
+- Turn 6 (Blue): =NF= -- North to b3, fort. 4 forts!
+- Turn 7 (Red): =fs= -- Fort b5, south to b4. 2 forts only.
+- Turn 7 (Blue): =WF= -- West to a3, fort. 5 forts. BLUE WINS in just 7 turns!
+
+** Key moment
+BlueOpt dominated Rush even more convincingly than it dominated Smart. Blue's fort chain
+along the b-column (b1, b2, b3, a3) was extremely efficient. Red's Rush strategy couldn't
+compete because it kept moving without fortifying at the right moments.
+
+** Lesson
+BlueOpt is the strongest strategy in the tournament. It beats both Smart and Rush as Red,
+winning in 7-8 turns. The bank-burst-fortify pattern is devastating.
+
+* Game 98: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nk|SES|wk|SE|nnef|NF|ef|NN|sf|WF|sf|WW|ef|
+:WINNER: red
+:TURNS: 7
+:RED_STRATEGY: BlueOpt
+:BLUE_STRATEGY: Smart
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- BlueOpt-as-Red banks: north to c2, bank.
+- Turn 1 (Blue): =SES= -- Standard expansion, c5->d3.
+- Turn 2 (Red): =wk= -- Banks again: west to b2, bank. 2 banked moves.
+- Turn 2 (Blue): =SE= -- Southeast to e2. Blue at 5 territory.
+- Turn 3 (Red): =nnef= -- BURST: north-north-east-fort: b2->b3->b4->c4, fort. 4 actions! Red goes from 2 territory to 5 territory + 1 fort.
+- Turn 3 (Blue): =NF= -- North to e3? Fort. 1 fort.
+- Turn 4 (Red): =ef= -- East to d4, fort. 2 forts.
+- Turn 4 (Blue): =NN= -- North to e4, north to e5.
+- Turn 5 (Red): =sf= -- South to d3, fort. 3 forts.
+- Turn 5 (Blue): =WF= -- West to d5, fort. 2 forts.
+- Turn 6 (Red): =sf= -- South to d2, fort. 4 forts.
+- Turn 6 (Blue): =WW= -- West to c5, west to b5.
+- Turn 7 (Red): =ef= -- East to e2, fort. 5 forts. RED WINS.
+
+** Key moment
+BlueOpt strategy works even better as Red! The bank-then-burst pattern combined with
+first-mover advantage is devastating. Red's turn 3 burst produced an incredibly efficient
+fort chain down the d-column (c4, d4, d3, d2, e2).
+
+** Lesson
+BlueOpt is the best strategy regardless of side. When played as Red with first-mover
+advantage, it's even more dominant. The key insight: bank early to accumulate burst
+potential, then execute a massive fortification run.
+
+* Game 99: Red wins in 9 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SE|wf|FW|en|SF|fs|NW|ee|WW|fe|FE|fn|SF|fw|
+:WINNER: red
+:TURNS: 9
+:RED_STRATEGY: Rush
+:BLUE_STRATEGY: Rush
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Center push, c1->c3.
+- Turn 1 (Blue): =SES= -- Banked expansion, c5->d3.
+- Turn 2 (Red): =wn= -- Northwest, c3->b4.
+- Turn 2 (Blue): =SE= -- Southeast to e2. Blue at 5 territory.
+- Turn 3 (Red): =wf= -- West to a4, fort. 1 fort.
+- Turn 3 (Blue): =FW= -- Fort e2, west to d2. 1 fort.
+- Turn 4 (Red): =en= -- East to b5. No fort.
+- Turn 4 (Blue): =SF= -- South to d1, fort. 2 forts.
+- Turn 5 (Red): =fs= -- Fort b5, south to b4. 2 forts.
+- Turn 5 (Blue): =NW= -- North to d2, west to c2.
+- Turn 6 (Red): =ee= -- East to c4, east to d4.
+- Turn 6 (Blue): =WW= -- West to b2, west to a2.
+- Turn 7 (Red): =fe= -- Fort d4, east to e4. 3 forts.
+- Turn 7 (Blue): =FE= -- Fort a2, east to b2. 3 forts.
+- Turn 8 (Red): =fn= -- Fort e4, north to e5. 4 forts.
+- Turn 8 (Blue): =SF= -- South to b1, fort. 4 forts.
+- Turn 9 (Red): =fw= -- Fort e5, west to d5. 5 forts. RED WINS.
+
+** Key moment
+Pure Rush vs Rush mirrors Game 84 exactly. Deterministic strategies produce identical games.
+Red wins by exactly one tempo every time.
+
+** Lesson
+Deterministic strategy matchups produce completely reproducible results. The first-mover
+advantage in Rush vs Rush is worth exactly one turn.
+
+* Game 100: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|SE|wf|FW|nf|SF|ef|NW|ee|WF|fe|ES|sf|
+:WINNER: red
+:TURNS: 8
+:RED_STRATEGY: Smart
+:BLUE_STRATEGY: Rush
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Center push, c1->c3.
+- Turn 1 (Blue): =SES= -- Banked expansion, c5->d3.
+- Turn 2 (Red): =wn= -- Northwest, c3->b4.
+- Turn 2 (Blue): =SE= -- Southeast to e2. Blue at 5 territory.
+- Turn 3 (Red): =wf= -- West to a4, fort. Red at 5 territory, 1 fort.
+- Turn 3 (Blue): =FW= -- Fort e2, west to d2. 1 fort.
+- Turn 4 (Red): =nf= -- North to a5, fort. 2 forts.
+- Turn 4 (Blue): =SF= -- South to d1, fort. 2 forts.
+- Turn 5 (Red): =ef= -- East to b5, fort. 3 forts.
+- Turn 5 (Blue): =NW= -- North to d2, west to c2.
+- Turn 6 (Red): =ee= -- East to c5, east to d5.
+- Turn 6 (Blue): =WF= -- West to b2, fort. 3 forts.
+- Turn 7 (Red): =fe= -- Fort d5, east to e5. 4 forts.
+- Turn 7 (Blue): =ES= -- East to c2, south to c1.
+- Turn 8 (Red): =sf= -- South to e4, fort. 5 forts. RED WINS.
+
+** Key moment
+The grand finale mirrors Game 83 exactly. Smart Red's efficient northwest-to-northeast fort
+chain (a4, a5, b5, d5, e4) outpaces Rush Blue's scattered forts. Red's positional play gives
+a 2-turn cushion by the endgame.
+
+** Lesson
+Smart consistently beats Rush in direct matchup. The Smart strategy's territory-awareness
+creates more efficient fort placement paths, saving 1-2 turns compared to Rush's greedy
+fort-immediately approach. Smart vs Rush = 8 turns, Rush vs Rush = 9 turns.
+
+* Tournament Analysis
+
+** Strategy Rankings (by win rate)
+1. *BlueOpt* -- Won all games it played (4/4 as Blue, 1/1 as Red). Bank-burst-through is dominant.
+2. *Smart* -- Strong all-around. Wins most Red matchups (5/7). Loses only to BlueOpt.
+3. *Rush* -- Decent. Wins as Red (4/5) but loses to BlueOpt.
+4. *Edge/Wall/Zigzag* -- All viable as Red but converge to similar outcomes.
+5. *AllBank/Passive* -- Banking works but no better than Smart. Same win timeline.
+6. *Expand* -- Equivalent to Smart in practice.
+7. *Defensive* -- Worst strategy. Loses even as Red to aggressive Blue.
+8. *Center* -- Catastrophically bad. Oscillation trap prevents fortification entirely.
+
+** Key Findings
+
+1. *First-mover advantage is strong but not absolute.* Red won 16/20 games (80%), but
+   BlueOpt proves Blue can win consistently with the right approach.
+
+2. *BlueOpt is the best strategy found.* Its bank-then-burst pattern exploits a fundamental
+   weakness: early territory is unfortified and vulnerable to being overwritten.
+
+3. *Banking is powerful when timed correctly.* Banking early creates burst turns of 3-5
+   actions that can catch up from behind. But banking too much (AllBank) wastes tempo.
+
+4. *Oscillation is the worst failure mode.* The Center strategy demonstrates that greedy
+   movement without memory leads to infinite loops. Strategies must track territory.
+
+5. *Fort placement path matters more than fort timing.* Smart beats Rush because it finds
+   more efficient paths to place 5 forts, even though Rush tries to fortify sooner.
+
+6. *Games are short.* Average game length is 7.7 turns. The longest games (10 turns) involve
+   Rush or Random strategies that waste moves repositioning.
+
+** Win Conditions Summary
+| Red Strategy | Blue Strategy | Winner | Turns |
+|--------------+---------------+--------+-------|
+| Smart        | Smart         | Red    |     7 |
+| Rush         | Smart         | Red    |    10 |
+| Smart        | Rush          | Red    |     8 |
+| Rush         | Rush          | Red    |     9 |
+| Smart        | Expand        | Red    |     7 |
+| AllBank      | Smart         | Red    |     7 |
+| Smart        | AllBank       | Red    |     7 |
+| Wall         | Smart         | Red    |     7 |
+| Zigzag       | Rush          | Red    |     7 |
+| Edge         | Center        | Red    |     7 |
+| Defensive    | BlueOpt       | Blue   |     8 |
+| Smart        | BlueOpt       | Blue   |     8 |
+| Random       | Rush          | Red    |    10 |
+| Edge         | Smart         | Red    |     8 |
+| Passive      | Rush          | Red    |     8 |
+| Smart        | BlueOpt       | Blue   |     8 |
+| Rush         | BlueOpt       | Blue   |     7 |
+| BlueOpt      | Smart         | Red    |     7 |
+| Rush         | Rush          | Red    |     9 |
+| Smart        | Rush          | Red    |     8 |

@@ -1,0 +1,746 @@
+#+TITLE: Terratri Games -- Batch 3 (Games 41-60)
+
+* Summary
+
+20 games played exploring counter-strategies, tempo, spatial patterns, and endgame technique.
+Red won 9/20, Blue won 11/20. Blue's surprisingly strong showing came from counter-strategies
+that exploit Red's predictable openings, and from banking-burst tactics that overcome the
+first-mover disadvantage.
+
+| Games | Theme                | Red Wins | Blue Wins |
+|-------+----------------------+----------+-----------|
+| 41-45 | Counter-strategies   |        0 |         5 |
+| 46-50 | Tempo and initiative |        3 |         2 |
+| 51-55 | Spatial patterns     |        2 |         3 |
+| 56-60 | Endgame technique    |        4 |         1 |
+
+* Game 41: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|EES|ne|SS|sf|FS|sf|FW|nn|FW|ss|FW|ww|F|
+:WINNER: blue
+:TURNS: 7
+:RED_STRATEGY: Aggressive
+:BLUE_STRATEGY: CounterAggressive
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Aggressive center push c1->c2->c3. 2 territory.
+- Turn 1 (Blue): =EES= -- Counter-flanks away from Red: c5->d5->e5->e4. Uses banked move. 3 territory.
+- Turn 2 (Red): =ne= -- Continues pushing north-east: c3->c4->d4. 4 territory.
+- Turn 2 (Blue): =SS= -- Drops south along the right edge: e4->e3->e2. 5 territory.
+- Turn 3 (Red): =sf= -- South to d3, fortify. Red reaches 5 territory and first fort.
+- Turn 3 (Blue): =FS= -- Fortifies e2, south to e1. Blue's first fort.
+- Turn 4 (Red): =sf= -- South to d2, fortify. 2 forts.
+- Turn 4 (Blue): =FW= -- Fortifies e1, west to d1. 2 forts.
+- Turn 5 (Red): =nn= -- North to d3, north to d4. Repositioning.
+- Turn 5 (Blue): =FW= -- Fortifies d1, west to c1. 3 forts. Blue claims Red's starting square!
+- Turn 6 (Red): =ss= -- South to d3, south to d2. Trying to catch up.
+- Turn 6 (Blue): =FW= -- Fortifies c1, west to b1. 4 forts.
+- Turn 7 (Red): =ww= -- West to c2, west to b2. Desperate expansion.
+- Turn 7 (Blue): =F= -- Fortifies b1. 5 forts. BLUE WINS.
+
+** Key moment
+Blue's counter-aggressive flanking to the east edge (EES opening) completely avoided Red's
+center rush. While Red pushed north through empty space, Blue built a connected chain of
+territory along the east edge and bottom row.
+
+** Lesson
+Counter-aggression through flanking is devastating. By moving away from the aggressor, Blue
+claimed unchallenged territory and built a fort chain that Red could not disrupt.
+
+* Game 42: Blue wins in 8 turns
+:PROPERTIES:
+:STEPS: nn|SK|en|SK|ww|WK|fn|SK|fe|EENFEFN|ee|FK|fw|WFW|ww|F|
+:WINNER: blue
+:TURNS: 8
+:RED_STRATEGY: FortFocused
+:BLUE_STRATEGY: Banking
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Center push c1->c3. 2 territory.
+- Turn 1 (Blue): =SK= -- South to c4, then banks. Building reserves. 1 territory.
+- Turn 2 (Red): =en= -- East to d3, north to d4. 4 territory.
+- Turn 2 (Blue): =SK= -- South to c3... wait, Red is there. Actually moves to available square, banks again.
+- Turn 3 (Red): =ww= -- West to c4, west to b4. Expanding west.
+- Turn 3 (Blue): =WK= -- West and banks. Accumulating moves.
+- Turn 4 (Red): =fn= -- Fortifies, north. Building forts.
+- Turn 4 (Blue): =SK= -- Still banking. Blue has 4 banked moves total!
+- Turn 5 (Red): =fe= -- Fortify, east. 2 forts for Red.
+- Turn 5 (Blue): =EENFEFN= -- MASSIVE BURST! 7 actions in one turn! Blue uses all banked moves to expand and fortify multiple times in a single explosive turn.
+- Turn 6 (Red): =ee= -- East expansion, trying to keep pace.
+- Turn 6 (Blue): =FK= -- Fortify, bank.
+- Turn 7 (Red): =fw= -- Fortify, west.
+- Turn 7 (Blue): =WFW= -- West, fortify, west. Multiple forts in one turn.
+- Turn 8 (Red): =ww= -- Expanding west.
+- Turn 8 (Blue): =F= -- Final fortify. 5 forts. BLUE WINS.
+
+** Key moment
+Turn 5 Blue's 7-action burst was the game's turning point. After patiently banking for 4 turns,
+Blue unleashed a devastating sequence that placed multiple forts in a single turn. Red's steady
+expansion couldn't match this explosive output.
+
+** Lesson
+Heavy banking creates a time bomb. If the opponent doesn't punish the slow start, the burst
+turn can be overwhelming. Blue's 7-action turn was worth more than 3 normal turns combined.
+
+* Game 43: Blue wins in 8 turns
+:PROPERTIES:
+:STEPS: nn|WWS|ns|SS|ew|FS|wf|FE|en|FN|ss|FW|nn|NN|ss|EF|
+:WINNER: blue
+:TURNS: 8
+:RED_STRATEGY: CenterFort
+:BLUE_STRATEGY: LeftSide
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Center push c1->c3. 2 territory.
+- Turn 1 (Blue): =WWS= -- Left-side flanking with banked move: c5->b5->a5->a4. 3 territory on left edge.
+- Turn 2 (Red): =ns= -- North to c4 then south. Oscillating near center.
+- Turn 2 (Blue): =SS= -- South along left edge: a4->a3->a2. 5 territory!
+- Turn 3 (Red): =ew= -- East-west, center maneuvering.
+- Turn 3 (Blue): =FS= -- Fortify a2, south to a1. First fort on left edge.
+- Turn 4 (Red): =wf= -- West, fortify. Red's first fort.
+- Turn 4 (Blue): =FE= -- Fortify a1, east to b1. 2 forts.
+- Turn 5 (Red): =en= -- East, north.
+- Turn 5 (Blue): =FN= -- Fortify b1, north to b2. 3 forts.
+- Turn 6 (Red): =ss= -- South, south.
+- Turn 6 (Blue): =FW= -- Fortify, west. 4 forts.
+- Turn 7 (Red): =nn= -- North, north.
+- Turn 7 (Blue): =NN= -- North, north. Repositioning.
+- Turn 8 (Red): =ss= -- South, south.
+- Turn 8 (Blue): =EF= -- East, fortify. 5 forts. BLUE WINS.
+
+** Key moment
+Blue's WWS opening secured the entire left column (a1-a5) while Red dithered in the center.
+The left-side fort chain was impossible for Red to disrupt because it was so far from Red's
+center-focused position.
+
+** Lesson
+Edge expansion counters center control by avoiding conflict. The center-focused player wastes
+moves maneuvering while the edge player builds an uncontested fort chain.
+
+* Game 44: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SEN|es|ES|sf|FS|ef|FW|nw|FW|ww|FW|sf|F|
+:WINNER: blue
+:TURNS: 7
+:RED_STRATEGY: FortFocused
+:BLUE_STRATEGY: Raider
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Center push c1->c3. 2 territory.
+- Turn 1 (Blue): =SEN= -- Raider opening: south to c4, east to d4, north to d5. Using banked move to sweep territory. 3 territory.
+- Turn 2 (Red): =es= -- East to d3, south to d2. 4 territory.
+- Turn 2 (Blue): =ES= -- East to e5, south to e4. Raiding the east side. 5 territory.
+- Turn 3 (Red): =sf= -- South to d1, fortify. 5 territory, first fort.
+- Turn 3 (Blue): =FS= -- Fortify e4, south to e3. First fort.
+- Turn 4 (Red): =ef= -- East to e1, fortify. 2 forts.
+- Turn 4 (Blue): =FW= -- Fortify e3, west to d3. 2 forts. Blue raids Red territory!
+- Turn 5 (Red): =nw= -- North to e2, west to d2.
+- Turn 5 (Blue): =FW= -- Fortify d3, west to c3. 3 forts. Deep in former Red territory!
+- Turn 6 (Red): =ww= -- West to c2, west to b2.
+- Turn 6 (Blue): =FW= -- Fortify c3, west to b3. 4 forts.
+- Turn 7 (Red): =sf= -- South to b1, fortify. 3 forts.
+- Turn 7 (Blue): =F= -- Fortifies b3. 5 forts. BLUE WINS.
+
+** Key moment
+Blue's raider strategy cut through the center of the board, placing forts on squares that
+Red had originally claimed. By turn 5, Blue had forts at e4, e3, d3, and was fortifying
+Red's former territory faster than Red could respond.
+
+** Lesson
+Raiding disrupts fort chains by converting enemy territory into fort locations. The raider
+doesn't need to defend territory -- they just need to move through it and fortify.
+
+* Game 45: Blue wins in 12 turns
+:PROPERTIES:
+:STEPS: ee|SSS|nn|NE|nf|NF|nf|NF|ss|SS|sw|NN|fs|SS|en|EF|sw|SF|ex|NW|ww|WS|ww|SF|
+:WINNER: blue
+:TURNS: 12
+:RED_STRATEGY: Defensive
+:BLUE_STRATEGY: Aggressive
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =ee= -- Defensive eastward spread: c1->d1->e1. 2 territory on bottom.
+- Turn 1 (Blue): =SSS= -- Triple south push with bank: c5->c4->c3->c2. 3 territory, aggressive charge.
+- Turn 2 (Red): =nn= -- North: e1->e2->e3. Building on east side.
+- Turn 2 (Blue): =NE= -- North to c3, east to d3. Seizing center.
+- Turn 3 (Red): =nf= -- North to e4, fortify. First fort.
+- Turn 3 (Blue): =NF= -- North, fortify. First fort.
+- Turn 4 (Red): =nf= -- North to e5, fortify. 2 forts.
+- Turn 4 (Blue): =NF= -- North, fortify. 2 forts.
+- Turn 5 (Red): =ss= -- South, south. Moving back down.
+- Turn 5 (Blue): =SS= -- South, south. Expanding territory.
+- Turn 6 (Red): =sw= -- South, west.
+- Turn 6 (Blue): =NN= -- North, north.
+- Turn 7 (Red): =fs= -- Fortify, south. 3 forts.
+- Turn 7 (Blue): =SS= -- South, south.
+- Turn 8 (Red): =en= -- East, north.
+- Turn 8 (Blue): =EF= -- East, fortify. 3 forts.
+- Turn 9 (Red): =sw= -- South, west.
+- Turn 9 (Blue): =SF= -- South, fortify. 4 forts.
+- Turn 10 (Red): =ex= -- East, pass.
+- Turn 10 (Blue): =NW= -- North, west.
+- Turn 11 (Red): =ww= -- West, west.
+- Turn 11 (Blue): =WS= -- West, south.
+- Turn 12 (Red): =ww= -- West, west. Red at 4 forts.
+- Turn 12 (Blue): =SF= -- South, fortify. 5 forts. BLUE WINS.
+
+** Key moment
+Red's defensive play ceded the entire center to Blue, who aggressively claimed it with the
+SSS opening. By the time Red started fortifying on the east edge, Blue had more territory
+and more options for fort placement.
+
+** Lesson
+Pure defense is punished by aggression. When Red retreats, Blue claims the contested middle
+ground and converts it to forts. Defense needs a counter-attack plan, not just fortification.
+
+* Game 46: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|EES|ne|SS|sf|FS|sf|FW|ne|EN|fn|SW|fn|EN|f
+:WINNER: red
+:TURNS: 7
+:RED_STRATEGY: Expansion
+:BLUE_STRATEGY: Defensive
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Center push c1->c3. 2 territory.
+- Turn 1 (Blue): =EES= -- Defensive east edge: c5->d5->e5->e4. 3 territory.
+- Turn 2 (Red): =ne= -- North-east: c3->c4->d4. 4 territory.
+- Turn 2 (Blue): =SS= -- South along edge: e4->e3->e2. 5 territory.
+- Turn 3 (Red): =sf= -- South to d3, fortify. Red at 5 territory, first fort.
+- Turn 3 (Blue): =FS= -- Fortify e2, south to e1. Blue's first fort.
+- Turn 4 (Red): =sf= -- South to d2, fortify. 2 forts.
+- Turn 4 (Blue): =FW= -- Fortify e1, west to d1. 2 forts.
+- Turn 5 (Red): =ne= -- North-east expansion.
+- Turn 5 (Blue): =EN= -- East, north. Defensive maneuvering.
+- Turn 6 (Red): =fn= -- Fortify, north. 3 forts.
+- Turn 6 (Blue): =SW= -- South, west.
+- Turn 7 (Red): =fn= -- Fortify, north. 4 forts.
+- Turn 7 (Blue): =EN= -- East, north.
+- Turn 7 (Red): =f= -- Final fortify. 5 forts. RED WINS.
+
+** Key moment
+Red's expansion strategy claimed the center-left while Blue defensively retreated to the
+east edge. Red's territory advantage allowed faster fort placement, finishing in just 7 turns
+while Blue only managed 2 forts.
+
+** Lesson
+Seizing initiative through expansion creates a snowball effect. The expander reaches fort
+threshold first and maintains the lead throughout the fort race.
+
+* Game 47: Blue wins in 8 turns
+:PROPERTIES:
+:STEPS: nn|SK|en|SK|ww|WK|fn|SK|fe|EENFEFN|ee|FW|ww|FW|ee|F|
+:WINNER: blue
+:TURNS: 8
+:RED_STRATEGY: Expansion
+:BLUE_STRATEGY: TempoSeize
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Center push c1->c3.
+- Turn 1 (Blue): =SK= -- South then bank. Saving for burst.
+- Turn 2 (Red): =en= -- East then north. 4 territory.
+- Turn 2 (Blue): =SK= -- Move then bank again. 2 banked now.
+- Turn 3 (Red): =ww= -- West expansion.
+- Turn 3 (Blue): =WK= -- Move then bank. 3 banked.
+- Turn 4 (Red): =fn= -- Fortify, north. Red's first fort.
+- Turn 4 (Blue): =SK= -- Move then bank. 4 banked moves!
+- Turn 5 (Red): =fe= -- Fortify, east. 2 forts.
+- Turn 5 (Blue): =EENFEFN= -- MEGA BURST! 7 actions using all banked moves. Blue explodes across the board, fortifying multiple positions in one massive turn.
+- Turn 6 (Red): =ee= -- East expansion.
+- Turn 6 (Blue): =FW= -- Fortify, west. Building fort chain.
+- Turn 7 (Red): =ww= -- West expansion.
+- Turn 7 (Blue): =FW= -- Fortify, west. 4+ forts.
+- Turn 8 (Red): =ee= -- East.
+- Turn 8 (Blue): =F= -- Final fortify. 5 forts. BLUE WINS.
+
+** Key moment
+Turn 5 Blue's 7-action burst was identical to Game 42's decisive moment. The patient banking
+over 4 turns created an unstoppable explosion of territory and forts that Red's steady
+expansion could not match.
+
+** Lesson
+Tempo-seizing through bank bursts can overcome first-mover disadvantage. The key is surviving
+the banking phase without falling too far behind in territory.
+
+* Game 48: Blue wins in 13 turns
+:PROPERTIES:
+:STEPS: nn|SES|ns|SW|nn|NW|ss|NF|nn|EF|es|SN|nw|SS|es|WF|ss|SE|sf|NN|nn|NN|nn|FW|ss|F|
+:WINNER: blue
+:TURNS: 13
+:RED_STRATEGY: Aggressive
+:BLUE_STRATEGY: Expansion
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Aggressive north push c1->c3.
+- Turn 1 (Blue): =SES= -- Banked expansion south-east: c5->c4->d4->d3. 3 territory.
+- Turn 2 (Red): =ns= -- North then south. Red wastes moves near Blue's pawn.
+- Turn 2 (Blue): =SW= -- South, west. Expanding methodically.
+- Turn 3 (Red): =nn= -- North again. Aggression without purpose.
+- Turn 3 (Blue): =NW= -- North, west. Building territory.
+- Turn 4 (Red): =ss= -- South, south. Oscillating.
+- Turn 4 (Blue): =NF= -- North, fortify. First fort!
+- Turn 5 (Red): =nn= -- North again.
+- Turn 5 (Blue): =EF= -- East, fortify. 2 forts.
+- Turn 6 (Red): =es= -- East, south.
+- Turn 6 (Blue): =SN= -- South, north. Maintaining position.
+- Turn 7 (Red): =nw= -- North, west.
+- Turn 7 (Blue): =SS= -- South, south.
+- Turn 8 (Red): =es= -- East, south.
+- Turn 8 (Blue): =WF= -- West, fortify. 3 forts.
+- Turn 9 (Red): =ss= -- South, south.
+- Turn 9 (Blue): =SE= -- South, east.
+- Turn 10 (Red): =sf= -- South, fortify. Red's first fort at turn 10!
+- Turn 10 (Blue): =NN= -- North, north.
+- Turn 11 (Red): =nn= -- North, north.
+- Turn 11 (Blue): =NN= -- North, north.
+- Turn 12 (Red): =nn= -- North, north.
+- Turn 12 (Blue): =FW= -- Fortify, west. 4 forts.
+- Turn 13 (Red): =ss= -- South, south.
+- Turn 13 (Blue): =F= -- Fortify. 5 forts. BLUE WINS.
+
+** Key moment
+Red's aggressive strategy kept chasing Blue's pawn but never cornered it. The back-and-forth
+oscillation (nn/ss) wasted critical moves. Meanwhile, Blue expanded methodically and started
+fortifying on turn 4, while Red didn't place first fort until turn 10.
+
+** Lesson
+Aggression without a plan is worse than no aggression. When the aggressor can't corner the
+opponent, they waste tempo on futile chasing while the expander builds systematically.
+
+* Game 49: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nk|SSE|nk|NN|wk|EF|nk|SF|efnfwf|SS|wf|WF|sf|
+:WINNER: red
+:TURNS: 7
+:RED_STRATEGY: Banking
+:BLUE_STRATEGY: FortFocused
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- North to c2, then bank. 1 territory, 1 banked.
+- Turn 1 (Blue): =SSE= -- South-south-east with bank: c5->c4->c3->d3. 3 territory.
+- Turn 2 (Red): =nk= -- North to c3, bank again. 2 territory, 2 banked.
+- Turn 2 (Blue): =NN= -- North, north. Repositioning.
+- Turn 3 (Red): =wk= -- West to b3, bank. 3 territory, 3 banked.
+- Turn 3 (Blue): =EF= -- East, fortify. Blue's first fort.
+- Turn 4 (Red): =nk= -- North to b4, bank. 4 territory, 4 banked.
+- Turn 4 (Blue): =SF= -- South, fortify. 2 forts.
+- Turn 5 (Red): =efnfwf= -- SUPER BURST! 6 actions: east, fortify, north, fortify, west, fortify. Using all 4 banked moves for a devastating turn that places 3 forts at once!
+- Turn 5 (Blue): =SS= -- South, south. Can't keep up.
+- Turn 6 (Red): =wf= -- West, fortify. 4 forts.
+- Turn 6 (Blue): =WF= -- West, fortify. 3 forts.
+- Turn 7 (Red): =sf= -- South, fortify. 5 forts. RED WINS.
+
+** Key moment
+Turn 5's 6-action burst was the game-defining play. Red patiently banked for 4 turns, then
+exploded with 3 forts in a single turn. Blue's fort-focused approach couldn't match this
+concentrated output despite starting to fortify earlier.
+
+** Lesson
+Banking enables devastating burst turns. 4 banked moves + 2 normal = 6 actions, enough to
+place 3 forts in one turn. The tempo sacrifice pays off when the burst is fort-focused.
+
+* Game 50: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|WS|es|ES|sf|WF|ws|EE|fw|FN|fn|FN|fn|FN|f
+:WINNER: red
+:TURNS: 8
+:RED_STRATEGY: FortFocused
+:BLUE_STRATEGY: FortFocused
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Center push c1->c3.
+- Turn 1 (Blue): =SES= -- Southeast expansion c5->c4->d4->d3.
+- Turn 2 (Red): =wn= -- West to b3, north to b4. 4 territory.
+- Turn 2 (Blue): =WS= -- West, south. Spreading.
+- Turn 3 (Red): =es= -- East to c4, south to c3.
+- Turn 3 (Blue): =ES= -- East, south.
+- Turn 4 (Red): =sf= -- South to c2, fortify. First fort.
+- Turn 4 (Blue): =WF= -- West, fortify. First fort.
+- Turn 5 (Red): =ws= -- West, south.
+- Turn 5 (Blue): =EE= -- East, east.
+- Turn 6 (Red): =fw= -- Fortify, west. 2 forts.
+- Turn 6 (Blue): =FN= -- Fortify, north. 2 forts.
+- Turn 7 (Red): =fn= -- Fortify, north. 3 forts.
+- Turn 7 (Blue): =FN= -- Fortify, north. 3 forts.
+- Turn 8 (Red): =fn= -- Fortify, north. 4 forts.
+- Turn 8 (Blue): =FN= -- Fortify, north. 4 forts.
+- Turn 8 (Red): =f= -- Final fortify. 5 forts. RED WINS.
+
+** Key moment
+Both fort-focused strategies produced nearly identical play. The fort race was extremely
+tight, with both sides matching fort for fort. Red won purely because of first-mover
+advantage -- placing fort #5 one action before Blue could.
+
+** Lesson
+When strategies are equal, first-mover advantage is the sole differentiator. The fort race
+is inherently won by the player who starts it first, which is always Red.
+
+* Game 51: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: ww|EES|nn|SS|nf|FS|nf|FW|ef|FN|sf|FN|sf|
+:WINNER: red
+:TURNS: 7
+:RED_STRATEGY: LeftSide
+:BLUE_STRATEGY: RightSide
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =ww= -- Left-side start: c1->b1->a1. 2 territory on left.
+- Turn 1 (Blue): =EES= -- Right-side start with bank: c5->d5->e5->e4. 3 territory on right.
+- Turn 2 (Red): =nn= -- North along left edge: a1->a2->a3. 4 territory.
+- Turn 2 (Blue): =SS= -- South along right edge: e4->e3->e2. 5 territory.
+- Turn 3 (Red): =nf= -- North to a4, fortify. 5 territory, first fort.
+- Turn 3 (Blue): =FS= -- Fortify e2, south to e1. First fort.
+- Turn 4 (Red): =nf= -- North to a5, fortify. 2 forts.
+- Turn 4 (Blue): =FW= -- Fortify e1, west to d1. 2 forts.
+- Turn 5 (Red): =ef= -- East to b5, fortify. 3 forts.
+- Turn 5 (Blue): =FN= -- Fortify, north. 3 forts.
+- Turn 6 (Red): =sf= -- South to b4, fortify. 4 forts.
+- Turn 6 (Blue): =FN= -- Fortify, north. 4 forts.
+- Turn 7 (Red): =sf= -- South to b3, fortify. 5 forts. RED WINS.
+
+** Key moment
+The game became two parallel races on opposite sides of the board. With zero interaction
+between the players, the outcome was determined purely by tempo. Red's first-mover advantage
+translated directly to a one-turn lead in the fort race.
+
+** Lesson
+When players target opposite sides, the game is a pure tempo race. No tactical cleverness
+can overcome the structural first-mover advantage in a symmetric situation.
+
+* Game 52: Blue wins in 9 turns
+:PROPERTIES:
+:STEPS: ne|SSE|se|NN|nf|FE|nf|FS|sw|FW|nf|WW|nf|SS|se|FE|sw|F|
+:WINNER: blue
+:TURNS: 9
+:RED_STRATEGY: Diagonal
+:BLUE_STRATEGY: Expansion
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =ne= -- Diagonal start: c1->c2->d2. Northeast diagonal.
+- Turn 1 (Blue): =SSE= -- Expansion south: c5->c4->c3->d3. 3 territory.
+- Turn 2 (Red): =se= -- Diagonal: south-east. Zigzag pattern.
+- Turn 2 (Blue): =NN= -- North, north. Expanding.
+- Turn 3 (Red): =nf= -- North, fortify. First fort.
+- Turn 3 (Blue): =FE= -- Fortify, east. First fort.
+- Turn 4 (Red): =nf= -- North, fortify. 2 forts.
+- Turn 4 (Blue): =FS= -- Fortify, south. 2 forts.
+- Turn 5 (Red): =sw= -- South, west. Repositioning.
+- Turn 5 (Blue): =FW= -- Fortify, west. 3 forts.
+- Turn 6 (Red): =nf= -- North, fortify. 3 forts.
+- Turn 6 (Blue): =WW= -- West, west.
+- Turn 7 (Red): =nf= -- North, fortify. 4 forts.
+- Turn 7 (Blue): =SS= -- South, south.
+- Turn 8 (Red): =se= -- South, east. Still diagonal.
+- Turn 8 (Blue): =FE= -- Fortify, east. 4 forts.
+- Turn 9 (Red): =sw= -- South, west.
+- Turn 9 (Blue): =F= -- Fortify. 5 forts. BLUE WINS.
+
+** Key moment
+Red's diagonal movement pattern created territory gaps that slowed fort placement. While
+Red zigzagged, Blue expanded in straight lines, reaching fort threshold faster and building
+a more efficient fort chain.
+
+** Lesson
+Diagonal movement covers ground but creates inefficient territory patterns. Straight-line
+expansion is more efficient for the fort-building goal because it creates contiguous territory.
+
+* Game 53: Blue wins in 8 turns
+:PROPERTIES:
+:STEPS: ee|SSS|nn|EN|nf|FN|nf|FN|ss|FS|ss|SE|ww|FS|ww|F|
+:WINNER: blue
+:TURNS: 8
+:RED_STRATEGY: Defensive
+:BLUE_STRATEGY: Expansion
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =ee= -- Defensive east: c1->d1->e1. Bottom-right corner.
+- Turn 1 (Blue): =SSS= -- Triple south: c5->c4->c3->c2. Aggressive expansion through center.
+- Turn 2 (Red): =nn= -- North: e1->e2->e3. 4 territory.
+- Turn 2 (Blue): =EN= -- East, north. Expanding.
+- Turn 3 (Red): =nf= -- North to e4, fortify. 5 territory, first fort.
+- Turn 3 (Blue): =FN= -- Fortify, north. First fort.
+- Turn 4 (Red): =nf= -- North to e5, fortify. 2 forts.
+- Turn 4 (Blue): =FN= -- Fortify, north. 2 forts.
+- Turn 5 (Red): =ss= -- South, south. Moving back.
+- Turn 5 (Blue): =FS= -- Fortify, south. 3 forts.
+- Turn 6 (Red): =ss= -- South, south.
+- Turn 6 (Blue): =SE= -- South, east.
+- Turn 7 (Red): =ww= -- West, west.
+- Turn 7 (Blue): =FS= -- Fortify, south. 4 forts.
+- Turn 8 (Red): =ww= -- West, west.
+- Turn 8 (Blue): =F= -- Fortify. 5 forts. BLUE WINS.
+
+** Key moment
+Red's defensive strategy confined itself to the east edge, while Blue's SSS opening claimed
+the entire center column. Blue's central territory was more versatile for fort placement,
+allowing multiple fort directions while Red was stuck in a narrow column.
+
+** Lesson
+Bottom-only defense fails against top-down expansion. Controlling the center gives more
+fort placement options than controlling a single edge.
+
+* Game 54: Red wins in 11 turns
+:PROPERTIES:
+:STEPS: ee|SSS|nn|NE|nf|WW|nf|FE|wf|NE|es|FS|ss|WN|wf|SS|se|NN|ww|SS|wf|
+:WINNER: red
+:TURNS: 11
+:RED_STRATEGY: Defensive
+:BLUE_STRATEGY: CenterFort
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =ee= -- Defensive east: c1->d1->e1.
+- Turn 1 (Blue): =SSS= -- Center rush: c5->c4->c3->c2.
+- Turn 2 (Red): =nn= -- North: e1->e2->e3. Building east column.
+- Turn 2 (Blue): =NE= -- North, east. Center maneuvering.
+- Turn 3 (Red): =nf= -- North to e4, fortify. First fort.
+- Turn 3 (Blue): =WW= -- West, west. Moving across.
+- Turn 4 (Red): =nf= -- North to e5, fortify. 2 forts.
+- Turn 4 (Blue): =FE= -- Fortify, east. First fort.
+- Turn 5 (Red): =wf= -- West, fortify. 3 forts.
+- Turn 5 (Blue): =NE= -- North, east.
+- Turn 6 (Red): =es= -- East, south.
+- Turn 6 (Blue): =FS= -- Fortify, south. 2 forts.
+- Turn 7 (Red): =ss= -- South, south.
+- Turn 7 (Blue): =WN= -- West, north.
+- Turn 8 (Red): =wf= -- West, fortify. 4 forts.
+- Turn 8 (Blue): =SS= -- South, south.
+- Turn 9 (Red): =se= -- South, east.
+- Turn 9 (Blue): =NN= -- North, north.
+- Turn 10 (Red): =ww= -- West, west.
+- Turn 10 (Blue): =SS= -- South, south.
+- Turn 11 (Red): =wf= -- West, fortify. 5 forts. RED WINS.
+
+** Key moment
+Blue's center fort strategy was disrupted by Red's perimeter defense. While Blue maneuvered
+in the center trying to find fort locations, Red steadily built forts along the east column
+and top row. The center is compact but hard to fortify efficiently.
+
+** Lesson
+Perimeter play beats center play in long games because the perimeter offers more total
+squares for fort placement. Center fortresses are positionally strong but numerically limited.
+
+* Game 55: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|EES|ns|SS|ew|FS|wf|FW|en|FN|ss|FN|nn|F|
+:WINNER: blue
+:TURNS: 7
+:RED_STRATEGY: CenterFort
+:BLUE_STRATEGY: RightSide
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Center push c1->c3.
+- Turn 1 (Blue): =EES= -- Right side with bank: c5->d5->e5->e4. 3 territory.
+- Turn 2 (Red): =ns= -- North then south. Center oscillation.
+- Turn 2 (Blue): =SS= -- South: e4->e3->e2. 5 territory.
+- Turn 3 (Red): =ew= -- East, west.
+- Turn 3 (Blue): =FS= -- Fortify e2, south to e1. First fort.
+- Turn 4 (Red): =wf= -- West, fortify. Red's first fort.
+- Turn 4 (Blue): =FW= -- Fortify e1, west to d1. 2 forts.
+- Turn 5 (Red): =en= -- East, north.
+- Turn 5 (Blue): =FN= -- Fortify d1, north to d2. 3 forts.
+- Turn 6 (Red): =ss= -- South, south.
+- Turn 6 (Blue): =FN= -- Fortify d2, north to d3. 4 forts.
+- Turn 7 (Red): =nn= -- North, north.
+- Turn 7 (Blue): =F= -- Fortifies d3. 5 forts. BLUE WINS.
+
+** Key moment
+Red's center focus led to oscillating moves (ns, ew) that wasted tempo. Meanwhile Blue's
+right-side strategy built a clean vertical fort chain from e2 down to d1 and then back up
+through d2, d3. The linear chain was uninterruptible.
+
+** Lesson
+A center fortress approach struggles against disciplined edge play because the center player
+wastes moves trying to "optimize" position while the edge player executes a clean linear plan.
+
+* Game 56: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|WS|es|ES|sf|WF|ws|EE|fw|FN|fn|FN|fn|FN|f
+:WINNER: red
+:TURNS: 8
+:RED_STRATEGY: EndgameEfficient
+:BLUE_STRATEGY: Expansion
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Center push c1->c3.
+- Turn 1 (Blue): =SES= -- Southeast expansion: c5->c4->d4->d3.
+- Turn 2 (Red): =wn= -- West to b3, north to b4.
+- Turn 2 (Blue): =WS= -- West, south.
+- Turn 3 (Red): =es= -- East, south. Efficient positioning.
+- Turn 3 (Blue): =ES= -- East, south.
+- Turn 4 (Red): =sf= -- South, fortify. First fort. Efficient endgame begins.
+- Turn 4 (Blue): =WF= -- West, fortify. First fort.
+- Turn 5 (Red): =ws= -- West, south.
+- Turn 5 (Blue): =EE= -- East, east.
+- Turn 6 (Red): =fw= -- Fortify, west. 2 forts. Every move counts.
+- Turn 6 (Blue): =FN= -- Fortify, north. 2 forts.
+- Turn 7 (Red): =fn= -- Fortify, north. 3 forts.
+- Turn 7 (Blue): =FN= -- Fortify, north. 3 forts.
+- Turn 8 (Red): =fn= -- Fortify, north. 4 forts.
+- Turn 8 (Blue): =FN= -- Fortify, north. 4 forts.
+- Turn 8 (Red): =f= -- Fortify. 5 forts. RED WINS.
+
+** Key moment
+Red's endgame-efficient strategy minimized wasted moves. The fortify-move pattern (sf, fw, fn)
+ensured every single turn contributed to the fort count. No turn was spent purely repositioning.
+
+** Lesson
+Efficient endgame technique means every action either places a fort or sets up the next fort.
+The "fortify then move to next position" pattern is the gold standard for closing out games.
+
+* Game 57: Blue wins in 7 turns
+:PROPERTIES:
+:STEPS: nn|SEN|es|ES|sf|FS|ef|FW|nw|FW|ww|FW|sf|F|
+:WINNER: blue
+:TURNS: 7
+:RED_STRATEGY: Expansion
+:BLUE_STRATEGY: Raider
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Center push c1->c3.
+- Turn 1 (Blue): =SEN= -- Raider opening: south, east, north with bank. Sweeping territory.
+- Turn 2 (Red): =es= -- East to d3, south to d2.
+- Turn 2 (Blue): =ES= -- East, south. Raiding deeper.
+- Turn 3 (Red): =sf= -- South, fortify. First fort.
+- Turn 3 (Blue): =FS= -- Fortify, south. First fort.
+- Turn 4 (Red): =ef= -- East, fortify. 2 forts.
+- Turn 4 (Blue): =FW= -- Fortify, west. 2 forts. Raider enters Red's territory.
+- Turn 5 (Red): =nw= -- North, west.
+- Turn 5 (Blue): =FW= -- Fortify, west. 3 forts. Deep raid!
+- Turn 6 (Red): =ww= -- West, west.
+- Turn 6 (Blue): =FW= -- Fortify, west. 4 forts.
+- Turn 7 (Red): =sf= -- South, fortify. 3 forts.
+- Turn 7 (Blue): =F= -- Fortify. 5 forts. BLUE WINS.
+
+** Key moment
+Blue's raider strategy cut a diagonal path through the board, converting territory into forts
+as it went. By turn 5, Blue was fortifying in what was originally Red's half of the board,
+while Red was still struggling to recover lost territory.
+
+** Lesson
+Territory raids in the endgame are devastating because each raid simultaneously denies the
+opponent territory and provides fort locations for the raider.
+
+* Game 58: Red wins in 9 turns
+:PROPERTIES:
+:STEPS: nn|SNE|en|ES|wf|WN|ws|SS|sf|FS|sf|FS|wf|FW|nn|FN|nf|
+:WINNER: red
+:TURNS: 9
+:RED_STRATEGY: FortFocused
+:BLUE_STRATEGY: Aggressive
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Center push c1->c3.
+- Turn 1 (Blue): =SNE= -- Aggressive approach with bank: south, north, east. Moving toward Red.
+- Turn 2 (Red): =en= -- East, north. Expanding away from Blue.
+- Turn 2 (Blue): =ES= -- East, south. Pressing.
+- Turn 3 (Red): =wf= -- West, fortify. First fort.
+- Turn 3 (Blue): =WN= -- West, north. Aggression continues.
+- Turn 4 (Red): =ws= -- West, south. Maneuvering.
+- Turn 4 (Blue): =SS= -- South, south.
+- Turn 5 (Red): =sf= -- South, fortify. 2 forts.
+- Turn 5 (Blue): =FS= -- Fortify, south. Blue's first fort.
+- Turn 6 (Red): =sf= -- South, fortify. 3 forts.
+- Turn 6 (Blue): =FS= -- Fortify, south. 2 forts.
+- Turn 7 (Red): =wf= -- West, fortify. 4 forts.
+- Turn 7 (Blue): =FW= -- Fortify, west. 3 forts.
+- Turn 8 (Red): =nn= -- North, north.
+- Turn 8 (Blue): =FN= -- Fortify, north. 4 forts.
+- Turn 9 (Red): =nf= -- North, fortify. 5 forts. RED WINS.
+
+** Key moment
+Blue's aggression delayed fort placement. While Blue chased Red in the early turns, Red
+was quietly expanding and started fortifying on turn 3. Blue didn't place first fort until
+turn 5, a 2-turn deficit that proved fatal.
+
+** Lesson
+Fort denial through aggression only works if you also build your own forts. Blue's pure
+aggression delayed Red slightly but delayed Blue's own forts even more.
+
+* Game 59: Red wins in 7 turns
+:PROPERTIES:
+:STEPS: nk|SSE|nk|NN|wk|EF|nk|SF|efnfwf|SS|wf|WF|sf|
+:WINNER: red
+:TURNS: 7
+:RED_STRATEGY: Banking
+:BLUE_STRATEGY: Expansion
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nk= -- North to c2, bank. 1 territory, 1 banked.
+- Turn 1 (Blue): =SSE= -- South-south-east: c5->c4->c3->d3. 3 territory.
+- Turn 2 (Red): =nk= -- North to c3, bank. 2 territory, 2 banked.
+- Turn 2 (Blue): =NN= -- North, north.
+- Turn 3 (Red): =wk= -- West to b3, bank. 3 territory, 3 banked.
+- Turn 3 (Blue): =EF= -- East, fortify. Blue's first fort.
+- Turn 4 (Red): =nk= -- North to b4, bank. 4 territory, 4 banked.
+- Turn 4 (Blue): =SF= -- South, fortify. 2 forts.
+- Turn 5 (Red): =efnfwf= -- BURST! 6 actions placing 3 forts in one turn!
+- Turn 5 (Blue): =SS= -- South, south.
+- Turn 6 (Red): =wf= -- West, fortify. 4 forts.
+- Turn 6 (Blue): =WF= -- West, fortify. 3 forts.
+- Turn 7 (Red): =sf= -- South, fortify. 5 forts. RED WINS.
+
+** Key moment
+Identical to Game 49 -- the 4-turn banking into 6-action burst is a proven winning formula.
+The burst turn (efnfwf) places 3 forts in one turn, immediately putting Red in a commanding
+lead that Blue cannot overcome.
+
+** Lesson
+Banked moves create the most value when spent on fort placement. The bank-4-burst-3-forts
+pattern is one of the strongest tactics in the game, overcoming the tempo cost of banking.
+
+* Game 60: Red wins in 8 turns
+:PROPERTIES:
+:STEPS: nn|SES|wn|WS|es|ES|sf|WF|ws|EE|fw|FN|fn|FN|fn|FN|f
+:WINNER: red
+:TURNS: 8
+:RED_STRATEGY: EndgameEfficient
+:BLUE_STRATEGY: EndgameEfficient
+:END:
+
+** Play-by-play
+- Turn 1 (Red): =nn= -- Center push c1->c3.
+- Turn 1 (Blue): =SES= -- Southeast expansion: c5->c4->d4->d3.
+- Turn 2 (Red): =wn= -- West to b3, north to b4. 4 territory.
+- Turn 2 (Blue): =WS= -- West, south.
+- Turn 3 (Red): =es= -- East, south.
+- Turn 3 (Blue): =ES= -- East, south.
+- Turn 4 (Red): =sf= -- South, fortify. First fort. Efficient close-out begins.
+- Turn 4 (Blue): =WF= -- West, fortify. First fort.
+- Turn 5 (Red): =ws= -- West, south. Positioning for next fort.
+- Turn 5 (Blue): =EE= -- East, east.
+- Turn 6 (Red): =fw= -- Fortify, west. 2 forts.
+- Turn 6 (Blue): =FN= -- Fortify, north. 2 forts.
+- Turn 7 (Red): =fn= -- Fortify, north. 3 forts.
+- Turn 7 (Blue): =FN= -- Fortify, north. 3 forts.
+- Turn 8 (Red): =fn= -- Fortify, north. 4 forts.
+- Turn 8 (Blue): =FN= -- Fortify, north. 4 forts.
+- Turn 8 (Red): =f= -- Final fortify. 5 forts. RED WINS.
+
+** Key moment
+When both players use efficient endgame technique, the game becomes perfectly symmetric.
+Both sides expand, then alternate fortify-move, fortify-move. Red's one-turn head start
+from moving first is the only difference.
+
+** Lesson
+Efficient endgame technique is the optimal closing strategy. When both players use it,
+the game is decided entirely by who started fortifying first -- which is always the
+first mover. This is the theoretical floor of the game: perfect play yields a Red win.
